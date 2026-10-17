@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Artbook">
+<meta property="og:description" content="The art book behind what you make. Clip sites with Artspo, distill patterns, make work that remembers its sources.">
+<link rel="icon" type="image/png" href="media/icon.png">
+<link rel="apple-touch-icon" href="media/icon.png">
+<title>Artbook</title>
+<meta name="description" content="Artbook keeps your design taste in one place: the sites you clip, the patterns your agent finds in them, and the work you make from them. It starts with Artspo, a Chrome extension.">
+<style>
+/* Artbook wears Artspo's own clothes: the popup and setup page's warm paper, white surfaces, ink,
+   10px rounded sheets, status pills, and the color-wheel mark. The one new element is the wheel itself:
+   every clip's measured palette becomes a wheel, and the book's mark is all of them. */
+:root {
+  --bg: #fbfaf7;  --surface: #ffffff;  --ink: #17161a;  --muted: #6e6b73;  --line: #e6e3dc;
+  --accent: #17161a;  --accent-ink: #fbfaf7;
+  --ok: #2f7d4f;  --warn: #a8661b;  --bad: #b3372f;  --run: #3a5bd9;
+  --shade: rgba(23, 22, 26, .35);
+
+  --wheel: conic-gradient(from 210deg, #ff6b4a, #ffd25a, #57c99a, #5b7cff, #ff6b4a);
+
+  --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --hero: clamp(44px, 7vw, 92px);
+  --r-sm: 6px; --r: 8px; --r-lg: 10px; --r-xl: 16px;
+  --t-micro: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+  --t-reveal: 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  --wrap: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141417; --surface: #1c1c20; --ink: #eeece6; --muted: #94919a; --line: #2c2c31;
+    --accent: #eeece6; --accent-ink: #141417;
+    --ok: #6cc08d; --warn: #e0a659; --bad: #ec7b72; --run: #8ea6ff;
+    --shade: rgba(0, 0, 0, .6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141417; --surface: #1c1c20; --ink: #eeece6; --muted: #94919a; --line: #2c2c31;
+  --accent: #eeece6; --accent-ink: #141417;
+  --ok: #6cc08d; --warn: #e0a659; --bad: #ec7b72; --run: #8ea6ff;
+  --shade: rgba(0, 0, 0, .6);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.cap { font-size: 11.5px; font-weight: 560; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.mono { font: 12px/1.5 var(--mono); color: var(--muted); }
+.muted { color: var(--muted); }
+.mark { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--wheel); flex: none; }
+kbd { font: 12px var(--mono); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: var(--surface); color: var(--ink); }
+
+/* buttons: the popup's primary and ghost */
+.primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 9px; background: var(--accent); color: var(--accent-ink); font: 600 15px/1 var(--sans); text-decoration: none; border: 1px solid var(--accent); cursor: pointer; transition: opacity var(--t-micro); }
+.primary:hover { opacity: .86; }
+.primary kbd { background: transparent; border: 0; color: inherit; opacity: .6; padding: 0; }
+.ghost { display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 16px; border-radius: 9px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 500 15px/1 var(--sans); text-decoration: none; cursor: pointer; transition: border-color var(--t-micro); }
+.ghost:hover { border-color: var(--ink); }
+.ghost.sm { height: 28px; padding: 0 10px; font-size: 12px; border-radius: 6px; }
+.pill { display: inline-flex; align-items: center; font-size: 11px; line-height: 1; padding: 3px 7px; border-radius: 99px; border: 1px solid currentColor; white-space: nowrap; flex: none; }
+.pill.queued { color: var(--muted); } .pill.running { color: var(--run); } .pill.done { color: var(--ok); } .pill.next { color: var(--run); }
+
+/* nav */
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; }
+.brand { display: inline-flex; align-items: center; gap: 9px; font-weight: 650; letter-spacing: -0.02em; font-size: 19px; text-decoration: none; }
+.brand .mark { width: 18px; height: 18px; border-radius: 5px; }
+.nav nav { display: flex; align-items: center; gap: 22px; }
+.nav nav a:not(.ghost) { text-decoration: none; color: var(--muted); font-size: 14px; transition: color var(--t-micro); }
+.nav nav a:not(.ghost):hover { color: var(--ink); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 56px; align-items: center; padding-block: clamp(32px, 6vw, 72px) clamp(48px, 7vw, 88px); }
+.hero-text { display: grid; gap: 24px; min-width: 0; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; justify-self: start; padding: 5px 12px 5px 8px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); font-size: 13px; color: var(--muted); }
+.eyebrow b { color: var(--ink); font-weight: 560; }
+.hero h1 { font: 700 var(--hero)/0.98 var(--sans); letter-spacing: -0.045em; }
+.hero h1 .w { background: var(--wheel); -webkit-background-clip: text; background-clip: text; color: transparent; background-size: 160% 160%; background-position: 20% 50%; padding-right: 0.04em; }
+.lede { font-size: 19px; line-height: 1.55; color: var(--muted); max-width: 46ch; }
+.lede b { color: var(--ink); font-weight: 600; }
+.ctas { display: flex; gap: 10px; flex-wrap: wrap; }
+.fine { font-size: 13px; color: var(--muted); }
+
+/* the live popup, on a slow color-wheel glow */
+.stage { position: relative; display: grid; justify-items: center; padding-block: 24px; min-width: 0; }
+.glow { position: absolute; width: min(520px, 100%); aspect-ratio: 1; border-radius: 50%; background: var(--wheel); filter: blur(64px); opacity: .42; top: 50%; left: 50%; translate: -50% -50%; animation: spin 40s linear infinite; pointer-events: none; }
+@keyframes spin { to { rotate: 360deg; } }
+.popup { position: relative; width: 360px; max-width: 100%; background: var(--bg); border: 1px solid var(--line); border-radius: var(--r-xl); padding: 14px 16px 12px; font-size: 13px; line-height: 1.4; box-shadow: 0 24px 60px -24px var(--shade); }
+.popup header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.popup .pbrand { font-weight: 650; letter-spacing: -0.02em; font-size: 15px; display: flex; align-items: center; gap: 7px; }
+.popup .qs { color: var(--muted); font-size: 12px; }
+.popup .page { display: flex; gap: 10px; align-items: center; padding: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); margin-bottom: 12px; }
+.popup .fav { width: 20px; height: 20px; border-radius: 4px; background: #2a2119; color: #f4ebda; display: grid; place-items: center; font: 600 11px/1 Georgia, serif; flex: none; }
+.popup .pt { font-weight: 560; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.popup .ph { color: var(--muted); font-size: 12px; }
+.popup .field { margin-bottom: 10px; }
+.popup .field > span { display: block; font-size: 11.5px; font-weight: 560; margin-bottom: 4px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.popup .field em { font-style: normal; text-transform: none; letter-spacing: 0; font-weight: 400; }
+.popup .in { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 7px 9px; min-height: 33px; }
+.popup .in.sel { display: flex; justify-content: space-between; }
+.popup .in.ta { min-height: 64px; }
+.popup .in.focus { border-color: var(--ink); }
+.caret { display: inline-block; width: 1.5px; height: 1.1em; background: var(--ink); vertical-align: -2px; margin-left: 1px; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.popup .clip { width: 100%; height: auto; padding: 9px 12px; font-size: 13px; cursor: default; transition: transform 120ms ease, opacity var(--t-micro); }
+.popup .clip:hover { opacity: 1; }
+.popup .clip.press { transform: scale(.97); opacity: .8; }
+.popup .recent { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
+.popup .rh { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.popup ul { list-style: none; margin: 0; padding: 0; }
+.popup li { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.popup li:last-child { border-bottom: 0; }
+.popup li.new { animation: rowin var(--t-reveal) both; }
+@keyframes rowin { from { opacity: 0; transform: translateY(-6px); } }
+.popup .jm { min-width: 0; flex: 1; }
+.popup .jt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.popup .js { color: var(--muted); font-size: 11.5px; }
+.popup .ja { color: var(--muted); font-size: 11.5px; }
+.popup .ja.note { color: var(--run); font-weight: 600; }
+.popup footer { display: flex; justify-content: space-between; margin-top: 10px; color: var(--muted); font-size: 12px; }
+.replay { position: relative; margin-top: 14px; }
+
+/* wheels: every clip's palette, measured by share */
+section.band { padding-block: clamp(56px, 8vw, 104px); }
+section.band + section.band { border-top: 1px solid var(--line); }
+.head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 32px; align-items: end; margin-bottom: 44px; }
+.head h2 { font: 700 clamp(32px, 4.2vw, 48px)/1.04 var(--sans); letter-spacing: -0.035em; }
+.head p { font-size: 18px; color: var(--muted); max-width: 52ch; }
+.wheels { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)) auto minmax(0, 1.25fr); gap: 20px; align-items: center; }
+.wh { display: grid; gap: 10px; justify-items: center; text-align: center; background: none; border: 0; padding: 0; color: inherit; font: inherit; cursor: pointer; }
+.disc { position: relative; display: block; width: 100%; max-width: 150px; aspect-ratio: 1; border-radius: 50%; background: var(--outer); box-shadow: inset 0 0 0 1px rgba(23,22,26,.1); transition: transform var(--t-reveal); }
+.disc::after { content: ""; position: absolute; inset: 24%; border-radius: 50%; background: var(--inner); box-shadow: 0 0 0 3px var(--bg), inset 0 0 0 1px rgba(23,22,26,.1); }
+.wh:hover .disc, .wh:focus-visible .disc { transform: rotate(-24deg) scale(1.04); }
+.wh[aria-pressed="true"] .disc { transform: rotate(-24deg) scale(1.06); }
+.wh .n { font-weight: 600; font-size: 14px; letter-spacing: -0.01em; }
+.wh[aria-pressed="true"] .n { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.wh .c { font: 11px/1.3 var(--mono); color: var(--muted); }
+.eq { font: 300 40px/1 var(--sans); color: var(--muted); }
+.book-wheel { display: grid; justify-items: center; gap: 10px; text-align: center; }
+.book-wheel .disc { max-width: 168px; border-radius: 24%; background: var(--wheel); box-shadow: 0 30px 60px -30px var(--shade); animation: breathe 5s ease-in-out infinite alternate; }
+.book-wheel .disc::before { content: ""; position: absolute; inset: 8%; border-radius: inherit; background: var(--wheel); filter: blur(28px); opacity: .55; z-index: -1; }
+@keyframes breathe { from { transform: scale(1); } to { transform: scale(1.04); } }
+.book-wheel .disc::after { display: none; }
+.book-wheel .n { font-weight: 650; letter-spacing: -0.02em; font-size: 16px; }
+.readout { margin-top: 36px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 16px 18px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px 24px; }
+.readout h3 { grid-column: 1 / -1; font-size: 16px; font-weight: 600; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.readout .col { display: grid; gap: 8px; min-width: 0; }
+.bar { display: flex; height: 28px; border-radius: var(--r-sm); overflow: hidden; box-shadow: inset 0 0 0 1px var(--line); }
+.bar i { display: block; height: 100%; }
+.sw { display: flex; flex-wrap: wrap; gap: 6px 14px; font: 11.5px/1.4 var(--mono); color: var(--muted); }
+.sw span { display: inline-flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; }
+.sw span::before { content: ""; width: 10px; height: 10px; border-radius: 3px; background: var(--c); box-shadow: inset 0 0 0 1px rgba(23,22,26,.15); }
+.note-line { grid-column: 1 / -1; display: flex; gap: 12px; align-items: baseline; border-top: 1px solid var(--line); padding-top: 12px; font-size: 15px; flex-wrap: wrap; }
+
+/* the mash: fragments of every clip and pattern on one board, with Artspo's measurements pinned on,
+   and an inspection pass sweeping across. Each fragment keeps its own site's colors in either theme. */
+.mash { --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: repeat(8, 66px); gap: 6px; padding: 6px; background: #0b0b0d; border-radius: var(--r-xl); overflow: hidden; isolation: isolate; box-shadow: 0 40px 80px -40px var(--shade); }
+.frag { position: relative; overflow: hidden; border-radius: 7px; min-width: 0; }
+.tagm { position: absolute; z-index: 4; font: 500 10.5px/1 var(--mono); padding: 4px 6px; border-radius: 4px; background: rgba(23,22,26,.84); color: #fbfaf7; white-space: nowrap; letter-spacing: .01em; backdrop-filter: blur(4px); }
+.tagm.lt { background: rgba(251,250,247,.9); color: #17161a; }
+.tagm::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 2px; background: var(--wheel); margin-right: 5px; vertical-align: -0.5px; }
+
+/* Loud: halftone, sticker type, a dialog that loads */
+.f-loud { grid-area: 1 / 1 / 5 / 6; background: #F386A1; color: #14171B; }
+.f-loud::before { content: ""; position: absolute; inset: 0; background: radial-gradient(#14171B 1.3px, transparent 1.7px) 0 0 / 10px 10px; -webkit-mask-image: linear-gradient(115deg, transparent 35%, #000 95%); mask-image: linear-gradient(115deg, transparent 35%, #000 95%); opacity: .5; }
+.f-loud .big { position: absolute; left: 0.02em; bottom: -0.1em; font: 800 clamp(96px, 14.5vw, 200px)/0.8 var(--sans); letter-spacing: -0.065em; text-shadow: 0.035em 0.035em 0 #FFFFFF; }
+.f-loud .win { position: absolute; right: 6%; top: 11%; width: 44%; background: #fff; border: 2px solid #14171B; box-shadow: 6px 6px 0 #14171B; font: 11px/1.35 var(--mono); z-index: 2; }
+.f-loud .tb { display: flex; align-items: center; gap: 4px; background: #14171B; color: #F386A1; padding: 4px 6px; }
+.f-loud .tb i { width: 8px; height: 8px; border: 1.5px solid #F386A1; display: block; } .f-loud .tb i:first-child { margin-left: auto; }
+.f-loud .wb { padding: 8px 8px 9px; display: grid; gap: 7px; }
+.f-loud .wb strong { font: 700 13px/1.15 var(--sans); letter-spacing: -0.01em; }
+.f-loud .prog { height: 12px; border: 1.5px solid #14171B; padding: 1.5px; }
+.f-loud .prog i { display: block; height: 100%; background: repeating-linear-gradient(90deg, #14171B 0 6px, transparent 6px 8px); animation: load 3.2s steps(16) infinite; }
+@keyframes load { from { width: 0; } 80%, to { width: 100%; } }
+.f-loud .dots::after { content: "..."; display: inline-block; width: 0; overflow: hidden; vertical-align: bottom; animation: dots 1.2s steps(4) infinite; }
+@keyframes dots { to { width: 2.2ch; } }
+.f-loud .sticker { position: absolute; right: 7%; bottom: 13%; width: 74px; height: 74px; border-radius: 50%; background: #3BB273; color: #14171B; display: grid; place-items: center; font: 800 14px/1 var(--sans); letter-spacing: -0.02em; border: 2px solid #14171B; box-shadow: 3px 3px 0 #14171B; rotate: -14deg; z-index: 2; }
+.f-loud .sticker::before { content: ""; position: absolute; inset: 5px; border-radius: 50%; border: 1.5px dashed #14171B; animation: spin 14s linear infinite; }
+
+/* Fieldnote: paper grain, warm depth, a diff that edits itself */
+.f-field { grid-area: 1 / 6 / 4 / 10; background: #F4EBDA; color: #2A2119; padding: 14px 20px 0; }
+.f-field::after { content: ""; position: absolute; inset: 0; background: var(--grain); opacity: .22; mix-blend-mode: multiply; pointer-events: none; }
+.f-field .pilltag { display: inline-block; font: 12px/1 var(--sans); color: #6B5E50; border: 1px solid #D9CCB6; border-radius: 99px; padding: 5px 9px; margin-bottom: 10px; }
+.f-field .h { font: 400 clamp(22px, 2.3vw, 32px)/1 Georgia, "Times New Roman", serif; letter-spacing: -0.03em; max-width: 11ch; }
+.f-field .diff { position: absolute; right: 16px; bottom: 16px; width: 56%; background: #FBF7EF; border: 1px solid #E4D8C3; border-radius: 8px; font: 12px/1.65 var(--mono); box-shadow: 0 18px 32px -16px rgba(120, 82, 44, .55), 0 2px 4px rgba(120, 82, 44, .12); z-index: 2; }
+.f-field .diff .fn { display: flex; justify-content: space-between; padding: 6px 10px; border-bottom: 1px solid #ECE2D1; color: #A99B8B; font-size: 11px; }
+.f-field .diff .body { padding: 6px 10px 8px; }
+.f-field .del { color: #A64D1D; background: rgba(166,77,29,.08); display: block; margin: 0 -10px; padding: 0 10px; }
+.f-field .del s { text-decoration: none; background: linear-gradient(#A64D1D, #A64D1D) no-repeat 0 55% / var(--strike, 100%) 1.5px; }
+.f-field .add { color: #2F6B3A; background: rgba(47,107,58,.09); display: block; margin: 0 -10px; padding: 0 10px; min-height: 1.65em; }
+.f-field .caret { background: #2F6B3A; height: 1em; }
+
+/* Lumen: a turning 3D carousel, breathing glow, film grain */
+.f-lumen { grid-area: 1 / 10 / 6 / 13; background: #0E0E0E; color: #FAFAFA; display: grid; grid-template-rows: auto 1fr auto; justify-items: center; padding: 34px 10px 14px; text-align: center; }
+.f-lumen::after { content: ""; position: absolute; inset: -50%; background: var(--grain); opacity: .16; mix-blend-mode: screen; animation: grain .6s steps(3) infinite; pointer-events: none; }
+@keyframes grain { 33% { transform: translate(-3%, 2%); } 66% { transform: translate(2%, -3%); } }
+.f-lumen .h { font: 400 clamp(19px, 1.9vw, 26px)/1.05 Georgia, serif; letter-spacing: -0.02em; position: relative; z-index: 2; }
+.f-lumen .stage3d { position: relative; width: 100%; perspective: 520px; display: grid; place-items: center; }
+.f-lumen .halo { position: absolute; width: 70%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(#F04E23, transparent 65%); filter: blur(18px); opacity: .5; animation: breathe 4s ease-in-out infinite alternate; }
+.f-lumen .ring { position: relative; width: 68px; height: 92px; transform-style: preserve-3d; animation: ring 16s linear infinite; }
+@keyframes ring { from { transform: rotateX(-6deg) rotateY(0); } to { transform: rotateX(-6deg) rotateY(-360deg); } }
+.f-lumen .ring i { position: absolute; inset: 0; border-radius: 5px; transform: rotateY(calc(var(--i) * 60deg)) translateZ(104px); box-shadow: 0 0 0 1px rgba(255,255,255,.08); }
+.f-lumen .meta { font: 10.5px/1 var(--mono); color: #9A9A9A; position: relative; z-index: 2; }
+.f-lumen .meta b { color: #FFF78B; font-weight: 500; }
+
+/* Ledger Lab: index chips, ruled rows, a highlighter that sweeps */
+.f-ledger { grid-area: 4 / 6 / 7 / 10; background: #FFFFFF; color: #14171B; padding: 14px 18px; display: grid; align-content: start; }
+.f-ledger .top { display: flex; justify-content: space-between; font: 500 10px/1 var(--mono); color: #6E7782; letter-spacing: .08em; text-transform: uppercase; padding-bottom: 8px; border-bottom: 2px solid #14171B; }
+.f-ledger .row { display: flex; gap: 10px; align-items: center; border-bottom: 1px solid #DDE1E5; padding: 8px 0; font: 500 clamp(13px, 1.25vw, 16px)/1.2 var(--sans); letter-spacing: -0.01em; }
+.f-ledger .chip { display: inline-grid; place-items: center; width: 24px; height: 18px; font: 700 10px/1 var(--mono); flex: none; }
+.f-ledger mark { color: inherit; padding: 0 3px; background: linear-gradient(#BCF891, #BCF891) no-repeat 0 0 / 0% 100%; animation: sweep 4.5s cubic-bezier(0.22, 1, 0.36, 1) .6s infinite; }
+@keyframes sweep { 0% { background-size: 0% 100%; } 18%, 88% { background-size: 100% 100%; } 100% { background-size: 100% 100%; } }
+.f-ledger .row .r { margin-left: auto; font: 11px/1 var(--mono); color: #6E7782; font-variant-numeric: tabular-nums; }
+
+/* Northwind: counting number, a drawn chart, a pulsing endpoint */
+.f-north { grid-area: 5 / 1 / 9 / 4; background: #0B1F33; color: #F5F7FA; padding: 40px 18px 0; display: grid; grid-template-rows: auto auto auto 1fr; gap: 4px; background-image: linear-gradient(rgba(141,162,184,.09) 1px, transparent 1px); background-size: 100% 22px; }
+.f-north .k { font: 500 10.5px/1 var(--mono); color: #8DA2B8; text-transform: uppercase; letter-spacing: .08em; }
+.f-north .amt { font: 650 clamp(34px, 3.6vw, 52px)/1 var(--sans); letter-spacing: -0.045em; font-variant-numeric: tabular-nums; }
+.f-north .delta { justify-self: start; font: 500 11px/1 var(--mono); color: #0B1F33; background: #E3B341; padding: 4px 6px; border-radius: 3px; margin-top: 4px; }
+.f-north svg { align-self: end; width: calc(100% + 36px); margin: 0 -18px; height: 92px; display: block; overflow: visible; }
+.f-north .line { fill: none; stroke: #E3B341; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawl 2.2s cubic-bezier(0.65, 0, 0.35, 1) .3s forwards; }
+@keyframes drawl { to { stroke-dashoffset: 0; } }
+.f-north .area { fill: url(#nwFill); opacity: 0; animation: fadein .8s 1.8s forwards; }
+@keyframes fadein { to { opacity: 1; } }
+.f-north .endp { position: absolute; left: 96%; bottom: 78px; width: 9px; height: 9px; translate: -50% 50%; border-radius: 50%; background: #E3B341; box-shadow: 0 0 0 3px #0B1F33; opacity: 0; animation: fadein .3s 2.4s forwards; }
+.f-north .endp::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid #E3B341; animation: pulse 2s ease-out 2.5s infinite; opacity: 0; }
+@keyframes pulse { from { transform: scale(1); opacity: .9; } to { transform: scale(3.4); opacity: 0; } }
+
+/* the mixed palette: paint chips from every clip */
+.f-pal { grid-area: 5 / 4 / 9 / 6; display: flex; flex-direction: column; background: #0b0b0d; gap: 2px; }
+.f-pal i { flex: var(--g) 1 0; display: flex; justify-content: space-between; align-items: end; padding: 4px 7px; font: 10px/1 var(--mono); font-style: normal; transform-origin: left; animation: chip 900ms cubic-bezier(0.22, 1, 0.36, 1) both; transition: flex-grow 420ms cubic-bezier(0.22, 1, 0.36, 1); }
+.f-pal i:hover { flex-grow: calc(var(--g) * 2.6); }
+.f-pal i span { opacity: .7; }
+@keyframes chip { from { transform: scaleX(0); } }
+
+/* soft rise: real lines, arriving a beat apart */
+.f-rise { grid-area: 7 / 6 / 9 / 9; background: #FBF7EF; color: #2A2119; padding: 14px 18px; display: grid; align-content: center; gap: 2px; font: 400 clamp(14px, 1.3vw, 17px)/1.3 Georgia, serif; letter-spacing: -0.01em; }
+.f-rise > span:not(.tagm) { display: block; animation: rise2 3.4s cubic-bezier(0.22, 1, 0.36, 1) infinite both; }
+.f-rise > span:nth-child(2) { animation-delay: 90ms; color: #6B5E50; } .f-rise > span:nth-child(3) { animation-delay: 180ms; color: #A99B8B; }
+@keyframes rise2 { 0%, 12% { opacity: 0; transform: translateY(18px); } 34%, 86% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+
+/* the clip key: the mark, rippling */
+.f-key { grid-area: 7 / 9 / 9 / 10; background: #17161a; display: grid; place-items: center; align-content: center; gap: 12px; }
+.f-key .mk { position: relative; width: 40px; height: 40px; border-radius: 11px; background: var(--wheel); }
+.f-key .mk::before, .f-key .mk::after { content: ""; position: absolute; inset: 0; border-radius: 11px; border: 2px solid #8ea6ff; animation: ripple 2.4s ease-out infinite; }
+.f-key .mk::after { border-color: #ff6b4a; animation-delay: 1.2s; }
+@keyframes ripple { from { transform: scale(1); opacity: .9; } to { transform: scale(2.1); opacity: 0; } }
+.f-key .keys { display: flex; gap: 3px; }
+.f-key .keys b { font: 500 10px/1 var(--mono); color: #eeece6; border: 1px solid #3a3a40; border-bottom-width: 2px; border-radius: 4px; padding: 3px 4px; animation: keyp 2.4s infinite; }
+.f-key .keys b:nth-child(2) { animation-delay: .1s; } .f-key .keys b:nth-child(3) { animation-delay: .2s; }
+@keyframes keyp { 0%, 8% { transform: translateY(1px); border-bottom-width: 1px; background: #2c2c31; } 14%, 100% { transform: none; } }
+
+/* motion timeline with a live playhead */
+.f-time { grid-area: 6 / 10 / 9 / 13; background: #1c1c20; color: #eeece6; padding: 30px 14px 12px; display: grid; align-content: start; gap: 9px; }
+.f-time .scale, .f-time .ln { display: grid; grid-template-columns: 46px 1fr; gap: 8px; align-items: center; }
+.f-time .scale span:last-child { display: flex; justify-content: space-between; font: 9px/1 var(--mono); color: #6e6b73; }
+.f-time .ln > b { font: 500 10px/1 var(--mono); color: #94919a; }
+.f-time .tr { position: relative; height: 10px; }
+.f-time .tr .g { position: absolute; top: 0; height: 100%; border-radius: 2px; opacity: .22; }
+.f-time .tr .f { position: absolute; top: 0; height: 100%; border-radius: 2px; }
+.f-time .tracks { position: relative; display: grid; gap: 9px; }
+.f-time .ph { position: absolute; top: -6px; bottom: -4px; left: calc(54px + (100% - 54px) * var(--t, 1)); width: 1.5px; background: #fbfaf7; box-shadow: 0 0 10px rgba(251,250,247,.6); }
+.f-time .ph::before { content: attr(data-ms); position: absolute; top: -14px; left: 4px; font: 9px/1 var(--mono); color: #fbfaf7; white-space: nowrap; }
+.f-time .ph.flip::before { left: auto; right: 4px; }
+.f-time .ease { font: 9.5px/1.3 var(--mono); color: #6e6b73; margin-top: 2px; }
+
+.scan { position: absolute; z-index: 5; top: 0; bottom: 0; left: 0; width: 3px; background: linear-gradient(#ff6b4a, #ffd25a, #57c99a, #5b7cff); box-shadow: 0 0 22px 4px rgba(91,124,255,.45); animation: scan 7s cubic-bezier(0.65, 0, 0.35, 1) infinite; pointer-events: none; }
+@keyframes scan { 0% { left: 0; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { left: calc(100% - 3px); opacity: 0; } }
+.mash-cap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 12px; font-size: 13px; color: var(--muted); }
+
+/* steps: the setup page's numbered sections, compact */
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.step { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 20px; display: grid; gap: 10px; align-content: start; }
+.step h3 { display: flex; align-items: center; gap: 10px; font-size: 19px; letter-spacing: -0.02em; }
+.num { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: 13px; letter-spacing: 0; flex: none; font-weight: 600; }
+.step p { color: var(--muted); font-size: 15px; }
+.step p b { color: var(--ink); font-weight: 600; }
+.step .mono { border-top: 1px solid var(--line); padding-top: 10px; }
+
+/* files + agents */
+.files { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.tree { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 18px 20px; font: 13px/1.85 var(--mono); color: var(--muted); overflow-x: auto; min-width: 0; }
+.tree pre { margin: 0; }
+.tree b { color: var(--ink); font-weight: 500; }
+.files-text { display: grid; gap: 16px; }
+.files-text h2 { font: 700 clamp(28px, 3.4vw, 40px)/1.06 var(--sans); letter-spacing: -0.03em; }
+.files-text p { color: var(--muted); font-size: 17px; }
+.agents { display: flex; flex-wrap: wrap; gap: 8px; }
+.agents span { font-size: 13px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); }
+
+/* roadmap */
+.road { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.road article { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 20px; display: grid; gap: 10px; align-content: start; }
+.road .pill { justify-self: start; }
+.road h3 { font-size: 18px; letter-spacing: -0.015em; }
+.road p { color: var(--muted); font-size: 15px; }
+.road .url { font: 13px var(--mono); color: var(--ink); }
+.road .url span { background: var(--wheel); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 600; }
+.today { display: flex; gap: 8px; align-items: baseline; border-top: 1px solid var(--line); padding-top: 12px; font-size: 14px; color: var(--muted); }
+
+/* install: the setup page's command rows */
+.install { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 40px; align-items: start; }
+.install h2 { font: 700 clamp(32px, 4.2vw, 48px)/1.04 var(--sans); letter-spacing: -0.035em; margin-bottom: 14px; }
+.install > div > p { color: var(--muted); font-size: 17px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 20px; display: grid; gap: 14px; min-width: 0; }
+.card h3 { display: flex; align-items: center; gap: 8px; font-size: 16px; }
+.card h3 .num { width: 20px; height: 20px; font-size: 12px; }
+.card p { color: var(--muted); font-size: 14px; }
+.cmd { display: flex; gap: 8px; align-items: center; background: var(--bg); border: 1px solid var(--line); border-radius: var(--r); padding: 8px 8px 8px 12px; min-width: 0; }
+.cmd code { flex: 1; min-width: 0; font: 12.5px/1.5 var(--mono); overflow-wrap: anywhere; }
+.cmd .ghost.sm { flex: none; }
+.share { margin-top: 24px; display: grid; gap: 8px; }
+
+footer.site { border-top: 1px solid var(--line); padding-block: 28px 40px; }
+footer.site .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
+footer.site p { color: var(--muted); font-size: 13px; max-width: 70ch; }
+
+@media (max-width: 1020px) {
+  .wheels { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .eq { display: none; }
+  .book-wheel { grid-column: 1 / -1; margin-top: 12px; }
+  .book-wheel .disc { max-width: 140px; }
+}
+@media (max-width: 900px) {
+  .hero, .head, .files, .install { grid-template-columns: minmax(0, 1fr); }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .mash { grid-template-rows: repeat(8, 52px); }
+  .road { grid-template-columns: minmax(0, 1fr); }
+  .readout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .nav nav a:not(.ghost) { display: none; }
+  .wheels { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 12px; }
+  .mash { grid-template-columns: repeat(6, minmax(0, 1fr)); grid-template-rows: repeat(13, 50px); }
+  .f-loud { grid-area: 1 / 1 / 4 / 7; } .f-field { grid-area: 4 / 1 / 7 / 5; } .f-lumen { grid-area: 4 / 5 / 9 / 7; }
+  .f-ledger { grid-area: 7 / 1 / 9 / 5; } .f-north { grid-area: 9 / 1 / 12 / 4; } .f-pal { grid-area: 9 / 4 / 14 / 5; }
+  .f-rise { grid-area: 12 / 1 / 14 / 4; } .f-time { grid-area: 9 / 5 / 13 / 7; } .f-key { grid-area: 13 / 5 / 14 / 7; grid-auto-flow: column; }
+  .f-loud .sticker { display: none; } .f-loud .win { width: 56%; } .f-time .scale, .f-time .ease, .f-time .ln > b { display: none; } .f-time .ln { grid-template-columns: 1fr; } .f-time .ph { left: calc(100% * var(--t, 1)); } .f-time { padding-top: 22px; }
+  .f-north svg { height: 60px; } .f-north .endp { bottom: 51px; } .f-pal i { padding: 2px 4px; } .f-lumen .ring { width: 46px; height: 62px; } .f-lumen .ring i { transform: rotateY(calc(var(--i) * 60deg)) translateZ(70px); } .f-key .keys { display: none; }
+  .f-ledger .top, .f-ledger .r, .f-ledger .row:nth-of-type(4), .f-rise .tagm { display: none; } .f-ledger { align-content: center; }
+  .f-pal i { font-size: 0; }
+  .f-lumen .tagm, .f-time .tagm, .f-ledger .tagm { display: none; }
+  .f-field .diff { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glow, .book-wheel .disc, .scan, .f-rise > span, .f-key *, .f-key .mk::before, .f-key .mk::after, .f-lumen .ring, .f-lumen .halo, .f-lumen::after, .f-loud .prog i, .f-loud .sticker::before, .f-ledger mark, .f-pal i, .f-north .line, .f-north .area, .f-north .endp, .f-north .endp::after { animation: none !important; }
+  .f-north .line { stroke-dashoffset: 0; } .f-north .area, .f-north .endp { opacity: 1; } .f-ledger mark { background-size: 100% 100%; } .f-loud .prog i { width: 70%; }
+  .scan { display: none; }
+  .caret { animation: none; }
+  .popup li.new { animation: none; }
+  .disc { transition: none; }
+}
+</style>
+</head>
+<body>
+
+
+<header class="wrap nav">
+  <a class="brand" href="#top" aria-label="Artbook home"><span class="mark"></span>artbook</a>
+  <nav aria-label="Main">
+    <a href="#wheels">Your book</a>
+    <a href="#how">How it works</a>
+    <a href="#next">What's next</a>
+    <a class="ghost sm" href="https://github.com/bryfeng/artspo">GitHub ↗</a>
+  </nav>
+</header>
+
+<main id="top" style="overflow-x: clip">
+  <div class="wrap hero">
+    <div class="hero-text">
+      <span class="eyebrow"><span class="mark"></span><span><b>Artspo</b> for Chrome · open source</span></span>
+      <h1>The art book behind what you <span class="w">make.</span></h1>
+      <p class="lede">Studios keep an art book: the references and studies behind the finished thing. <b>Artbook keeps yours.</b> Clip the sites you love, let your agent find the patterns in them, and make work that remembers where it came from.</p>
+      <div class="ctas">
+        <a class="primary" href="https://github.com/bryfeng/artspo">Get Artspo</a>
+        <a class="ghost" href="#how">How it works</a>
+      </div>
+      <p class="fine">A Chrome extension plus an agent skill. No account, no server. Your library is plain files.</p>
+    </div>
+
+    <div class="stage">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="popup" role="img" aria-label="The Artspo popup clipping a site called Fieldnote, with the note: The diff that types itself sells the product in one line. The clip then appears in Recent and goes from queued to inspecting to done.">
+        <header><span class="pbrand"><span class="mark"></span>artspo</span><span class="qs" id="qs">all inspected</span></header>
+        <div class="page"><span class="fav">F</span><div style="min-width:0"><div class="pt">Fieldnote · Quiet tools for careful work</div><div class="ph">fieldnote.example</div></div></div>
+        <div class="field"><span>Collection</span><div class="in sel"><span>editorial-warm</span><span class="muted">▾</span></div></div>
+        <div class="field"><span>Note <em>what caught your eye?</em></span><div class="in ta" id="note">The diff that types itself sells the product in one line.</div></div>
+        <div class="field"><span>Tags</span><div class="in">serif, paper</div></div>
+        <div class="primary clip" id="clip">Clip <kbd>⌘↵</kbd></div>
+        <div class="recent">
+          <div class="rh"><span class="cap">Recent</span><span class="ghost sm">↻ Re-inspect all</span></div>
+          <ul id="jobs">
+            <li data-k="fieldnote"><div class="jm"><div class="jt">Fieldnote · Quiet tools for careful work</div><div class="js">editorial-warm · just now</div></div><span class="pill done">done</span><span class="ja">note</span></li>
+            <li><div class="jm"><div class="jt">Loud Machine · A computer that jokes</div><div class="js">loud · 2m ago</div></div><span class="pill done">done</span><span class="ja note">+ note</span></li>
+            <li><div class="jm"><div class="jt">Ledger Lab · Measurement is the product</div><div class="js">research · 3m ago</div></div><span class="pill done">done</span><span class="ja">note</span></li>
+          </ul>
+        </div>
+        <footer><span>Inspect after 2 min idle</span><span>Catalogue ↗</span></footer>
+      </div>
+      <button class="ghost sm replay" id="replay" type="button">↻ Replay the clip</button>
+    </div>
+  </div>
+
+  <section class="band" id="wheels">
+    <div class="wrap">
+      <div class="head">
+        <h2>Every clip has a palette. Your book is all of them.</h2>
+        <p>Artspo measures each page you clip: surfaces by share of the page, text by amount of text. Here each clip is a wheel, surfaces outside and text inside. Pick one to read its measurements.</p>
+      </div>
+      <div class="wheels">
+        <button class="wh" type="button" aria-pressed="true"><span class="disc"></span><span class="n">Fieldnote</span><span class="c">editorial-warm</span></button>
+        <button class="wh" type="button" aria-pressed="false"><span class="disc"></span><span class="n">Loud Machine</span><span class="c">loud</span></button>
+        <button class="wh" type="button" aria-pressed="false"><span class="disc"></span><span class="n">Ledger Lab</span><span class="c">research</span></button>
+        <button class="wh" type="button" aria-pressed="false"><span class="disc"></span><span class="n">Lumen</span><span class="c">media</span></button>
+        <button class="wh" type="button" aria-pressed="false"><span class="disc"></span><span class="n">Northwind</span><span class="c">fintech-serious</span></button>
+        <span class="eq" aria-hidden="true">→</span>
+        <div class="book-wheel"><span class="disc" aria-hidden="true"></span><span class="n">your artbook</span><span class="mono">5 clips · 29 patterns · 3 works</span></div>
+      </div>
+      <div class="readout" aria-live="polite">
+        <h3><span id="rName">Fieldnote</span><span class="mono" id="rHost">fieldnote.example</span></h3>
+        <div class="col"><span class="cap">Surfaces · share of the page</span><div class="bar" id="rSurf"></div><div class="sw" id="rSurfSw"></div></div>
+        <div class="col"><span class="cap">Text · by amount of text</span><div class="bar" id="rText"></div><div class="sw" id="rTextSw"></div></div>
+        <div class="note-line"><span class="cap">Your note</span><span id="rNote">The diff that types itself sells the product in one line.</span></div>
+      </div>
+      <p class="fine" style="margin-top:12px">Sites shown are demo sites built for Artspo, not real companies.</p>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap">
+      <div class="head">
+        <h2>Clip, distill, make.</h2>
+        <p>Five sites go in. Artspo measures each one, your agent pulls out the moves they share, and you make from the pieces. Everything on this board is rebuilt from measurements, not copied.</p>
+      </div>
+      <div class="mash" role="img" aria-label="A collage of fragments from five demo sites and three patterns: giant pink type with a loading dialog and a sticker, a serif headline with a code diff that edits itself, a dark 3D carousel of media tiles, numbered rows with a highlighter sweeping in, a navy panel with a counting number and a gold chart, a strip of paint chips from every site, lines rising a beat apart, the Artspo clip key, and a motion timeline with a moving playhead. Measurement tags are pinned to each fragment, and a color line sweeps across like an inspection pass.">
+        <div class="frag f-loud">
+          <span class="big">Loud.</span>
+          <div class="win"><div class="tb">series_a.exe<i></i><i></i></div><div class="wb"><strong>We raised a really big round.</strong><div class="prog"><i></i></div><span>loading confidence<span class="dots"></span></span></div></div>
+          <span class="sticker">v2!</span>
+          <span class="tagm" style="left:10px;top:10px">#F386A1 · 42%</span><span class="tagm" style="left:10px;top:36px">150px / 0.8 leading</span>
+        </div>
+        <div class="frag f-field">
+          <span class="pilltag">For teams who think in drafts</span>
+          <div class="h">Quiet tools for careful work.</div>
+          <div class="diff"><div class="fn"><span>settings.yml</span><span>1 change</span></div><div class="body"><span class="del">- plan: <s id="fdel">legacy</s></span><span class="add" id="fadd">+ plan: fieldnote</span></div></div>
+          <span class="tagm" style="left:10px;bottom:10px">serif 68/500 · -0.022em</span>
+        </div>
+        <div class="frag f-lumen">
+          <div class="h">Picture it.<br>Then watch it land.</div>
+          <div class="stage3d"><span class="halo"></span><div class="ring">
+            <i style="--i:0;background:linear-gradient(160deg,#3B4A6B,#A86B4A)"></i><i style="--i:1;background:linear-gradient(160deg,#6B2E2E,#F04E23)"></i><i style="--i:2;background:linear-gradient(160deg,#1F5C45,#9FD8A8)"></i><i style="--i:3;background:linear-gradient(160deg,#5A2F78,#D49BE0)"></i><i style="--i:4;background:linear-gradient(160deg,#6B5A24,#FFF78B)"></i><i style="--i:5;background:linear-gradient(160deg,#20304A,#8EA6FF)"></i>
+          </div></div>
+          <span class="meta">one prompt · <b>every model</b></span>
+          <span class="tagm lt" style="left:8px;top:8px">1500ms expo-out</span>
+        </div>
+        <div class="frag f-ledger">
+          <div class="top"><span>Ledger Lab / Research</span><span>Index 01–03</span></div>
+          <div class="row"><span class="chip" style="background:#FFB4D9">01</span><span>Measurement is <mark>the product</mark></span><span class="r">p.4</span></div>
+          <div class="row"><span class="chip" style="background:#FFE45C">02</span><span>What we measure</span><span class="r">p.9</span></div>
+          <div class="row"><span class="chip" style="background:#7FE3F0">03</span><span>Open problems</span><span class="r">p.17</span></div>
+          <span class="tagm" style="right:8px;bottom:8px">p · highlighter-marks</span>
+        </div>
+        <div class="frag f-north">
+          <span class="k">Settled this quarter</span>
+          <span class="amt" id="amt">$4.2B</span>
+          <span class="delta">▲ 18.4% QoQ</span>
+          <svg viewBox="0 0 200 92" preserveAspectRatio="none" aria-hidden="true">
+            <defs><linearGradient id="nwFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#E3B341" stop-opacity=".35"/><stop offset="1" stop-color="#E3B341" stop-opacity="0"/></linearGradient></defs>
+            <path class="area" d="M0 78 L20 74 L40 76 L60 64 L80 66 L100 52 L120 56 L140 40 L160 34 L180 22 L192 14 L192 92 L0 92 Z"/>
+            <path class="line" pathLength="1" d="M0 78 L20 74 L40 76 L60 64 L80 66 L100 52 L120 56 L140 40 L160 34 L180 22 L192 14"/>
+          </svg>
+          <span class="endp" aria-hidden="true"></span>
+          <span class="tagm lt" style="left:10px;top:10px">#0B1F33 · 40%</span>
+        </div>
+        <div class="frag f-pal">
+          <i style="--g:3;background:#F4EBDA;color:#4B4036;animation-delay:.05s">#F4EBDA<span>94%</span></i>
+          <i style="--g:2.2;background:#F386A1;color:#14171B;animation-delay:.12s">#F386A1<span>42%</span></i>
+          <i style="--g:1.8;background:#0B1F33;color:#F5F7FA;animation-delay:.19s">#0B1F33<span>40%</span></i>
+          <i style="--g:1.2;background:#BCF891;color:#14171B;animation-delay:.26s">#BCF891<span>5%</span></i>
+          <i style="--g:1;background:#F04E23;color:#FFF;animation-delay:.33s">#F04E23<span>4%</span></i>
+          <i style="--g:.9;background:#E3B341;color:#14171B;animation-delay:.4s">#E3B341<span>5%</span></i>
+          <i style="--g:.8;background:#FFF78B;color:#14171B;animation-delay:.47s">#FFF78B<span>3%</span></i>
+        </div>
+        <div class="frag f-rise"><span>Each line arrives</span><span>a beat after the last,</span><span>then settles softly.</span><span class="tagm" style="right:8px;top:8px">p · soft-rise · 90ms stagger</span></div>
+        <div class="frag f-key"><span class="mk"></span><span class="keys"><b>⌥</b><b>⇧</b><b>S</b></span></div>
+        <div class="frag f-time">
+          <div class="scale"><span></span><span><i>0</i><i>500</i><i>1000</i><i>1500</i></span></div>
+          <div class="tracks" id="tracks">
+            <div class="ln"><b>h1</b><span class="tr" data-s="0" data-d="1500" data-c="#ff6b4a"></span></div>
+            <div class="ln"><b>tiles</b><span class="tr" data-s="120" data-d="750" data-c="#ffd25a"></span></div>
+            <div class="ln"><b>plan</b><span class="tr" data-s="300" data-d="750" data-c="#57c99a"></span></div>
+            <div class="ln"><b>prompt</b><span class="tr" data-s="500" data-d="1200" data-c="#5b7cff"></span></div>
+            <span class="ph flip" id="ph" data-ms="1700ms"></span>
+          </div>
+          <span class="ease">expo-out · cubic-out · 4 on load</span>
+        </div>
+        <span class="scan" aria-hidden="true"></span>
+      </div>
+      <div class="mash-cap"><span>Fragments of five demo sites and three patterns from one library.</span><span class="mono">5 clips · 3 patterns · 1 board</span></div>
+
+      <div class="steps">
+        <div class="step">
+          <h3><span class="num">1</span>Clip</h3>
+          <p>Press <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>S</kbd> on a site and write one line about what caught your eye. While you're away, Artspo scrolls the page and records its <b>palette, type, shapes and every animation</b>.</p>
+          <span class="mono">clip.md · seen.jpg · filmstrip/</span>
+        </div>
+        <div class="step">
+          <h3><span class="num">2</span>Distill</h3>
+          <p>Your agent finds what your clips share: <b>languages</b> (whole looks) and <b>techniques</b> (single moves), each with a recipe, a live specimen and the evidence behind it.</p>
+          <span class="mono">patterns/languages · patterns/techniques</span>
+        </div>
+        <div class="step">
+          <h3><span class="num">3</span>Make</h3>
+          <p>Ask for a brand direction, a motion spec or a page. Each work lists the <b>patterns and clips it came from</b>, and the catalogue lets you trace any of it back.</p>
+          <span class="mono">works/ · catalogue.html</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap files">
+      <div class="tree" aria-label="The Artspo library folder">
+<pre><b>artspo/</b>
+  <b>editorial-warm/</b>            # a collection is a project
+    collection.md             # its brief
+    <b>2026-10-16_fieldnote_6vj0/</b>
+      clip.md                 # the record
+      seen.jpg  full.jpg  filmstrip/
+  <b>patterns/</b>
+    INDEX.md
+    languages/  techniques/
+  <b>works/</b>
+    <b>2026-10-16_launch-page/</b>
+      work.md  index.html  tokens.css
+  catalogue.html</pre>
+      </div>
+      <div class="files-text">
+        <span class="cap">No server · no account</span>
+        <h2>Plain files, readable by any agent.</h2>
+        <p>Everything lives in a folder on your computer as markdown and images. The skill teaches your coding agent to read the library, distill it, make from it and rebuild the catalogue.</p>
+        <div class="agents"><span>Claude Code</span><span>Codex</span><span>Cursor</span><span>Gemini CLI</span><span>Copilot</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="next">
+    <div class="wrap">
+      <div class="head">
+        <h2>Books worth borrowing.</h2>
+        <p>Artspo makes your book. Artbook is where books get shared, so you can learn from someone else's taste and build on it.</p>
+      </div>
+      <div class="road">
+        <article>
+          <span class="pill next">next</span>
+          <h3>A home for your book</h3>
+          <p class="url">artbook.dev/<span>you</span></p>
+          <p>Your catalogue at your own address, updated when your library changes.</p>
+          <div class="today"><span class="pill done">today</span><span>Publish the public edition to any static host in one command.</span></div>
+        </article>
+        <article>
+          <span class="pill next">next</span>
+          <h3>Remix a book</h3>
+          <p>Import a friend's collection, with its patterns and works, into your library, then make from it with your agent.</p>
+          <div class="today"><span class="pill done">today</span><span>Hand over the collection folder and the pattern files it uses.</span></div>
+        </article>
+        <article>
+          <span class="pill next">next</span>
+          <h3>Lift the prompts</h3>
+          <p>Each work in a shared book shows the request that made it, so you can run it against your own library.</p>
+          <div class="today"><span class="pill done">today</span><span>Every work.md records its brief and what it was made from.</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap install">
+      <div>
+        <h2>Start your book.</h2>
+        <p>Chrome 118 or newer. Python 3 is optional; agents use it to build the catalogue.</p>
+        <div class="share">
+          <span class="cap">Share your book today</span>
+          <div class="cmd"><code id="c3">python3 extension/skills/artspo/catalogue.py ~/Downloads/artspo --public --site ~/artbook-site</code><button class="ghost sm copy" type="button" data-copy="c3">Copy</button></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3><span class="num">1</span>Get the code and the skill</h3>
+        <div class="cmd"><code id="c1">git clone https://github.com/bryfeng/artspo ~/code/artspo</code><button class="ghost sm copy" type="button" data-copy="c1">Copy</button></div>
+        <div class="cmd"><code id="c2">cd ~/code/artspo &amp;&amp; sh install.sh</code><button class="ghost sm copy" type="button" data-copy="c2">Copy</button></div>
+        <h3><span class="num">2</span>Load the extension</h3>
+        <p>Open chrome://extensions, turn on Developer mode, click Load unpacked and choose the extension folder. Pin Artspo to the toolbar.</p>
+        <h3><span class="num">3</span>Clip something</h3>
+        <p>Pick where clips go, name a few collections, then press <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>S</kbd> on a site you like.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" style="font-size:16px" aria-label="Artbook, back to top"><span class="mark" style="width:14px;height:14px;border-radius:4px"></span>artbook</a>
+    <p>Artspo is open source under the MIT license. Sites on this page are demos built for it. Screenshots and measurements in a library belong to the sites clipped; patterns and works are yours.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // wheels: demo clips, measured the way clip.md records them
+  var clips = [
+    { name: 'Fieldnote', host: 'fieldnote.example', note: 'The diff that types itself sells the product in one line.',
+      surf: [['#F4EBDA', 94], ['#FAF5EC', 5.6], ['#E4D8C3', 0.4]], text: [['#4B4036', 52], ['#2A2119', 32], ['#A99B8B', 7], ['#A64D1D', 6], ['#F5F0E7', 3]] },
+    { name: 'Loud Machine', host: 'loud.example', note: 'Huge type that turns into a shape. Not afraid to be funny.',
+      surf: [['#F386A1', 42], ['#14171B', 28], ['#FFFFFF', 22], ['#3BB273', 8]], text: [['#14171B', 68], ['#FFFFFF', 24], ['#F386A1', 8]] },
+    { name: 'Ledger Lab', host: 'ledgerlab.example', note: 'Numbered like a paper. The green marker is the only color.',
+      surf: [['#FFFFFF', 71], ['#F2F3F5', 22], ['#BCF891', 5], ['#14171B', 2]], text: [['#14171B', 61], ['#6E7782', 29], ['#3BD966', 10]] },
+    { name: 'Lumen', host: 'lumen.example', note: 'Tiles develop like photos instead of sliding in.',
+      surf: [['#0E0E0E', 55], ['#202020', 20], ['#FAFAFA', 18], ['#F04E23', 4], ['#FFF78B', 3]], text: [['#FAFAFA', 64], ['#9A9A9A', 26], ['#F04E23', 10]] },
+    { name: 'Northwind', host: 'northwind.example', note: 'Serious money, calm navy, one gold line for the number that matters.',
+      surf: [['#F5F7FA', 46], ['#0B1F33', 40], ['#1E6FD9', 9], ['#E3B341', 5]], text: [['#0B1F33', 58], ['#5A6B7D', 30], ['#1E6FD9', 8], ['#E3B341', 4]] }
+  ];
+  function conic(list) {
+    var at = 0, total = list.reduce(function (s, c) { return s + c[1]; }, 0), stops = [];
+    list.forEach(function (c) { var a = at / total * 360, b = (at + c[1]) / total * 360; stops.push(c[0] + ' ' + a.toFixed(1) + 'deg ' + b.toFixed(1) + 'deg'); at += c[1]; });
+    return 'conic-gradient(from -90deg, ' + stops.join(', ') + ')';
+  }
+  function fill(barEl, swEl, list) {
+    barEl.innerHTML = ''; swEl.innerHTML = '';
+    list.forEach(function (c) {
+      var i = document.createElement('i'); i.style.background = c[0]; i.style.flex = c[1] + ' 0 0'; barEl.appendChild(i);
+      var s = document.createElement('span'); s.style.setProperty('--c', c[0]); s.textContent = c[0] + ' ' + c[1] + '%'; swEl.appendChild(s);
+    });
+  }
+  var buttons = document.querySelectorAll('.wh');
+  function show(i) {
+    var c = clips[i];
+    buttons.forEach(function (b, j) { b.setAttribute('aria-pressed', j === i ? 'true' : 'false'); });
+    document.getElementById('rName').textContent = c.name;
+    document.getElementById('rHost').textContent = c.host;
+    document.getElementById('rNote').textContent = c.note;
+    fill(document.getElementById('rSurf'), document.getElementById('rSurfSw'), c.surf);
+    fill(document.getElementById('rText'), document.getElementById('rTextSw'), c.text);
+  }
+  buttons.forEach(function (b, i) {
+    var d = b.querySelector('.disc');
+    d.style.setProperty('--outer', conic(clips[i].surf));
+    d.style.setProperty('--inner', conic(clips[i].text));
+    b.addEventListener('click', function () { show(i); });
+  });
+  show(0);
+
+  // the popup acts out a clip
+  var note = document.getElementById('note'), qs = document.getElementById('qs'), jobs = document.getElementById('jobs'), clip = document.getElementById('clip');
+  var text = 'The diff that types itself sells the product in one line.';
+  var timers = [];
+  function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+  function play() {
+    timers.forEach(clearTimeout); timers = [];
+    var row = jobs.querySelector('[data-k="fieldnote"]'); if (row) row.remove();
+    qs.textContent = 'all inspected';
+    note.classList.add('focus'); note.innerHTML = '<span class="caret"></span>';
+    var n = 0;
+    later(function type() {
+      n++; note.textContent = text.slice(0, n);
+      var c = document.createElement('span'); c.className = 'caret'; note.appendChild(c);
+      if (n < text.length) later(type, 38 + Math.random() * 40); else later(press, 500);
+    }, 500);
+    function press() {
+      note.classList.remove('focus'); note.textContent = text;
+      clip.classList.add('press');
+      later(function () { clip.classList.remove('press'); add(); }, 160);
+    }
+    function add() {
+      var li = document.createElement('li'); li.className = 'new'; li.dataset.k = 'fieldnote';
+      li.innerHTML = '<div class="jm"><div class="jt">Fieldnote · Quiet tools for careful work</div><div class="js">editorial-warm · just now</div></div><span class="pill queued">queued</span><span class="ja">note</span>';
+      jobs.prepend(li); qs.textContent = '1 waiting for idle';
+      var pill = li.querySelector('.pill');
+      later(function () { pill.className = 'pill running'; pill.textContent = 'inspecting'; qs.textContent = 'inspecting 1'; }, 1400);
+      later(function () { pill.className = 'pill done'; pill.textContent = 'done'; qs.textContent = 'all inspected'; }, 3400);
+    }
+  }
+  document.getElementById('replay').addEventListener('click', play);
+  if (!reduce) play();
+
+  // the board: timeline playhead, Fieldnote's self-editing diff, Northwind's count-up
+  (function () {
+    var tracks = document.getElementById('tracks'); if (!tracks) return;
+    var TOTAL = 1700, rows = [].slice.call(tracks.querySelectorAll('.tr'));
+    rows.forEach(function (tr) {
+      var s = +tr.dataset.s, d = +tr.dataset.d, c = tr.dataset.c;
+      var g = document.createElement('i'); g.className = 'g'; g.style.cssText = 'left:' + (s / TOTAL * 100) + '%;width:' + (d / TOTAL * 100) + '%;background:' + c;
+      var f = document.createElement('i'); f.className = 'f'; f.style.cssText = 'left:' + (s / TOTAL * 100) + '%;width:' + (d / TOTAL * 100) + '%;background:' + c;
+      tr.appendChild(g); tr.appendChild(f); tr._f = f;
+    });
+    var ph = document.getElementById('ph');
+    var amt = document.getElementById('amt'), del = document.getElementById('fdel'), add = document.getElementById('fadd');
+    if (reduce) return;
+    // timeline: 1.7s of motion played over 2.6s, then a pause
+    var start = performance.now();
+    function frame(now) {
+      var cyc = (now - start) % 4200, t = Math.min(cyc / 2600, 1), ms = t * TOTAL;
+      ph.style.setProperty('--t', t.toFixed(4)); ph.dataset.ms = Math.round(ms) + 'ms'; ph.classList.toggle('flip', t > 0.6);
+      rows.forEach(function (tr) {
+        var s = +tr.dataset.s, d = +tr.dataset.d, p = Math.max(0, Math.min(1, (ms - s) / d));
+        tr._f.style.width = (p * d / TOTAL * 100) + '%';
+      });
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+    // count up once
+    var t0 = null;
+    function count(now) {
+      if (!t0) t0 = now; var p = Math.min((now - t0) / 1800, 1), e = 1 - Math.pow(1 - p, 4);
+      amt.textContent = '$' + (4.2 * e).toFixed(p < 1 ? 2 : 1) + 'B';
+      if (p < 1) requestAnimationFrame(count);
+    }
+    setTimeout(function () { requestAnimationFrame(count); }, 300);
+    // diff: strike the old value, type the new one, hold, repeat
+    var word = 'fieldnote';
+    function edit() {
+      del.style.setProperty('--strike', '0%'); add.innerHTML = '+ plan: <span class="caret"></span>';
+      var k = 0, sp = 0;
+      (function strike() { sp += 8; del.style.setProperty('--strike', sp + '%'); if (sp < 100) setTimeout(strike, 22); else setTimeout(type, 260); })();
+      function type() {
+        k++; add.textContent = '+ plan: ' + word.slice(0, k);
+        var c = document.createElement('span'); c.className = 'caret'; add.appendChild(c);
+        if (k < word.length) setTimeout(type, 70 + Math.random() * 50); else setTimeout(edit, 3200);
+      }
+    }
+    setTimeout(edit, 700);
+  })();
+
+  // copy buttons
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = document.getElementById(btn.dataset.copy);
+      function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); }
+      function fallback() { var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected'); }
+      try { navigator.clipboard.writeText(el.textContent).then(function () { done('Copied'); }, fallback); } catch (e) { fallback(); }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
