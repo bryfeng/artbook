@@ -1,0 +1,160 @@
+{
+ "key": "2026-10-14_preferencemodel-com_by8f",
+ "site": "preferencemodel.com",
+ "url": "https://www.preferencemodel.com/",
+ "title": "Preference Model",
+ "collection": "inbox",
+ "clipped": "2026-10-14",
+ "patterns": [
+  "https://artbook.dev/library/agents/patterns/research-index.json",
+  "https://artbook.dev/library/agents/patterns/retro-machine-pop.json",
+  "https://artbook.dev/library/agents/patterns/color-indexed-sections.json",
+  "https://artbook.dev/library/agents/patterns/numbered-sections.json",
+  "https://artbook.dev/library/agents/patterns/ruled-structure.json",
+  "https://artbook.dev/library/agents/patterns/static-by-design.json",
+  "https://artbook.dev/library/agents/patterns/hard-edges-flat-depth.json",
+  "https://artbook.dev/library/agents/patterns/machine-voice-labels.json",
+  "https://artbook.dev/library/agents/patterns/one-family-scale-hierarchy.json"
+ ],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#FFFFFF",
+     "pct": 48.0
+    },
+    {
+     "c": "#E8E8E8",
+     "pct": 27.0
+    },
+    {
+     "c": "#FAB3F6",
+     "pct": 12.0
+    },
+    {
+     "c": "#000000",
+     "pct": 11.0
+    }
+   ],
+   "text": [
+    {
+     "c": "#000000",
+     "pct": 80.0
+    },
+    {
+     "c": "#FFFFFF",
+     "pct": 20.0
+    }
+   ],
+   "accents": [],
+   "theme_color": ""
+  },
+  "type": {
+   "display": {
+    "family": "MartianMono",
+    "px": 20.0,
+    "weight": 500,
+    "ls": 0,
+    "lh": 1.5,
+    "upper": true
+   },
+   "body": {
+    "family": "TWKLausanne",
+    "px": 20.0,
+    "lh": 28.0
+   },
+   "families": [
+    {
+     "name": "TWKLausanne",
+     "pct": 88
+    },
+    {
+     "name": "MartianMono",
+     "pct": 11
+    },
+    {
+     "name": "FKRasterGroteskSharp",
+     "pct": 1
+    }
+   ],
+   "scale": [
+    {
+     "px": 36.0,
+     "weight": 300,
+     "family": "TWKLausanne"
+    },
+    {
+     "px": 24.0,
+     "weight": 300,
+     "family": "TWKLausanne"
+    },
+    {
+     "px": 20.0,
+     "weight": 500,
+     "family": "MartianMono"
+    },
+    {
+     "px": 18.0,
+     "weight": 350,
+     "family": "TWKLausanne"
+    }
+   ],
+   "webfonts": "FKRasterGroteskSharp 400, MartianMono 500, TWKLausanne 300, TWKLausanne 350"
+  },
+  "shape": {
+   "radii": [],
+   "shadows": [],
+   "borders": [
+    {
+     "v": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.3)",
+     "n": 8,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #000000",
+     "n": 5,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #FFFFFF",
+     "n": 1,
+     "eg": ""
+    }
+   ],
+   "spacing": "4px grid; section padding 50px, 32px, 16px, 40px; gaps 24px, 16px, 12px, 8px"
+  },
+  "buttons": [
+   {
+    "filled": false,
+    "fill": "transparent",
+    "text": "#000000",
+    "radius": "0px",
+    "padding": "16px 16px",
+    "size": 36.0,
+    "weight": 400,
+    "border": "2px #000000",
+    "height": 90
+   }
+  ],
+  "motion": {
+   "libraries": "none detected (plain CSS/JS)",
+   "timeline": [],
+   "keyframes": {},
+   "declared_transitions": [
+    {
+     "props": "border-color, color, background-color, outline-color, text-decoration-color",
+     "ms": 300,
+     "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+     "easeName": "",
+     "n": 68,
+     "eg": "span.blog-list-title.group-hover:text-green, a.careers-row, article.use-case-car"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown"
+  ]
+ },
+ "prompt": "Use the measured design system of Preference Model (preferencemodel.com), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #FFFFFF 48%, #E8E8E8 27%, #FAB3F6 12%, #000000 11%\n- Text, by amount of text: #000000 80%, #FFFFFF 20%\n\n## Type\n- Display: MartianMono 20px/500, letter-spacing 0em, line-height 1.5, uppercase\n- Body: TWKLausanne 20px, line-height 28px\n- Scale (px/weight): 36/300, 24/300, 20/500, 18/350\n- Families by text share: TWKLausanne 88%, MartianMono 11%, FKRasterGroteskSharp 1%\n\n## Shape\n- Borders: 1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.3) (8×); 1px solid #000000 (5×); 1px solid #FFFFFF (1×)\n- Spacing: 4px grid; section padding 50px, 32px, 16px, 40px; gaps 24px, 16px, 12px, 8px\n\n## Buttons\n- outline, text #000000, radius 0px, padding 16px 16px, 36px/400, border 2px #000000\n\n## Motion\n- Libraries: none detected (plain CSS/JS)\n- Declared transition on border-color, color, background-color, outline-color, text-decoration-color: 300ms cubic-bezier(0.4, 0, 0.2, 1) (68 elements)\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n\n## Patterns in this book built on it\nResearch index, Retro machine pop, Color-indexed sections, Numbered sections, Ruled structure, Static by design, Hard edges, flat depth, Machine-voice labels, One family, scale does the work\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

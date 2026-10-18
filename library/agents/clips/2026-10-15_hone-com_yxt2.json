@@ -1,0 +1,1509 @@
+{
+ "key": "2026-10-15_hone-com_yxt2",
+ "site": "hone.com",
+ "url": "https://hone.com/",
+ "title": "Hone: AI Engines That Own Outcomes",
+ "collection": "inbox",
+ "clipped": "2026-10-15",
+ "patterns": [
+  "https://artbook.dev/library/agents/patterns/cinematic-media-canvas.json",
+  "https://artbook.dev/library/agents/patterns/research-index.json",
+  "https://artbook.dev/library/agents/patterns/accent-rationing.json",
+  "https://artbook.dev/library/agents/patterns/color-indexed-sections.json",
+  "https://artbook.dev/library/agents/patterns/highlighter-marks.json",
+  "https://artbook.dev/library/agents/patterns/announcement-bar.json",
+  "https://artbook.dev/library/agents/patterns/numbered-sections.json",
+  "https://artbook.dev/library/agents/patterns/ruled-structure.json",
+  "https://artbook.dev/library/agents/patterns/inertial-smooth-scroll.json",
+  "https://artbook.dev/library/agents/patterns/motion-timing-tiers.json",
+  "https://artbook.dev/library/agents/patterns/soft-rise-reveal.json",
+  "https://artbook.dev/library/agents/patterns/spring-for-characters.json",
+  "https://artbook.dev/library/agents/patterns/hard-edges-flat-depth.json",
+  "https://artbook.dev/library/agents/patterns/one-family-scale-hierarchy.json",
+  "https://artbook.dev/library/agents/patterns/oversized-tight-display.json"
+ ],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#FFFFFF",
+     "pct": 48.0
+    },
+    {
+     "c": "#000000",
+     "pct": 20.0
+    },
+    {
+     "c": "#001115",
+     "pct": 5.8
+    },
+    {
+     "c": "#BCF891",
+     "pct": 3.1
+    },
+    {
+     "c": "#3BD966",
+     "pct": 2.9
+    },
+    {
+     "c": "#CEE4E2",
+     "pct": 1.3
+    }
+   ],
+   "text": [
+    {
+     "c": "#000000",
+     "pct": 53.0
+    },
+    {
+     "c": "#6B8683",
+     "pct": 36.0
+    },
+    {
+     "c": "#FFFFFF",
+     "pct": 7.0
+    },
+    {
+     "c": "#001115",
+     "pct": 2.0
+    }
+   ],
+   "accents": [],
+   "theme_color": "#000000"
+  },
+  "type": {
+   "display": {
+    "family": "FT Aktual",
+    "px": 48.0,
+    "weight": 400,
+    "ls": -0.01,
+    "lh": 1.04,
+    "upper": false
+   },
+   "body": {
+    "family": "FT Aktual",
+    "px": 16.0,
+    "lh": 20.0
+   },
+   "families": [
+    {
+     "name": "FT Aktual",
+     "pct": 100
+    }
+   ],
+   "scale": [
+    {
+     "px": 120.0,
+     "weight": 400,
+     "family": "FT Aktual"
+    },
+    {
+     "px": 67.0,
+     "weight": 400,
+     "family": "FT Aktual"
+    },
+    {
+     "px": 48.0,
+     "weight": 400,
+     "family": "FT Aktual"
+    },
+    {
+     "px": 28.0,
+     "weight": 400,
+     "family": "FT Aktual"
+    }
+   ],
+   "webfonts": "FT Aktual 400, FT Aktual 500"
+  },
+  "shape": {
+   "radii": [
+    {
+     "v": "100%",
+     "n": 576,
+     "eg": "span.c-logo.-hoverable"
+    },
+    {
+     "v": "50%",
+     "n": 156,
+     "eg": "span.c-shape.-reveal"
+    },
+    {
+     "v": "38px",
+     "n": 1,
+     "eg": "span.c-logo"
+    },
+    {
+     "v": "60px",
+     "n": 1,
+     "eg": "span.c-logo"
+    }
+   ],
+   "shadows": [],
+   "borders": [
+    {
+     "v": "2px solid #CEE4E2",
+     "n": 577,
+     "eg": ""
+    },
+    {
+     "v": "2px solid #FFFFFF",
+     "n": 1,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #CEE4E2",
+     "n": 1,
+     "eg": ""
+    }
+   ],
+   "spacing": "no consistent grid; section padding 29.9531px, 166.939px, 20px, 111.641px; gaps 10px, 12px, 36px, 20px"
+  },
+  "buttons": [],
+  "motion": {
+   "libraries": "ScrollTrigger, Lenis smooth scroll, Swiper",
+   "timeline": [
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.c-logo.-hoverable",
+     "kind": "animation",
+     "ms": 1000,
+     "ease": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+     "name": "logo-animation-deactivate"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.c-logo.-hoverable",
+     "kind": "animation",
+     "ms": 1000,
+     "ease": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+     "name": "logo-animation-deactivate-dash"
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 420,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "stagger": 120,
+     "approx": true,
+     "kf": [
+      {
+       "opacity": 1
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 420,
+     "ease": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+     "easeName": "back-out",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-29.18px -5.040000000000001px",
+       "scale": "1"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 420,
+     "ease": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+     "easeName": "back-out",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "29.18px 2.16px",
+       "scale": "1"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 320,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-19.799999999999997px 20px"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 320,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "stagger": 140,
+     "approx": true,
+     "kf": [
+      {
+       "translate": "0px 0px"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 4,
+     "label": "rect",
+     "kind": "waapi",
+     "ms": 320,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "stagger": 140,
+     "approx": true,
+     "kf": [
+      {
+       "scale": "1 1"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 320,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-27.799999999999997px 20px"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 260,
+     "ease": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+     "easeName": "back-out",
+     "stagger": 140,
+     "approx": true,
+     "kf": [
+      {
+       "scale": "1"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 320,
+     "ease": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+     "easeName": "back-out",
+     "stagger": 140,
+     "approx": true,
+     "kf": [
+      {
+       "scale": "1"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "0.00px -3.60px"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "approx": true,
+     "kf": [
+      {
+       "rotate": "-90deg"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "7.50px 0px"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-0.00px 0px"
+      }
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.c-hero-bg_circles",
+     "kind": "sampled",
+     "ms": 2480,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "rotate",
+       "-25deg",
+       "0deg"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.c-hero-bg_circle.-inner",
+     "kind": "sampled",
+     "ms": 1490,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.c-hero-bg_circle.-middle",
+     "kind": "sampled",
+     "ms": 1490,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "rotate",
+       "65deg",
+       "0deg"
+      ],
+      [
+       "scale",
+       "0.2",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.c-hero-bg_circle.-outer",
+     "kind": "sampled",
+     "ms": 1490,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "rotate",
+       "-45deg",
+       "0deg"
+      ],
+      [
+       "scale",
+       "0.4",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.c-hero-bg_gradient",
+     "kind": "sampled",
+     "ms": 1490,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.c-loader_logo",
+     "kind": "sampled",
+     "ms": 500,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "1",
+       "0.5"
+      ],
+      [
+       "opacity",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "0.00px -3.60px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "kf": [
+      {
+       "rotate": "-90deg"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "7.50px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-0.00px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "stagger": 140,
+     "when": "between scrollY 1371–1412",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "4.24px -2.55px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "stagger": 140,
+     "when": "between scrollY 1371–1412",
+     "approx": true,
+     "kf": [
+      {
+       "rotate": "-45deg"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "stagger": 140,
+     "when": "between scrollY 1371–1412",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "3.85px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "stagger": 140,
+     "when": "between scrollY 1371–1412",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-4.24px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 12,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 1436–9360",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "6.00px 0.00px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 12,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 1436–9360",
+     "approx": true,
+     "kf": [
+      {
+       "rotate": "0deg"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 14,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 1436–9360",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "2.00px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 7,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 1436–9360",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-6.00px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 8,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 260,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 2095–9360",
+     "approx": true,
+     "kf": [
+      {
+       "scale": "0"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 8,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 260,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 2095–9360",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "0px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "rect",
+     "kind": "waapi",
+     "ms": 260,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 2095–5019",
+     "approx": true,
+     "kf": [
+      {
+       "scale": "1 0"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "rect",
+     "kind": "waapi",
+     "ms": 260,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 2132–9360",
+     "approx": true,
+     "kf": [
+      {
+       "scale": "0 1"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 440,
+     "ease": "cubic-bezier(0.45, 0, 0.55, 1)",
+     "when": "at scrollY≈2147",
+     "kf": [
+      {
+       "translate": "-29.18px -5.040000000000001px",
+       "scale": "1",
+       "opacity": 1
+      },
+      {
+       "translate": "-31.514400000000002px -5.040000000000001px",
+       "scale": "1",
+       "opacity": 1,
+       "offset": 0.2
+      },
+      {
+       "translate": "0px 0px",
+       "scale": "0.6",
+       "opacity": 0
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 440,
+     "ease": "cubic-bezier(0.45, 0, 0.55, 1)",
+     "when": "at scrollY≈2154",
+     "kf": [
+      {
+       "translate": "29.18px 2.16px",
+       "scale": "1",
+       "opacity": 1
+      },
+      {
+       "translate": "31.514400000000002px 2.16px",
+       "scale": "1",
+       "opacity": 1,
+       "offset": 0.2
+      },
+      {
+       "translate": "0px 0px",
+       "scale": "0.6",
+       "opacity": 0
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 420,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 3598–10825",
+     "approx": true,
+     "kf": [
+      {
+       "opacity": 1
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 420,
+     "ease": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+     "easeName": "back-out",
+     "when": "at scrollY≈3598",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-29.18px -5.211916578601648px",
+       "scale": "1"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 320,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈3939",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-19.799999999999997px 20px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 320,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 3939–7920",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "0px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "rect",
+     "kind": "waapi",
+     "ms": 320,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 3939–7920",
+     "approx": true,
+     "kf": [
+      {
+       "scale": "1 1"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 260,
+     "ease": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+     "easeName": "back-out",
+     "when": "between scrollY 4266–7920",
+     "approx": true,
+     "kf": [
+      {
+       "scale": "1"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 320,
+     "ease": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+     "easeName": "back-out",
+     "when": "between scrollY 4266–7920",
+     "approx": true,
+     "kf": [
+      {
+       "scale": "1"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈4313",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-0.35px -3.59px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈4313",
+     "approx": true,
+     "kf": [
+      {
+       "rotate": "-93.36181122853156deg"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈4313",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "7.46px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈4313",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "0.35px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈4320",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "6.00px -0.13px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈4320",
+     "approx": true,
+     "kf": [
+      {
+       "rotate": "-2.1351572504065643deg"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 440,
+     "ease": "cubic-bezier(0.45, 0, 0.55, 1)",
+     "when": "at scrollY≈5036",
+     "kf": [
+      {
+       "translate": "-29.18px -5.211916578601648px",
+       "scale": "1",
+       "opacity": 1
+      },
+      {
+       "translate": "-31.514400000000002px -5.211916578601648px",
+       "scale": "1",
+       "opacity": 1,
+       "offset": 0.2
+      },
+      {
+       "translate": "0px 0px",
+       "scale": "0.6",
+       "opacity": 0
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 420,
+     "ease": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+     "easeName": "back-out",
+     "when": "at scrollY≈7890",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "29.18px 0.1691209983856417px",
+       "scale": "1"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 320,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈7920",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-27.799999999999997px 20px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8533",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "0.81px -3.57px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8533",
+     "approx": true,
+     "kf": [
+      {
+       "rotate": "-82.21024234609774deg"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8533",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "7.30px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8533",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-0.81px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8639",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "4.45px -2.41px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8639",
+     "approx": true,
+     "kf": [
+      {
+       "rotate": "-42.05783544787869deg"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8639",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "3.61px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8639",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-4.45px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8836",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "5.98px -0.26px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8836",
+     "approx": true,
+     "kf": [
+      {
+       "rotate": "-4.144357011570264deg"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8836",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "2.01px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈8836",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-5.98px 0px"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 440,
+     "ease": "cubic-bezier(0.45, 0, 0.55, 1)",
+     "when": "at scrollY≈9360",
+     "kf": [
+      {
+       "translate": "29.18px 0.1691209983856417px",
+       "scale": "1",
+       "opacity": 1
+      },
+      {
+       "translate": "31.514400000000002px 0.1691209983856417px",
+       "scale": "1",
+       "opacity": 1,
+       "offset": 0.2
+      },
+      {
+       "translate": "0px 0px",
+       "scale": "0.6",
+       "opacity": 0
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 420,
+     "ease": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+     "easeName": "back-out",
+     "when": "at scrollY≈10825",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "-29.18px 2.1146944936448815px",
+       "scale": "1"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "svg.c-peek_face",
+     "kind": "waapi",
+     "ms": 420,
+     "ease": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+     "easeName": "back-out",
+     "when": "at scrollY≈10825",
+     "approx": true,
+     "kf": [
+      {
+       "translate": "29.18px -5.802730789098708px",
+       "scale": "1"
+      }
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "section.c-hero-home.is-inview",
+     "kind": "sampled",
+     "ms": 160,
+     "ease": "ease",
+     "when": "at scrollY≈116",
+     "approx": true,
+     "pairs": [
+      [
+       "--css-progress",
+       "0.0011098779134295228",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "div.c-lines-animation.is-inview",
+     "kind": "sampled",
+     "ms": 1210,
+     "ease": "ease",
+     "when": "between scrollY 2473–5806",
+     "approx": true,
+     "pairs": [
+      [
+       "--css-progress",
+       "0.013541666666666667",
+       "0.4375"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.c-lines-animation.is-inview",
+     "kind": "sampled",
+     "ms": 220,
+     "ease": "ease",
+     "when": "at scrollY≈2926",
+     "approx": true,
+     "pairs": [
+      [
+       "--css-progress",
+       "0.4375",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.c-lines-animation.is-inview",
+     "kind": "sampled",
+     "ms": 1010,
+     "ease": "ease",
+     "when": "at scrollY≈5558",
+     "approx": true,
+     "pairs": [
+      [
+       "--css-progress",
+       "0.0010416666666666667",
+       "0.21145833333333333"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.c-engine-icons.c-about_engines",
+     "kind": "sampled",
+     "ms": 1150,
+     "ease": "ease",
+     "when": "at scrollY≈8898",
+     "approx": true,
+     "pairs": [
+      [
+       "--css-progress",
+       "0.029978586723768737",
+       "0.5246252676659529"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.c-engine-icons.c-about_engines",
+     "kind": "sampled",
+     "ms": 150,
+     "ease": "ease",
+     "when": "at scrollY≈9406",
+     "approx": true,
+     "pairs": [
+      [
+       "--css-progress",
+       "0.5246252676659529",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "loop",
+     "n": 3,
+     "label": "div.c-hero-bg_circle.-inner",
+     "kind": "animation",
+     "ms": 0,
+     "ease": "linear",
+     "infinite": true,
+     "name": "anim-hero-circle"
+    },
+    {
+     "group": "loop",
+     "n": 5,
+     "label": "span.c-loader-spinner.c-video-embed_spinner",
+     "kind": "animation",
+     "ms": 400,
+     "ease": "linear",
+     "infinite": true,
+     "name": "anim-loader-spinner"
+    }
+   ],
+   "keyframes": {
+    "anim-hero-circle": "@keyframes anim-hero-circle { 0% { } 100% { rotate: 1turn; } }",
+    "anim-loader-spinner": "@keyframes anim-loader-spinner { 0% { } 100% { rotate: 1turn; } }",
+    "logo-animation-deactivate": "@keyframes logo-animation-deactivate { 0%, 50% { background-color: var(--logo-active-color-bg,var(--_logo-active-color-bg)); border-color: var(--logo-active-color-border,var(--_logo-active-color-border)); rotate: 90deg; } 100% { background-color: var(--logo-color-bg,var(--_logo-color-bg)); border-color: var(--logo-color-border,var(--_logo-color-border)); rotate: 0deg; } }",
+    "logo-animation-deactivate-dash": "@keyframes logo-animation-deactivate-dash { 0%, 50% { background-color: var(--logo-active-color-dash,var(--_logo-active-color-dash)); } 100% { background-color: var(--logo-color-dash,var(--_logo-color-dash)); } }"
+   },
+   "declared_transitions": [
+    {
+     "props": "scale, opacity, translate, background-color, color",
+     "ms": 400,
+     "ease": "cubic-bezier(0.38, 0.005, 0.215, 1)",
+     "easeName": "",
+     "n": 349,
+     "eg": "span.c-shape.-reveal, span.c-testimonials_index.|, h2.c-testimonials_title.|"
+    },
+    {
+     "props": "fill, scale, all, translate, color",
+     "ms": 200,
+     "ease": "cubic-bezier(0.38, 0.005, 0.215, 1)",
+     "easeName": "",
+     "n": 133,
+     "eg": "path, path.cls-1, circle"
+    },
+    {
+     "props": "translate",
+     "ms": 400,
+     "ease": "cubic-bezier(0.165, 0.84, 0.44, 1)",
+     "easeName": "",
+     "n": 6,
+     "eg": "div.c-engines_panel.is-active, div.c-engines_panel"
+    },
+    {
+     "props": "color",
+     "ms": 200,
+     "ease": "ease",
+     "easeName": "",
+     "n": 5,
+     "eg": "svg.c-peek_face, span.c-icon"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown",
+   "5 iframe(s) not inspected",
+   "Scrolling stopped at 10825px of 10825px — motion and colors below that point were not sampled"
+  ]
+ },
+ "prompt": "Use the measured design system of Hone: AI Engines That Own Outcomes (hone.com), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #FFFFFF 48%, #000000 20%, #001115 5.8%, #BCF891 3.1%, #3BD966 2.9%, #CEE4E2 1.3%\n- Text, by amount of text: #000000 53%, #6B8683 36%, #FFFFFF 7%, #001115 2%\n\n## Type\n- Display: FT Aktual 48px/400, letter-spacing -0.01em, line-height 1.04\n- Body: FT Aktual 16px, line-height 20px\n- Scale (px/weight): 120/400, 67/400, 48/400, 28/400\n- Families by text share: FT Aktual 100%\n\n## Shape\n- Radii: 100% (576×); 50% (156×); 38px (1×); 60px (1×)\n- Borders: 2px solid #CEE4E2 (577×); 2px solid #FFFFFF (1×); 1px solid #CEE4E2 (1×)\n- Spacing: no consistent grid; section padding 29.9531px, 166.939px, 20px, 111.641px; gaps 10px, 12px, 36px, 20px\n\n## Motion\n- Libraries: ScrollTrigger, Lenis smooth scroll, Swiper\n- On load, 1× span.c-logo.-hoverable: animation logo-animation-deactivate; 1000ms, cubic-bezier(0.215, 0.61, 0.355, 1)\n- On load, 1× span.c-logo.-hoverable: animation logo-animation-deactivate-dash; 1000ms, cubic-bezier(0.215, 0.61, 0.355, 1)\n- On load, 2× svg.c-peek_face: [{\"opacity\": 1}]; 420ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), 120ms stagger, approximate\n- On load, 1× svg.c-peek_face: [{\"translate\": \"-29.18px -5.040000000000001px\", \"scale\": \"1\"}]; 420ms, cubic-bezier(0.34, 1.56, 0.64, 1) (back-out), approximate\n- On load, 1× svg.c-peek_face: [{\"translate\": \"29.18px 2.16px\", \"scale\": \"1\"}]; 420ms, cubic-bezier(0.34, 1.56, 0.64, 1) (back-out), approximate\n- On load, 1× g: [{\"translate\": \"-19.799999999999997px 20px\"}]; 320ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), approximate\n- On load, 2× g: [{\"translate\": \"0px 0px\"}]; 320ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), 140ms stagger, approximate\n- On load, 4× rect: [{\"scale\": \"1 1\"}]; 320ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), 140ms stagger, approximate\n- On scroll, 2× g: [{\"translate\": \"0.00px -3.60px\"}]; 200ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), at scrollY≈0, approximate\n- On scroll, 2× g: [{\"rotate\": \"-90deg\"}]; 200ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), at scrollY≈0, approximate\n- On scroll, 2× g: [{\"translate\": \"7.50px 0px\"}]; 200ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), at scrollY≈0, approximate\n- On scroll, 1× g: [{\"translate\": \"-0.00px 0px\"}]; 200ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), at scrollY≈0, approximate\n- On scroll, 4× g: [{\"translate\": \"4.24px -2.55px\"}]; 200ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), 140ms stagger, between scrollY 1371–1412, approximate\n- On scroll, 4× g: [{\"rotate\": \"-45deg\"}]; 200ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), 140ms stagger, between scrollY 1371–1412, approximate\n- On scroll, 4× g: [{\"translate\": \"3.85px 0px\"}]; 200ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), 140ms stagger, between scrollY 1371–1412, approximate\n- On scroll, 2× g: [{\"translate\": \"-4.24px 0px\"}]; 200ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), 140ms stagger, between scrollY 1371–1412, approximate\n- Looping, 3× div.c-hero-bg_circle.-inner: animation anim-hero-circle; linear, infinite\n- Looping, 5× span.c-loader-spinner.c-video-embed_spinner: animation anim-loader-spinner; 400ms, linear, infinite\n- Declared transition on scale, opacity, translate, background-color, color: 400ms cubic-bezier(0.38, 0.005, 0.215, 1) (349 elements)\n- Declared transition on fill, scale, all, translate, color: 200ms cubic-bezier(0.38, 0.005, 0.215, 1) (133 elements)\n- Declared transition on translate: 400ms cubic-bezier(0.165, 0.84, 0.44, 1) (6 elements)\n- Declared transition on color: 200ms ease (5 elements)\n```css\n@keyframes anim-hero-circle { 0% { } 100% { rotate: 1turn; } }\n```\n```css\n@keyframes anim-loader-spinner { 0% { } 100% { rotate: 1turn; } }\n```\n```css\n@keyframes logo-animation-deactivate { 0%, 50% { background-color: var(--logo-active-color-bg,var(--_logo-active-color-bg)); border-color: var(--logo-active-color-border,var(--_logo-active-color-border)); rotate: 90deg; } 100% { background-color: var(--logo-color-bg,var(--_logo-color-bg)); border-color: var(--logo-color-border,var(--_logo-color-border)); rotate: 0deg; } }\n```\n```css\n@keyframes logo-animation-deactivate-dash { 0%, 50% { background-color: var(--logo-active-color-dash,var(--_logo-active-color-dash)); } 100% { background-color: var(--logo-color-dash,var(--_logo-color-dash)); } }\n```\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n- 5 iframe(s) not inspected\n- Scrolling stopped at 10825px of 10825px — motion and colors below that point were not sampled\n\n## Patterns in this book built on it\nCinematic media canvas, Research index, Accent rationing, Color-indexed sections, Highlighter marks, Announcement bar, Numbered sections, Ruled structure, Inertial smooth scroll, Four-tier motion timing, Soft rise reveal, Springs for characters only, Hard edges, flat depth, One family, scale does the work, Oversized tight display\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

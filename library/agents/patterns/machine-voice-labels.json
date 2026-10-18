@@ -1,0 +1,50 @@
+{
+ "id": "machine-voice-labels",
+ "kind": "technique",
+ "facet": "type",
+ "title": "Machine-voice labels",
+ "status": "established",
+ "summary": "A mono or pixel face as a secondary voice for labels, metadata, numbers and code. It's the machine talking, next to the human headline.",
+ "use_when": "AI and dev products: anything where showing the machinery builds trust.",
+ "avoid_when": "As body text past a sentence or two (TypeSafe's 12px mono body is the edge case).",
+ "languages": [
+  "research-index",
+  "retro-machine-pop"
+ ],
+ "techniques": null,
+ "swatches": null,
+ "recipe": [
+  ".label { font: 500 12px/1.4 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }\n/* Preference Model variant: labels as identifiers → OUR_TEAM, JOIN_US */\n.num { font-family: var(--font-pixel); }   /* section numerals */"
+ ],
+ "specimen_html": "<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #fff; color: #111; display: grid; align-content: center; gap: 14px; }\n.lab { font: 500 12px/1.4 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; text-transform: uppercase; letter-spacing: .04em; color: #555; }\nh2 { font-size: 36px; font-weight: 500; letter-spacing: -0.015em; margin: 0; }\n.row { display: flex; gap: 22px; font: 13px/1.4 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; color: #333; border-top: 1px solid #ddd; padding-top: 12px; }\n.row b { font-weight: 500; color: #111; }\n</style>\n<div class=\"s\"><span class=\"lab\">OUR_TEAM · 04</span><h2>People who write the evals first.</h2>\n<div class=\"row\"><span>RUN_ID <b>7f3a-22</b></span><span>LATENCY <b>184ms</b></span><span>UPDATED <b>2026-10-15</b></span></div>\n<span class=\"cap\">human headline · mono for ids, numbers, metadata</span></div>",
+ "evidence": [
+  {
+   "site": "Preference Model",
+   "measured": "Display: \"MartianMono\" 20px/500, letter-spacing normal, line-height 30px (1.5), uppercase",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_preferencemodel-com_by8f.json"
+  },
+  {
+   "site": "TypeSafe AI",
+   "measured": "Body: \"JetBrains Mono\" 12px",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_typesafe-ai_7sp7.json"
+  },
+  {
+   "site": "Jog",
+   "measured": "IBM Plex Mono 9%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json"
+  },
+  {
+   "site": "Melius",
+   "measured": "futurist 5%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_melius-com_4nc8.json"
+  },
+  {
+   "site": "Handwired",
+   "measured": "ui-monospace 20%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_chenglou-me_ikur.json"
+  }
+ ],
+ "from_book": null,
+ "source": null,
+ "prompt": "Use the type technique \"Machine-voice labels\" from the Artspo book \"The Artbook library\" (https://artbook.dev/library/).\n\nA mono or pixel face as a secondary voice for labels, metadata, numbers and code. It's the machine talking, next to the human headline.\n\n## Recipe\n\n_Rebuilt from measurements. A starting point, not any site's code._\n\n```css\n.label { font: 500 12px/1.4 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }\n/* Preference Model variant: labels as identifiers → OUR_TEAM, JOIN_US */\n.num { font-family: var(--font-pixel); }   /* section numerals */\n```\n\n## Specimen\n\n_A generic demo of the move, for reference: HTML and CSS, no scripts._\n\n```html\n<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #fff; color: #111; display: grid; align-content: center; gap: 14px; }\n.lab { font: 500 12px/1.4 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; text-transform: uppercase; letter-spacing: .04em; color: #555; }\nh2 { font-size: 36px; font-weight: 500; letter-spacing: -0.015em; margin: 0; }\n.row { display: flex; gap: 22px; font: 13px/1.4 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; color: #333; border-top: 1px solid #ddd; padding-top: 12px; }\n.row b { font-weight: 500; color: #111; }\n</style>\n<div class=\"s\"><span class=\"lab\">OUR_TEAM · 04</span><h2>People who write the evals first.</h2>\n<div class=\"row\"><span>RUN_ID <b>7f3a-22</b></span><span>LATENCY <b>184ms</b></span><span>UPDATED <b>2026-10-15</b></span></div>\n<span class=\"cap\">human headline · mono for ids, numbers, metadata</span></div>\n```\n\n## Use when\n\nAI and dev products: anything where showing the machinery builds trust.\n\n## Avoid when\n\nAs body text past a sentence or two (TypeSafe's 12px mono body is the edge case).\n\n## Pairs with\n\nNumbered sections, One family, scale does the work, Serif display, sans UI\n\nMeasured on: Preference Model, TypeSafe AI, Jog, Melius, Handwired.\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

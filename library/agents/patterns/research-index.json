@@ -1,0 +1,74 @@
+{
+ "id": "research-index",
+ "kind": "language",
+ "facet": null,
+ "title": "Research index",
+ "status": "established",
+ "summary": "A lab notebook made public. Numbered, ruled, precise, confident. Color works as an index or a highlighter, never as decoration.",
+ "use_when": "Research-heavy, technical or trust-critical products: infrastructure, data, protocols, anything where 'we are rigorous' is the pitch.",
+ "avoid_when": "Consumer warmth, or emotional products. It reads cold without a highlight color or a character (Hone uses mascot faces to warm it).",
+ "languages": null,
+ "techniques": [
+  "color-indexed-sections",
+  "highlighter-marks",
+  "numbered-sections",
+  "ruled-structure",
+  "spring-for-characters",
+  "static-by-design",
+  "hard-edges-flat-depth",
+  "machine-voice-labels",
+  "one-family-scale-hierarchy"
+ ],
+ "swatches": [
+  "#FFFFFF",
+  "#E8E8E8",
+  "#000000",
+  "#6B8683",
+  "#BCF891",
+  "#CEE4E2"
+ ],
+ "recipe": [
+  "--ground: #FFFFFF;  --ground-alt: #E8E8E8;  --ink: #000000;  --ink-muted: #6B8683;\n--highlight: #BCF891;              /* or one chip color per section */\n--rule: 1px solid #000000;         /* Hone variant: 2px solid #CEE4E2 */\n--radius: 0;                       /* max 2px */\n--font-sans: \"<one grotesk>\", system-ui;  --font-mono: \"<mono>\", ui-monospace;\n--scale: 13px 16px 18px 28px 48px 67px 120px;\n--t-micro: 200ms cubic-bezier(0.33, 1, 0.68, 1);\n--t-reveal: 400ms cubic-bezier(0.38, 0.005, 0.215, 1);"
+ ],
+ "specimen_html": "<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #fff; color: #000; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; }\n.top { display: flex; justify-content: space-between; font: 500 11px/1 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .05em; border-bottom: 1px solid #000; padding-bottom: 10px; }\nh1 { font-size: 44px; font-weight: 400; line-height: 1.02; letter-spacing: -0.01em; margin: 22px 0 26px; max-width: 15ch; }\nmark { background: #BCF891; color: inherit; padding: 0 .1em; }\n.cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }\n.cols > div { border-top: 1px solid #000; padding-top: 12px; font-size: 13px; color: #333; }\n.n { display: inline-block; font: 500 12px/1 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; padding: 4px 5px; margin-bottom: 10px; }\n</style>\n<div class=\"s\"><div class=\"top\"><span>FIELDNOTE / RESEARCH</span><span>INDEX 01–03</span></div>\n<h1>Measurement is <mark>the product</mark>, not a feature.</h1>\n<div class=\"cols\"><div><span class=\"n\" style=\"background:#FAB3F6\">01</span><br>Every claim ships with the run that produced it.</div>\n<div><span class=\"n\" style=\"background:#F5D547\">02</span><br>Methods are public. Results are versioned.</div>\n<div><span class=\"n\" style=\"background:#F05A2A;color:#fff\">03</span><br>Errors are listed before wins.</div></div></div>",
+ "evidence": [
+  {
+   "site": "Hone",
+   "measured": "Families by text share: FT Aktual 100%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_hone-com_yxt2.json"
+  },
+  {
+   "site": "Hone",
+   "measured": "Type scale (px): 120 / 67 / 48 / 28 / 18 / 16 / 13",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_hone-com_yxt2.json"
+  },
+  {
+   "site": "Hone",
+   "measured": "2px solid #CEE4E2 (577×)",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_hone-com_yxt2.json"
+  },
+  {
+   "site": "Hone",
+   "measured": "Shadows: none — depth comes from color/surface",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_hone-com_yxt2.json"
+  },
+  {
+   "site": "Preference Model",
+   "measured": "Radii: none — square corners",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_preferencemodel-com_by8f.json"
+  },
+  {
+   "site": "Preference Model",
+   "measured": "Families by text share: TWKLausanne 88%, MartianMono 11%, FKRasterGroteskSharp 1%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_preferencemodel-com_by8f.json"
+  },
+  {
+   "site": "Preference Model",
+   "measured": "Sections 01–06, each numbered in a different color chip; labels like OUR_TEAM, JOIN_US",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_preferencemodel-com_by8f.json"
+  }
+ ],
+ "from_book": null,
+ "source": null,
+ "prompt": "Use the design language \"Research index\" from the Artspo book \"The Artbook library\" (https://artbook.dev/library/).\n\n_A lab notebook made public. Numbered, ruled, precise, confident. Color works as an index or a highlighter, never as decoration._\n\n## Defining traits\n\n- **Structure.** Numbered sections (01, 02 …), hairline or 2px rules, uppercase mono labels; the page reads like a document with chapters.\n- **Type.** One grotesk family carries every role, with hierarchy from size alone (Hone: 13px → 120px, all FT Aktual). Variant: light grotesk plus mono labels (Preference Model: Lausanne 300 + Martian Mono uppercase).\n- **Color.** Neutral ground (white / light gray / black) plus a highlighter accent: Hone's lime #BCF891 / #3BD966, or Preference Model's set of index chips (pink, yellow, orange, cyan, green), one per section.\n- **Shape.** 0–2px radii, no shadows. Depth comes from color bands, never elevation.\n- **Motion.** Either none at all (Preference Model has no load or scroll motion) or a strict system (Hone: 200ms micro, 400ms reveals, back-out springs only on the mascot). Never decorative drift.\n\n## Techniques it uses\n\n- Numbered sections: Sections numbered 01, 02 … like chapters, so a long page reads as an ordered argument and not a scroll of features.\n- Ruled structure: Hairline rules divide columns, list rows and FAQ entries, so the grid is visible like a printed table.\n- One family, scale does the work: A single grotesk family for every role, with hierarchy made only through size and space.\n- Machine-voice labels: A mono or pixel face as a secondary voice for labels, metadata, numbers and code.\n- Highlighter marks: Key words get a flat background block like a marker pen, so emphasis comes from color behind the text instead of weight or size.\n- Color-indexed sections: Each section gets its own color as wayfinding, either a chip next to the section number or a full-bleed band, so color tells you where you are.\n- Hard edges, flat depth: Square corners (0–2px) and no shadows.\n- Static by design: Little or no scroll motion, as a deliberate choice: content is simply there.\n- Springs for characters only: An overshooting spring (back-out) is reserved for characters and objects: mascots, products, carousel items.\n\n## Starter tokens\n\n```css\n--ground: #FFFFFF;  --ground-alt: #E8E8E8;  --ink: #000000;  --ink-muted: #6B8683;\n--highlight: #BCF891;              /* or one chip color per section */\n--rule: 1px solid #000000;         /* Hone variant: 2px solid #CEE4E2 */\n--radius: 0;                       /* max 2px */\n--font-sans: \"<one grotesk>\", system-ui;  --font-mono: \"<mono>\", ui-monospace;\n--scale: 13px 16px 18px 28px 48px 67px 120px;\n--t-micro: 200ms cubic-bezier(0.33, 1, 0.68, 1);\n--t-reveal: 400ms cubic-bezier(0.38, 0.005, 0.215, 1);\n```\n\n## Specimen\n\n_A generic demo of the move, for reference: HTML and CSS, no scripts._\n\n```html\n<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #fff; color: #000; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; }\n.top { display: flex; justify-content: space-between; font: 500 11px/1 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .05em; border-bottom: 1px solid #000; padding-bottom: 10px; }\nh1 { font-size: 44px; font-weight: 400; line-height: 1.02; letter-spacing: -0.01em; margin: 22px 0 26px; max-width: 15ch; }\nmark { background: #BCF891; color: inherit; padding: 0 .1em; }\n.cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }\n.cols > div { border-top: 1px solid #000; padding-top: 12px; font-size: 13px; color: #333; }\n.n { display: inline-block; font: 500 12px/1 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; padding: 4px 5px; margin-bottom: 10px; }\n</style>\n<div class=\"s\"><div class=\"top\"><span>FIELDNOTE / RESEARCH</span><span>INDEX 01–03</span></div>\n<h1>Measurement is <mark>the product</mark>, not a feature.</h1>\n<div class=\"cols\"><div><span class=\"n\" style=\"background:#FAB3F6\">01</span><br>Every claim ships with the run that produced it.</div>\n<div><span class=\"n\" style=\"background:#F5D547\">02</span><br>Methods are public. Results are versioned.</div>\n<div><span class=\"n\" style=\"background:#F05A2A;color:#fff\">03</span><br>Errors are listed before wins.</div></div></div>\n```\n\n## Use when\n\nResearch-heavy, technical or trust-critical products: infrastructure, data, protocols, anything where 'we are rigorous' is the pitch.\n\n## Avoid when\n\nConsumer warmth, or emotional products. It reads cold without a highlight color or a character (Hone uses mascot faces to warm it).\n\nMeasured on: Hone, Preference Model.\n\nIts techniques are written up in full at https://artbook.dev/library/artbook.md\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

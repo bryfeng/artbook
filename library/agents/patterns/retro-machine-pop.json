@@ -1,0 +1,60 @@
+{
+ "id": "retro-machine-pop",
+ "kind": "language",
+ "facet": null,
+ "title": "Retro machine pop",
+ "status": "emerging",
+ "summary": "Loud, funny, nostalgic computing. It's confident enough to joke ('We raised a really big Series A').",
+ "use_when": "Launches that need to be remembered, developer communities, products with a strong voice.",
+ "avoid_when": "Enterprise procurement audiences, or long-form trust content. Only one strong example so far, so treat it as a sketch, not a system.",
+ "languages": null,
+ "techniques": [
+  "analog-grain",
+  "color-indexed-sections",
+  "benchmark-as-headline",
+  "static-by-design",
+  "hard-edges-flat-depth",
+  "machine-voice-labels",
+  "oversized-tight-display"
+ ],
+ "swatches": [
+  "#F386A1",
+  "#161616",
+  "#FEFEFE",
+  "#1E1E1E"
+ ],
+ "recipe": [
+  "--ground: #F386A1;  --ground-dark: #161616;  --paper: #FEFEFE;  --ink: #1E1E1E;\n--radius: 0;  --shadow-window: 0 8px 24px rgba(0, 0, 0, 0.53);\n--font-display: \"<condensed-ish grotesk>\";   /* 150px, line-height 0.8, Title Case */\n--font-body: \"<mono>\", ui-monospace;          /* 12px */\n--font-meta: \"<pixel/terminal face>\";"
+ ],
+ "specimen_html": "<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #F386A1; color: #1E1E1E; }\n.s::before { content: \"\"; position: absolute; inset: 0; background-image: radial-gradient(#1E1E1E 1px, transparent 1.4px); background-size: 9px 9px; opacity: .14; }\nh1 { position: relative; font: 800 96px/.8 \"Helvetica Neue\", Helvetica, Arial, sans-serif; letter-spacing: -0.02em; margin: 0 0 22px; }\n.win { position: relative; width: 300px; background: #FEFEFE; border: 2px solid #1E1E1E; box-shadow: 0 8px 24px rgba(0,0,0,.53); }\n.bar { display: flex; justify-content: space-between; background: #1E1E1E; color: #FEFEFE; font: 500 11px/1 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; padding: 5px 8px; }\n.win p { font: 12px/1.5 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; margin: 0; padding: 12px; }\n.meta { position: absolute; right: 28px; bottom: 24px; font: 700 12px/1 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .1em; }\n</style>\n<div class=\"s\"><h1>The Loud<br>Machine</h1>\n<div class=\"win\"><div class=\"bar\"><span>README.TXT</span><span>_ □ ×</span></div><p>We built a computer that talks back. It is faster than the last one, and funnier.</p></div>\n<div class=\"meta\">v1.0 ▮ READY</div></div>",
+ "evidence": [
+  {
+   "site": "TypeSafe AI",
+   "measured": "#F386A1 — 42%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_typesafe-ai_7sp7.json"
+  },
+  {
+   "site": "TypeSafe AI",
+   "measured": "Display: \"Die Grotesk C Medium\" 150px/500, letter-spacing normal, line-height 120px (0.8), capitalize",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_typesafe-ai_7sp7.json"
+  },
+  {
+   "site": "TypeSafe AI",
+   "measured": "Body: \"JetBrains Mono\" 12px",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_typesafe-ai_7sp7.json"
+  },
+  {
+   "site": "TypeSafe AI",
+   "measured": "News and benchmark charts framed as retro OS windows; halftone dots on the pink",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_typesafe-ai_7sp7.json"
+  },
+  {
+   "site": "Preference Model",
+   "measured": "FKRasterGroteskSharp 400",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_preferencemodel-com_by8f.json"
+  }
+ ],
+ "from_book": null,
+ "source": null,
+ "prompt": "Use the design language \"Retro machine pop\" from the Artspo book \"The Artbook library\" (https://artbook.dev/library/).\n\n_Loud, funny, nostalgic computing. It's confident enough to joke ('We raised a really big Series A')._\n\n> **Emerging:** one strong example so far. Treat it as a sketch until another clip confirms it.\n\n## Defining traits\n\n- **Color.** One loud ground color covering about half the page (#F386A1, 42%), with near-black and white sections and an occasional green band.\n- **Type.** Giant grotesk display at 150px with 0.8 line-height, title-cased; mono body at 12px; a terminal or pixel font for metadata.\n- **Chrome.** Retro OS windows and dialog boxes as content frames; charts drawn in window chrome; halftone dot textures.\n- **Shape.** Square corners everywhere; the only shadows are hard, dark, OS-style ones.\n- **Motion.** Almost none: a loading bar and blinking dots. The page is loud, so the motion stays quiet.\n\n## Techniques it uses\n\n- Oversized tight display: Display type far beyond comfortable size (120–150px) with leading below 1, so words become shapes.\n- Machine-voice labels: A mono or pixel face as a secondary voice for labels, metadata, numbers and code.\n- Hard edges, flat depth: Square corners (0–2px) and no shadows.\n- Color-indexed sections: Each section gets its own color as wayfinding, either a chip next to the section number or a full-bleed band, so color tells you where you are.\n- Analog grain: A paper, film or halftone texture over flat color, to take the digital sterility off a page.\n- Benchmark as headline: The claim is a number against named competitors, set huge and backed by a chart right below it.\n- Static by design: Little or no scroll motion, as a deliberate choice: content is simply there.\n\n## Starter tokens\n\n```css\n--ground: #F386A1;  --ground-dark: #161616;  --paper: #FEFEFE;  --ink: #1E1E1E;\n--radius: 0;  --shadow-window: 0 8px 24px rgba(0, 0, 0, 0.53);\n--font-display: \"<condensed-ish grotesk>\";   /* 150px, line-height 0.8, Title Case */\n--font-body: \"<mono>\", ui-monospace;          /* 12px */\n--font-meta: \"<pixel/terminal face>\";\n```\n\n## Specimen\n\n_A generic demo of the move, for reference: HTML and CSS, no scripts._\n\n```html\n<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #F386A1; color: #1E1E1E; }\n.s::before { content: \"\"; position: absolute; inset: 0; background-image: radial-gradient(#1E1E1E 1px, transparent 1.4px); background-size: 9px 9px; opacity: .14; }\nh1 { position: relative; font: 800 96px/.8 \"Helvetica Neue\", Helvetica, Arial, sans-serif; letter-spacing: -0.02em; margin: 0 0 22px; }\n.win { position: relative; width: 300px; background: #FEFEFE; border: 2px solid #1E1E1E; box-shadow: 0 8px 24px rgba(0,0,0,.53); }\n.bar { display: flex; justify-content: space-between; background: #1E1E1E; color: #FEFEFE; font: 500 11px/1 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; padding: 5px 8px; }\n.win p { font: 12px/1.5 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; margin: 0; padding: 12px; }\n.meta { position: absolute; right: 28px; bottom: 24px; font: 700 12px/1 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .1em; }\n</style>\n<div class=\"s\"><h1>The Loud<br>Machine</h1>\n<div class=\"win\"><div class=\"bar\"><span>README.TXT</span><span>_ □ ×</span></div><p>We built a computer that talks back. It is faster than the last one, and funnier.</p></div>\n<div class=\"meta\">v1.0 ▮ READY</div></div>\n```\n\n## Use when\n\nLaunches that need to be remembered, developer communities, products with a strong voice.\n\n## Avoid when\n\nEnterprise procurement audiences, or long-form trust content. Only one strong example so far, so treat it as a sketch, not a system.\n\nMeasured on: TypeSafe AI, Preference Model.\n\nIts techniques are written up in full at https://artbook.dev/library/artbook.md\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

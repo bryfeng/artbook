@@ -1,0 +1,656 @@
+{
+ "key": "2026-10-17_pen-dev_qjnk",
+ "site": "pen.dev",
+ "url": "https://www.pen.dev/",
+ "title": "pen.dev – An agentic canvas for building bold software",
+ "collection": "technical-landing",
+ "clipped": "2026-10-17",
+ "patterns": [],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#DBE0E6",
+     "pct": 41.0
+    },
+    {
+     "c": "#EAEDF0",
+     "pct": 31.0
+    },
+    {
+     "c": "#0D0D0D",
+     "pct": 6.7
+    },
+    {
+     "c": "#00000026",
+     "pct": 3.5
+    },
+    {
+     "c": null,
+     "pct": 18.0
+    }
+   ],
+   "text": [
+    {
+     "c": "#0D0D0D8C",
+     "pct": 50.0
+    },
+    {
+     "c": "#00000070",
+     "pct": 22.0
+    },
+    {
+     "c": "#0D0D0D",
+     "pct": 21.0
+    },
+    {
+     "c": "#FFFFFF",
+     "pct": 4.0
+    }
+   ],
+   "accents": [],
+   "theme_color": "#dbe0e6"
+  },
+  "type": {
+   "display": {
+    "family": "InterDisplay",
+    "px": 32.0,
+    "weight": 400,
+    "ls": -0.02,
+    "lh": 1.13,
+    "upper": false
+   },
+   "body": {
+    "family": "InterDisplay",
+    "px": 16.0,
+    "lh": 24.0
+   },
+   "families": [
+    {
+     "name": "InterDisplay",
+     "pct": 100
+    }
+   ],
+   "scale": [
+    {
+     "px": 44.0,
+     "weight": 400,
+     "family": "InterDisplay"
+    },
+    {
+     "px": 32.0,
+     "weight": 400,
+     "family": "InterDisplay"
+    },
+    {
+     "px": 20.0,
+     "weight": 400,
+     "family": "InterDisplay"
+    },
+    {
+     "px": 16.0,
+     "weight": 500,
+     "family": "InterDisplay"
+    }
+   ],
+   "webfonts": "Inter 100 900, InterDisplay 400, InterDisplay 500, PenCursor 500, InterDisplay 100"
+  },
+  "shape": {
+   "radii": [
+    {
+     "v": "4px",
+     "n": 34,
+     "eg": "div.g-card"
+    },
+    {
+     "v": "8px",
+     "n": 27,
+     "eg": "article.fcard"
+    },
+    {
+     "v": "12px",
+     "n": 9,
+     "eg": "div.stage-frame"
+    },
+    {
+     "v": "9999px",
+     "n": 3,
+     "eg": "a.btn.btn-primary"
+    }
+   ],
+   "shadows": [
+    {
+     "v": "rgba(0, 0, 0, 0.12) 0px 0.5px 2px 0px",
+     "n": 1,
+     "eg": ""
+    },
+    {
+     "v": "rgba(44, 48, 62, 0.09) 0px 0px 125px 0px, rgba(44, 48, 62, 0.05) 0px 0px 55.841px 0px, rgba(44, 48, 62, 0.04) 0px 0px 16.625px 0px",
+     "n": 1,
+     "eg": ""
+    }
+   ],
+   "borders": [
+    {
+     "v": "1px solid #00000014",
+     "n": 9,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #0D0D0D",
+     "n": 3,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #C6C7CB",
+     "n": 1,
+     "eg": ""
+    }
+   ],
+   "spacing": "4px grid; section padding 80px, 40px, 240px, 160px; gaps 20px, 8px, 72px, 64px"
+  },
+  "buttons": [
+   {
+    "filled": true,
+    "fill": "#0D0D0D",
+    "text": "#FFFFFF",
+    "radius": "9999px",
+    "padding": "0px 16px",
+    "size": 14.0,
+    "weight": 500,
+    "border": "",
+    "height": 40
+   },
+   {
+    "filled": true,
+    "fill": "#0D0D0D",
+    "text": "#FFFFFF",
+    "radius": "24px",
+    "padding": "12px 20px",
+    "size": 16.0,
+    "weight": 400,
+    "border": "",
+    "height": 46
+   }
+  ],
+  "motion": {
+   "libraries": "WebGL canvas",
+   "timeline": [
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.mark.hero-seq",
+     "kind": "animation",
+     "ms": 500,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "name": "hero-in"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.goodies-head",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 4,
+     "label": "div.feat-col, div.feat-col",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 8,
+     "label": "div.model-card, div.model-card",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "stagger": 40,
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "div.intro, div.intro",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.models-head",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.nib-wrap",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.foot-col",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "p.sub.models-sub",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "h1.lede.hero-seq",
+     "kind": "animation",
+     "ms": 500,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "delay": 70,
+     "name": "hero-in"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.hero-actions.hero-seq",
+     "kind": "animation",
+     "ms": 500,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "delay": 140,
+     "name": "hero-in"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.video-card",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "delay": 80,
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.cta-copy",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "delay": 80,
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.switcher.hero-seq",
+     "kind": "animation",
+     "ms": 500,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "delay": 280,
+     "name": "hero-in"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "iframe",
+     "kind": "transition",
+     "ms": 200,
+     "ease": "ease",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.hero-inner",
+     "kind": "transition",
+     "ms": 250,
+     "ease": "ease",
+     "when": "at scrollY≈720",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "div.intro.revealed, div.intro.revealed",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "when": "between scrollY 720–4320",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.video-card.revealed",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "delay": 80,
+     "when": "at scrollY≈720",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.rebrand-banner",
+     "kind": "transition",
+     "ms": 450,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "delay": 120,
+     "when": "at scrollY≈720",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "nav.site-nav",
+     "kind": "transition",
+     "ms": 450,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "delay": 120,
+     "when": "at scrollY≈720",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.goodies-head.revealed",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "stagger": 20,
+     "when": "at scrollY≈2160",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.models-head.revealed",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "stagger": 20,
+     "when": "at scrollY≈2880",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 8,
+     "label": "div.model-card.revealed, div.model-card.revealed",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "stagger": 40,
+     "when": "at scrollY≈2880",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "p.sub.models-sub",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "stagger": 20,
+     "when": "at scrollY≈2880",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "iframe.ready",
+     "kind": "transition",
+     "ms": 400,
+     "ease": "ease",
+     "when": "between scrollY 2880–9360",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "div.feat-col.revealed, div.feat-col.revealed",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "when": "between scrollY 3600–10080",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.nib-wrap.revealed",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "stagger": 70,
+     "when": "at scrollY≈14400",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.cta-copy.revealed",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "delay": 80,
+     "when": "at scrollY≈14400",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.foot-col.revealed",
+     "kind": "transition",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "stagger": 20,
+     "when": "at scrollY≈15120",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.goodies-track",
+     "kind": "sampled",
+     "ms": 1000,
+     "ease": "ease",
+     "when": "at scrollY≈2160",
+     "approx": true,
+     "pairs": [
+      [
+       "x",
+       "-3088px",
+       "-3143px"
+      ]
+     ]
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "div.cta-nib",
+     "kind": "animation",
+     "ms": 6000,
+     "ease": "linear",
+     "infinite": true,
+     "name": "nib-float"
+    }
+   ],
+   "keyframes": {
+    "hero-in": "@keyframes hero-in { 0% { opacity: 0; transform: translateY(10px); } }",
+    "story-loading-spin": "@keyframes story-loading-spin { 100% { transform: rotate(360deg); } }",
+    "nib-float": "@keyframes nib-float { 0% { transform: translateY(-4px); } 100% { transform: translateY(4px); } }"
+   },
+   "declared_transitions": [
+    {
+     "props": "color, background, transform, box-shadow",
+     "ms": 150,
+     "ease": "ease",
+     "easeName": "",
+     "n": 31,
+     "eg": "a, a.social-logo, a.nav-signin"
+    },
+    {
+     "props": "opacity, transform",
+     "ms": 550,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "easeName": "",
+     "n": 42,
+     "eg": "div.intro.revealed, div.video-card.revealed, div.goodies-head.revealed"
+    },
+    {
+     "props": "opacity",
+     "ms": 400,
+     "ease": "ease",
+     "easeName": "",
+     "n": 4,
+     "eg": "iframe.ready"
+    },
+    {
+     "props": "opacity, transform",
+     "ms": 450,
+     "ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+     "easeName": "",
+     "n": 4,
+     "eg": "div.rebrand-banner, nav.site-nav"
+    },
+    {
+     "props": "opacity",
+     "ms": 200,
+     "ease": "ease",
+     "easeName": "",
+     "n": 2,
+     "eg": "iframe, button.vc-play"
+    },
+    {
+     "props": "transform",
+     "ms": 250,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "n": 1,
+     "eg": "span.marketing-theme-thumb"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown",
+   "WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque",
+   "1 autoplay video(s) — motion is baked into video, not code",
+   "9 iframe(s) not inspected"
+  ]
+ },
+ "prompt": "Use the measured design system of pen.dev – An agentic canvas for building bold software (pen.dev), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #DBE0E6 41%, #EAEDF0 31%, #0D0D0D 6.7%, #00000026 3.5%, imagery 18%\n- Text, by amount of text: #0D0D0D8C 50%, #00000070 22%, #0D0D0D 21%, #FFFFFF 4%\n\n## Type\n- Display: InterDisplay 32px/400, letter-spacing -0.02em, line-height 1.13\n- Body: InterDisplay 16px, line-height 24px\n- Scale (px/weight): 44/400, 32/400, 20/400, 16/500\n- Families by text share: InterDisplay 100%\n\n## Shape\n- Radii: 4px (34×); 8px (27×); 12px (9×); 9999px (3×)\n- Shadows: rgba(0, 0, 0, 0.12) 0px 0.5px 2px 0px (1×); rgba(44, 48, 62, 0.09) 0px 0px 125px 0px, rgba(44, 48, 62, 0.05) 0px 0px 55.841px 0px, rgba(44, 48, 62, 0.04) 0px 0px 16.625px 0px (1×)\n- Borders: 1px solid #00000014 (9×); 1px solid #0D0D0D (3×); 1px solid #C6C7CB (1×)\n- Spacing: 4px grid; section padding 80px, 40px, 240px, 160px; gaps 20px, 8px, 72px, 64px\n\n## Buttons\n- filled #0D0D0D, text #FFFFFF, radius 9999px, padding 0px 16px, 14px/500\n- filled #0D0D0D, text #FFFFFF, radius 24px, padding 12px 20px, 16px/400\n\n## Motion\n- Libraries: WebGL canvas\n- On load, 1× div.mark.hero-seq: animation hero-in; 500ms, cubic-bezier(0.19, 1, 0.22, 1)\n- On load, 1× div.goodies-head: transition on opacity, transform; 550ms, cubic-bezier(0.19, 1, 0.22, 1), approximate\n- On load, 4× div.feat-col, div.feat-col: transition on opacity, transform; 550ms, cubic-bezier(0.19, 1, 0.22, 1), approximate\n- On load, 8× div.model-card, div.model-card: transition on opacity, transform; 550ms, cubic-bezier(0.19, 1, 0.22, 1), 40ms stagger, approximate\n- On load, 2× div.intro, div.intro: transition on opacity, transform; 550ms, cubic-bezier(0.19, 1, 0.22, 1), approximate\n- On load, 1× div.models-head: transition on opacity, transform; 550ms, cubic-bezier(0.19, 1, 0.22, 1), approximate\n- On load, 1× div.nib-wrap: transition on opacity, transform; 550ms, cubic-bezier(0.19, 1, 0.22, 1), approximate\n- On load, 1× div.foot-col: transition on opacity; 550ms, cubic-bezier(0.19, 1, 0.22, 1), approximate\n- On scroll, 1× div.hero-inner: transition on opacity; 250ms, ease, at scrollY≈720, approximate\n- On scroll, 2× div.intro.revealed, div.intro.revealed: transition on opacity, transform; 550ms, cubic-bezier(0.19, 1, 0.22, 1), between scrollY 720–4320, approximate\n- On scroll, 1× div.video-card.revealed: transition on opacity, transform; 550ms, cubic-bezier(0.19, 1, 0.22, 1), 80ms delay, at scrollY≈720, approximate\n- On scroll, 1× div.rebrand-banner: transition on opacity, transform; 450ms, cubic-bezier(0.19, 1, 0.22, 1), 120ms delay, at scrollY≈720, approximate\n- On scroll, 1× nav.site-nav: transition on opacity, transform; 450ms, cubic-bezier(0.19, 1, 0.22, 1), 120ms delay, at scrollY≈720, approximate\n- On scroll, 1× div.goodies-head.revealed: transition on opacity, transform; 550ms, cubic-bezier(0.19, 1, 0.22, 1), 20ms stagger, at scrollY≈2160, approximate\n- On scroll, 1× div.models-head.revealed: transition on opacity, transform; 550ms, cubic-bezier(0.19, 1, 0.22, 1), 20ms stagger, at scrollY≈2880, approximate\n- On scroll, 8× div.model-card.revealed, div.model-card.revealed: transition on opacity, transform; 550ms, cubic-bezier(0.19, 1, 0.22, 1), 40ms stagger, at scrollY≈2880, approximate\n- Looping, 1× div.cta-nib: animation nib-float; 6000ms, linear, infinite\n- Declared transition on color, background, transform, box-shadow: 150ms ease (31 elements)\n- Declared transition on opacity, transform: 550ms cubic-bezier(0.19, 1, 0.22, 1) (42 elements)\n- Declared transition on opacity: 400ms ease (4 elements)\n- Declared transition on opacity, transform: 450ms cubic-bezier(0.19, 1, 0.22, 1) (4 elements)\n- Declared transition on opacity: 200ms ease (2 elements)\n- Declared transition on transform: 250ms cubic-bezier(0.22, 1, 0.36, 1) (1 elements)\n```css\n@keyframes hero-in { 0% { opacity: 0; transform: translateY(10px); } }\n```\n```css\n@keyframes story-loading-spin { 100% { transform: rotate(360deg); } }\n```\n```css\n@keyframes nib-float { 0% { transform: translateY(-4px); } 100% { transform: translateY(4px); } }\n```\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n- WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque\n- 1 autoplay video(s) — motion is baked into video, not code\n- 9 iframe(s) not inspected\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

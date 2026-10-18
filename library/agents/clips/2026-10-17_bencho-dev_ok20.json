@@ -1,0 +1,1244 @@
+{
+ "key": "2026-10-17_bencho-dev_ok20",
+ "site": "bencho.dev",
+ "url": "https://bencho.dev/",
+ "title": "Bencho — Interactive React UI Components & Micro-interactions",
+ "collection": "technical-landing",
+ "clipped": "2026-10-17",
+ "patterns": [],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#17181A0F",
+     "pct": 50.0
+    },
+    {
+     "c": "#FFFFFF",
+     "pct": 39.0
+    },
+    {
+     "c": "#FFFFFFB8",
+     "pct": 1.8
+    },
+    {
+     "c": null,
+     "pct": 9.0
+    }
+   ],
+   "text": [
+    {
+     "c": "#5C5B56",
+     "pct": 49.0
+    },
+    {
+     "c": "#3C3B37",
+     "pct": 28.0
+    },
+    {
+     "c": "#17181A",
+     "pct": 20.0
+    },
+    {
+     "c": "#73726D",
+     "pct": 3.0
+    }
+   ],
+   "accents": [],
+   "theme_color": ""
+  },
+  "type": {
+   "display": {
+    "family": "Inter",
+    "px": 40.0,
+    "weight": 500,
+    "ls": -0.012,
+    "lh": 1.1,
+    "upper": false
+   },
+   "body": {
+    "family": "Inter",
+    "px": 11.0,
+    "lh": 18.15
+   },
+   "families": [
+    {
+     "name": "Inter",
+     "pct": 99
+    },
+    {
+     "name": "Google Sans",
+     "pct": 1
+    }
+   ],
+   "scale": [
+    {
+     "px": 40.0,
+     "weight": 500,
+     "family": "Inter"
+    },
+    {
+     "px": 17.0,
+     "weight": 400,
+     "family": "Inter"
+    },
+    {
+     "px": 16.0,
+     "weight": 400,
+     "family": "Inter"
+    },
+    {
+     "px": 15.0,
+     "weight": 400,
+     "family": "Inter"
+    }
+   ],
+   "webfonts": "Google Sans 400 700, Inter 300 700"
+  },
+  "shape": {
+   "radii": [
+    {
+     "v": "999px",
+     "n": 159,
+     "eg": "div.bench-find"
+    },
+    {
+     "v": "28px",
+     "n": 47,
+     "eg": "article.bench-card"
+    },
+    {
+     "v": "14px",
+     "n": 3,
+     "eg": "div.pgp-under"
+    },
+    {
+     "v": "1px",
+     "n": 3,
+     "eg": "i"
+    }
+   ],
+   "shadows": [
+    {
+     "v": "rgba(23, 24, 26, 0.06) 0px 0px 0px 1px, rgba(23, 24, 26, 0.06) 0px 2px 10px 0px",
+     "n": 1,
+     "eg": ""
+    },
+    {
+     "v": "rgba(23, 24, 26, 0.12) 0px 0px 0px 1px inset",
+     "n": 1,
+     "eg": ""
+    },
+    {
+     "v": "color(srgb 0.0901961 0.0941176 0.101961 / 0.12) 0px 0px 0px 1px",
+     "n": 1,
+     "eg": ""
+    }
+   ],
+   "borders": [
+    {
+     "v": "1px solid color(srgb 0.0901961 0.0941176 0.101961 / 0.07)",
+     "n": 6,
+     "eg": ""
+    },
+    {
+     "v": "1px solid color(srgb 0.0901961 0.0941176 0.101961 / 0.12)",
+     "n": 3,
+     "eg": ""
+    }
+   ],
+   "spacing": "4px grid; section padding 92px, 24px, 60px, 78px; gaps 8px, 12px, 6px, 4px"
+  },
+  "buttons": [
+   {
+    "filled": true,
+    "fill": "#17181A0F",
+    "text": "#3C3B37",
+    "radius": "999px",
+    "padding": "0px 14px",
+    "size": 14.0,
+    "weight": 500,
+    "border": "",
+    "height": 32
+   },
+   {
+    "filled": true,
+    "fill": "#17181A",
+    "text": "#FFFFFF",
+    "radius": "999px",
+    "padding": "0px 20px",
+    "size": 15.0,
+    "weight": 500,
+    "border": "",
+    "height": 40
+   },
+   {
+    "filled": true,
+    "fill": "#17181AB8",
+    "text": "#FFFFFF",
+    "radius": "999px",
+    "padding": "4px 9px",
+    "size": 12.0,
+    "weight": 500,
+    "border": "",
+    "height": 28
+   }
+  ],
+  "motion": {
+   "libraries": "WebGL canvas",
+   "timeline": [
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.stb-bar",
+     "kind": "transition",
+     "ms": 600,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "stagger": 10,
+     "approx": true,
+     "props": [
+      "height",
+      "bottom"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.stb-esc",
+     "kind": "transition",
+     "ms": 600,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "stagger": 10,
+     "approx": true,
+     "props": [
+      "height"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.logo-swap",
+     "kind": "animation",
+     "ms": 360,
+     "ease": "cubic-bezier(0.34, 1.56, 0.5, 1)",
+     "name": "logo-pop"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.bench-card.spo-card",
+     "kind": "animation",
+     "ms": 700,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "name": "wall-rise"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.hero-pill",
+     "kind": "animation",
+     "ms": 620,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "delay": 60,
+     "name": "hero-rise"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.hero-pill.hero-pill-sizer",
+     "kind": "animation",
+     "ms": 620,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "delay": 60,
+     "name": "hero-rise"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "h1.hero-head.hero-head-one",
+     "kind": "animation",
+     "ms": 620,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "delay": 140,
+     "name": "hero-rise"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "p.hero-sub",
+     "kind": "animation",
+     "ms": 620,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "delay": 220,
+     "name": "hero-rise"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "button.bench-join.hero-join",
+     "kind": "animation",
+     "ms": 620,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "delay": 300,
+     "name": "hero-rise"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.bench-rowbar",
+     "kind": "animation",
+     "ms": 620,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "delay": 380,
+     "name": "hero-rise"
+    },
+    {
+     "group": "load",
+     "n": 40,
+     "label": "article.bench-card, article.bench-card",
+     "kind": "animation",
+     "ms": 700,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "stagger": 70,
+     "name": "wall-rise"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "button.rh-play",
+     "kind": "transition",
+     "ms": 160,
+     "ease": "ease",
+     "approx": true,
+     "props": [
+      "color"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "button.rh-play",
+     "kind": "transition",
+     "ms": 180,
+     "ease": "ease",
+     "approx": true,
+     "props": [
+      "background-color"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.tst-icon",
+     "kind": "transition",
+     "ms": 220,
+     "ease": "ease",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "span.tst-text, span.tst-text",
+     "kind": "transition",
+     "ms": 220,
+     "ease": "ease",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "div.tst-toast, div.tst-toast",
+     "kind": "transition",
+     "ms": 220,
+     "ease": "ease",
+     "approx": true,
+     "props": [
+      "box-shadow",
+      "background-color"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "svg.rh-cursor",
+     "kind": "animation",
+     "ms": 200,
+     "ease": "cubic-bezier(0.28, 1.2, 0.36, 1)",
+     "name": "rh-cursor-in"
+    },
+    {
+     "group": "load",
+     "n": 3,
+     "label": "div.tst-toast, div.tst-toast",
+     "kind": "waapi",
+     "ms": 450,
+     "ease": "linear(0, 0.0177, 0.0631, 0.1265, 0.2005, 0.2795, 0.3594, 0.4373, 0.5111, 0.5796, 0.6421, 0.6982, 0.7479, 0.7914, 0.8292, 0.8615, 0.889, 0.9122, 0.9314, 0.9474, 0.9604, 0.9709, 0.9793, 0.9859, 0.991, 0.995, 0.9979, 1.0001, 1.0016, 1.0026, 1.0032, 1.0036, 1, 1, 1, 1.0033, 1.003, 1.0027, 1.0024, 1.0021, 1.0019, 1.0016, 1.0014, 1, 1)",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.bench-live",
+     "kind": "waapi",
+     "ms": 240,
+     "ease": "cubic-bezier(0.3, 1.12, 0.4, 1)",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.hero-pill",
+     "kind": "sampled",
+     "ms": 670,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "width",
+       "127.062px",
+       "142px"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.hero-pill",
+     "kind": "sampled",
+     "ms": 360,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "width",
+       "142px",
+       "165px"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.tst-toast",
+     "kind": "sampled",
+     "ms": 420,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "112px",
+       "88px"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.tst-toast",
+     "kind": "sampled",
+     "ms": 310,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "88px",
+       "148px"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "div.tst-toast, div.tst-toast",
+     "kind": "sampled",
+     "ms": 420,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "112px",
+       "74px"
+      ],
+      [
+       "scale",
+       "1",
+       "0.95"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.tst-toast",
+     "kind": "sampled",
+     "ms": 270,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "0.95",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.tst-toast",
+     "kind": "sampled",
+     "ms": 310,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "60px",
+       "0px"
+      ],
+      [
+       "scale",
+       "0.9",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.bench-live",
+     "kind": "sampled",
+     "ms": 230,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "0.9",
+       "1"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "span, span",
+     "kind": "sampled",
+     "ms": 430,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "170%",
+       "0px"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.bench-find",
+     "kind": "transition",
+     "ms": 160,
+     "ease": "ease",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "background-color"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.bench-tools",
+     "kind": "transition",
+     "ms": 200,
+     "ease": "ease",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.bench-tools",
+     "kind": "transition",
+     "ms": 260,
+     "ease": "cubic-bezier(0.33, 0.55, 0.2, 1)",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "translate"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.bench-lead",
+     "kind": "transition",
+     "ms": 200,
+     "ease": "ease",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.bench-lead",
+     "kind": "transition",
+     "ms": 260,
+     "ease": "cubic-bezier(0.33, 0.55, 0.2, 1)",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "translate"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "button.rh-play",
+     "kind": "transition",
+     "ms": 160,
+     "ease": "ease",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "color"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "button.rh-play",
+     "kind": "transition",
+     "ms": 180,
+     "ease": "ease",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "background-color"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "div.upl-file, div.upl-file",
+     "kind": "animation",
+     "ms": 360,
+     "ease": "cubic-bezier(0.3, 1.36, 0.4, 1)",
+     "when": "at scrollY≈0",
+     "name": "upl-back"
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.vn-in.vn-idle",
+     "kind": "animation",
+     "ms": 240,
+     "ease": "ease",
+     "delay": 80,
+     "when": "at scrollY≈0",
+     "name": "vn-in"
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "input.lbi-field",
+     "kind": "animation",
+     "ms": 260,
+     "ease": "ease-out",
+     "when": "at scrollY≈0",
+     "name": "lbi-flip-b"
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "svg.rh-cursor",
+     "kind": "animation",
+     "ms": 200,
+     "ease": "cubic-bezier(0.28, 1.2, 0.36, 1)",
+     "when": "at scrollY≈0",
+     "name": "rh-cursor-in"
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "button.crt-pill",
+     "kind": "transition",
+     "ms": 420,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "width"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.crt-say",
+     "kind": "transition",
+     "ms": 420,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "width"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.sek-skin",
+     "kind": "transition",
+     "ms": 220,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "rect.bpl-grid",
+     "kind": "transition",
+     "ms": 220,
+     "ease": "ease",
+     "stagger": 20,
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g.bpl-frame",
+     "kind": "transition",
+     "ms": 220,
+     "ease": "ease",
+     "delay": 80,
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g.bpl-rule",
+     "kind": "transition",
+     "ms": 420,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "stagger": 130,
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "clip-path"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g.bpl-rule",
+     "kind": "transition",
+     "ms": 160,
+     "ease": "ease",
+     "stagger": 130,
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "rect.bpl-caret",
+     "kind": "transition",
+     "ms": 160,
+     "ease": "ease",
+     "delay": 560,
+     "when": "at scrollY≈0",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "button.pik-row, button.pik-row",
+     "kind": "waapi",
+     "ms": 450,
+     "ease": "linear(0, 0.0241, 0.0822, 0.1585, 0.2424, 0.3272, 0.4087, 0.4847, 0.5539, 0.6158, 0.6706, 0.7187, 0.7604, 0.7965, 0.8275, 0.8541, 0.8767, 0.896, 0.9124, 0.9262, 0.938, 0.9478, 0.9562, 0.9632, 0.9691, 0.9741, 0.9783, 0.9818, 0.9847, 0.9872, 0.9893, 0.991, 0.9925, 0.9937, 0.9947, 0.9956, 0.9963, 0.9969, 0.9974, 0.9978, 0.9982, 0.9985, 0.9987, 1, 1)",
+     "delay": 30,
+     "when": "at scrollY≈0",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.pik-card",
+     "kind": "waapi",
+     "ms": 160,
+     "ease": "ease-out",
+     "when": "at scrollY≈0",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "circle.bra-guide",
+     "kind": "waapi",
+     "ms": 420,
+     "ease": "ease-out",
+     "when": "at scrollY≈0",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "circle.bra-guide",
+     "kind": "waapi",
+     "ms": 600,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "delay": 60,
+     "when": "at scrollY≈0",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 14,
+     "label": "g.bra-n",
+     "kind": "waapi",
+     "ms": 420,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "delay": 120,
+     "when": "at scrollY≈0",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 6,
+     "label": "g.bra-n",
+     "kind": "waapi",
+     "ms": 160,
+     "ease": "ease-out",
+     "when": "at scrollY≈0",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g.bra-dot",
+     "kind": "waapi",
+     "ms": 160,
+     "ease": "ease-out",
+     "when": "at scrollY≈0",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "span.hero-pill",
+     "kind": "sampled",
+     "ms": 340,
+     "ease": "ease",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "pairs": [
+      [
+       "width",
+       "165px",
+       "128px"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.pik-card",
+     "kind": "sampled",
+     "ms": 580,
+     "ease": "ease",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "-10px",
+       "0px"
+      ],
+      [
+       "scaleX",
+       "0.86",
+       "1"
+      ],
+      [
+       "scaleY",
+       "0.72",
+       "1"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "button.pik-row, button.pik-row",
+     "kind": "sampled",
+     "ms": 460,
+     "ease": "ease",
+     "stagger": 30,
+     "when": "at scrollY≈0",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "-8px",
+       "0px"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "svg.rh-cursor",
+     "kind": "sampled",
+     "ms": 390,
+     "ease": "ease",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "pairs": [
+      [
+       "x",
+       "266px",
+       "255px"
+      ],
+      [
+       "y",
+       "238px",
+       "229px"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "span, span",
+     "kind": "sampled",
+     "ms": 420,
+     "ease": "ease",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "170%",
+       "0px"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "g.bra-n",
+     "kind": "sampled",
+     "ms": 750,
+     "ease": "ease",
+     "stagger": 110,
+     "when": "at scrollY≈0",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "112px",
+       "58px"
+      ],
+      [
+       "scale",
+       "0",
+       "1"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g.bra-dot",
+     "kind": "sampled",
+     "ms": 720,
+     "ease": "ease",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "0.6",
+       "1"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 13,
+     "label": "g.bra-n",
+     "kind": "sampled",
+     "ms": 430,
+     "ease": "ease",
+     "stagger": 20,
+     "when": "at scrollY≈0",
+     "approx": true,
+     "pairs": [
+      [
+       "x",
+       "134px",
+       "105px"
+      ],
+      [
+       "y",
+       "58px",
+       "16px"
+      ],
+      [
+       "scale",
+       "0",
+       "1"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "g.bra-n",
+     "kind": "sampled",
+     "ms": 500,
+     "ease": "ease",
+     "when": "at scrollY≈0",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "58px",
+       "12px"
+      ],
+      [
+       "scale",
+       "0",
+       "1"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "span.bench-live-dot",
+     "kind": "animation",
+     "ms": 2600,
+     "ease": "linear",
+     "infinite": true,
+     "name": "bench-live-beat"
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "button.bench-join.bench-lock-go",
+     "kind": "animation",
+     "ms": 4500,
+     "ease": "linear",
+     "infinite": true,
+     "name": "prc-sweep"
+    }
+   ],
+   "keyframes": {
+    "hero-rise": "@keyframes hero-rise { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: none; } }",
+    "bench-live-beat": "@keyframes bench-live-beat { 0% { opacity: 0.5; scale: 1; } 70% { opacity: 0; scale: 2.8; } 100% { opacity: 0; scale: 2.8; } }",
+    "rh-cursor-in": "@keyframes rh-cursor-in { 0% { opacity: 0; scale: 0.5; } 100% { opacity: 1; scale: 1; } }",
+    "lbi-flip-b": "@keyframes lbi-flip-b { 0% { filter: blur(3px); opacity: 0.5; } }",
+    "car-bob": "@keyframes car-bob { 0%, 100% { transform: translateY(calc(var(--lift,4px) * -1)) rotate(calc(var(--sway,1deg) * -1)); } 50% { transform: translateY(var(--lift,4px)) rotate(var(--sway,1deg)); } }"
+   },
+   "declared_transitions": [
+    {
+     "props": "color, opacity, translate, filter, stroke",
+     "ms": 160,
+     "ease": "ease",
+     "easeName": "",
+     "n": 347,
+     "eg": "button.bench-chip, button.rh-play, a.bench-open"
+    },
+    {
+     "props": "opacity",
+     "ms": 180,
+     "ease": "ease",
+     "easeName": "",
+     "n": 136,
+     "eg": "button.rh-play, a.bench-open, button.bench-round"
+    },
+    {
+     "props": "transform",
+     "ms": 240,
+     "ease": "cubic-bezier(0.28, 1.3, 0.36, 1)",
+     "easeName": "",
+     "n": 90,
+     "eg": "button.rh-play, a.bench-open"
+    },
+    {
+     "props": "background, opacity",
+     "ms": 200,
+     "ease": "ease",
+     "easeName": "",
+     "n": 143,
+     "eg": "button.rh-play, a.bench-open, div.bench-veil"
+    },
+    {
+     "props": "scale",
+     "ms": 260,
+     "ease": "cubic-bezier(0.3, 1.12, 0.4, 1)",
+     "easeName": "",
+     "n": 48,
+     "eg": "svg.lucide.lucide-bookmark, svg, svg.lucide.lucide-mail"
+    },
+    {
+     "props": "transform",
+     "ms": 260,
+     "ease": "cubic-bezier(0.28, 1.3, 0.36, 1)",
+     "easeName": "",
+     "n": 47,
+     "eg": "div.bench-veil"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown",
+   "WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque"
+  ]
+ },
+ "prompt": "Use the measured design system of Bencho — Interactive React UI Components & Micro-interactions (bencho.dev), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #17181A0F 50%, #FFFFFF 39%, #FFFFFFB8 1.8%, imagery 9%\n- Text, by amount of text: #5C5B56 49%, #3C3B37 28%, #17181A 20%, #73726D 3%\n\n## Type\n- Display: Inter 40px/500, letter-spacing -0.012em, line-height 1.1\n- Body: Inter 11px, line-height 18.15px\n- Scale (px/weight): 40/500, 17/400, 16/400, 15/400\n- Families by text share: Inter 99%, Google Sans 1%\n\n## Shape\n- Radii: 999px (159×); 28px (47×); 14px (3×); 1px (3×)\n- Shadows: rgba(23, 24, 26, 0.06) 0px 0px 0px 1px, rgba(23, 24, 26, 0.06) 0px 2px 10px 0px (1×); rgba(23, 24, 26, 0.12) 0px 0px 0px 1px inset (1×); color(srgb 0.0901961 0.0941176 0.101961 / 0.12) 0px 0px 0px 1px (1×)\n- Borders: 1px solid color(srgb 0.0901961 0.0941176 0.101961 / 0.07) (6×); 1px solid color(srgb 0.0901961 0.0941176 0.101961 / 0.12) (3×)\n- Spacing: 4px grid; section padding 92px, 24px, 60px, 78px; gaps 8px, 12px, 6px, 4px\n\n## Buttons\n- filled #17181A0F, text #3C3B37, radius 999px, padding 0px 14px, 14px/500\n- filled #17181A, text #FFFFFF, radius 999px, padding 0px 20px, 15px/500\n- filled #17181AB8, text #FFFFFF, radius 999px, padding 4px 9px, 12px/500\n\n## Motion\n- Libraries: WebGL canvas\n- On load, 1× span.stb-bar: transition on height, bottom; 600ms, cubic-bezier(0.22, 1, 0.36, 1) (quint-out), 10ms stagger, approximate\n- On load, 1× span.stb-esc: transition on height; 600ms, cubic-bezier(0.22, 1, 0.36, 1) (quint-out), 10ms stagger, approximate\n- On load, 1× span.logo-swap: animation logo-pop; 360ms, cubic-bezier(0.34, 1.56, 0.5, 1)\n- On load, 1× div.bench-card.spo-card: animation wall-rise; 700ms, cubic-bezier(0.22, 1, 0.36, 1) (quint-out)\n- On load, 1× span.hero-pill: animation hero-rise; 620ms, cubic-bezier(0.22, 1, 0.36, 1) (quint-out), 60ms delay\n- On load, 1× span.hero-pill.hero-pill-sizer: animation hero-rise; 620ms, cubic-bezier(0.22, 1, 0.36, 1) (quint-out), 60ms delay\n- On load, 1× h1.hero-head.hero-head-one: animation hero-rise; 620ms, cubic-bezier(0.22, 1, 0.36, 1) (quint-out), 140ms delay\n- On load, 1× p.hero-sub: animation hero-rise; 620ms, cubic-bezier(0.22, 1, 0.36, 1) (quint-out), 220ms delay\n- On scroll, 1× div.bench-find: transition on background-color; 160ms, ease, at scrollY≈0, approximate\n- On scroll, 1× div.bench-tools: transition on opacity; 200ms, ease, at scrollY≈0, approximate\n- On scroll, 1× div.bench-tools: transition on translate; 260ms, cubic-bezier(0.33, 0.55, 0.2, 1), at scrollY≈0, approximate\n- On scroll, 1× div.bench-lead: transition on opacity; 200ms, ease, at scrollY≈0, approximate\n- On scroll, 1× div.bench-lead: transition on translate; 260ms, cubic-bezier(0.33, 0.55, 0.2, 1), at scrollY≈0, approximate\n- On scroll, 1× button.rh-play: transition on color; 160ms, ease, at scrollY≈0, approximate\n- On scroll, 1× button.rh-play: transition on background-color; 180ms, ease, at scrollY≈0, approximate\n- On scroll, 2× div.upl-file, div.upl-file: animation upl-back; 360ms, cubic-bezier(0.3, 1.36, 0.4, 1), at scrollY≈0\n- Looping, 1× span.bench-live-dot: animation bench-live-beat; 2600ms, linear, infinite\n- Looping, 1× button.bench-join.bench-lock-go: animation prc-sweep; 4500ms, linear, infinite\n- Declared transition on color, opacity, translate, filter, stroke: 160ms ease (347 elements)\n- Declared transition on opacity: 180ms ease (136 elements)\n- Declared transition on transform: 240ms cubic-bezier(0.28, 1.3, 0.36, 1) (90 elements)\n- Declared transition on background, opacity: 200ms ease (143 elements)\n- Declared transition on scale: 260ms cubic-bezier(0.3, 1.12, 0.4, 1) (48 elements)\n- Declared transition on transform: 260ms cubic-bezier(0.28, 1.3, 0.36, 1) (47 elements)\n```css\n@keyframes hero-rise { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: none; } }\n```\n```css\n@keyframes bench-live-beat { 0% { opacity: 0.5; scale: 1; } 70% { opacity: 0; scale: 2.8; } 100% { opacity: 0; scale: 2.8; } }\n```\n```css\n@keyframes rh-cursor-in { 0% { opacity: 0; scale: 0.5; } 100% { opacity: 1; scale: 1; } }\n```\n```css\n@keyframes lbi-flip-b { 0% { filter: blur(3px); opacity: 0.5; } }\n```\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n- WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

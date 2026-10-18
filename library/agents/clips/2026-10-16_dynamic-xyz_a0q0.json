@@ -1,0 +1,235 @@
+{
+ "key": "2026-10-16_dynamic-xyz_a0q0",
+ "site": "dynamic.xyz/docs/flow/api",
+ "url": "https://www.dynamic.xyz/docs/flow/api",
+ "title": "Fireblocks Flow API guide - Dynamic",
+ "collection": "docsinspo",
+ "clipped": "2026-10-16",
+ "patterns": [],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#FAFAFA",
+     "pct": 92.0
+    },
+    {
+     "c": "#EDF1FE",
+     "pct": 2.8
+    },
+    {
+     "c": "#FEFCE8",
+     "pct": 0.9
+    }
+   ],
+   "text": [
+    {
+     "c": "#404246",
+     "pct": 59.0
+    },
+    {
+     "c": "#1F2328",
+     "pct": 15.0
+    },
+    {
+     "c": "#0A3069",
+     "pct": 10.0
+    },
+    {
+     "c": "#116329",
+     "pct": 9.0
+    }
+   ],
+   "accents": [],
+   "theme_color": ""
+  },
+  "type": {
+   "display": {
+    "family": "Inter",
+    "px": 12.0,
+    "weight": 600,
+    "ls": 0,
+    "lh": 1.33,
+    "upper": false
+   },
+   "body": {
+    "family": "Inter",
+    "px": 18.0,
+    "lh": 28.0
+   },
+   "families": [
+    {
+     "name": "Inter",
+     "pct": 61
+    },
+    {
+     "name": "paperMono",
+     "pct": 39
+    }
+   ],
+   "scale": [
+    {
+     "px": 24.0,
+     "weight": 600,
+     "family": "Inter"
+    },
+    {
+     "px": 20.0,
+     "weight": 600,
+     "family": "Inter"
+    },
+    {
+     "px": 16.0,
+     "weight": 600,
+     "family": "Inter"
+    },
+    {
+     "px": 14.0,
+     "weight": 500,
+     "family": "Inter"
+    }
+   ],
+   "webfonts": "paperMono 100 800, Inter 100 900, Axeptio DM Sans 400, Axeptio DM Sans 500, Axeptio Source Sans 3 400, Axeptio Source Sans 3 500, Axeptio Source Sans 3 600, Axeptio Source Sans 3 700"
+  },
+  "shape": {
+   "radii": [
+    {
+     "v": "6px",
+     "n": 470,
+     "eg": "div.size-6.rounded-md"
+    },
+    {
+     "v": "16px",
+     "n": 133,
+     "eg": "div.callout.my-4"
+    },
+    {
+     "v": "9999px",
+     "n": 35,
+     "eg": "button.group/search.flex"
+    },
+    {
+     "v": "14px",
+     "n": 8,
+     "eg": "div.w-0.min-w-full"
+    }
+   ],
+   "shadows": [
+    {
+     "v": "oklab(0.711828 -0.000561088 -0.00617272 / 0.3) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+     "n": 47,
+     "eg": ""
+    }
+   ],
+   "borders": [
+    {
+     "v": "1px solid oklab(0.159839 0.000654362 -0.00858998 / 0.1)",
+     "n": 60,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #FEF08A",
+     "n": 11,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #BFDBFE",
+     "n": 8,
+     "eg": ""
+    }
+   ],
+   "spacing": "no consistent grid; section padding 40px; gaps 6px, 12px, 8px, 10px"
+  },
+  "buttons": [
+   {
+    "filled": true,
+    "fill": "oklab(0.159839 0.000654362 -0.00858998 / 0.03)",
+    "text": "#727377",
+    "radius": "9999px",
+    "padding": "0px 12px",
+    "size": 14.0,
+    "weight": 400,
+    "border": "",
+    "height": 36
+   },
+   {
+    "filled": true,
+    "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+    "text": "#525357",
+    "radius": "12px",
+    "padding": "8px 14px",
+    "size": 16.0,
+    "weight": 400,
+    "border": "",
+    "height": 34
+   },
+   {
+    "filled": false,
+    "fill": "transparent",
+    "text": "#727377",
+    "radius": "12px",
+    "padding": "12px 16px",
+    "size": 16.0,
+    "weight": 400,
+    "border": "1px oklab(0.912395 -0.000514954 -0.00579274 / 0.7)",
+    "height": 74
+   }
+  ],
+  "motion": {
+   "libraries": "GSAP (global), WebGL canvas, Tailwind (utility classes)",
+   "timeline": [],
+   "keyframes": {},
+   "declared_transitions": [
+    {
+     "props": "height",
+     "ms": 300,
+     "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+     "easeName": "",
+     "n": 60,
+     "eg": "div.w-0.min-w-full"
+    },
+    {
+     "props": "opacity, transform, translate, scale, rotate",
+     "ms": 150,
+     "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+     "easeName": "",
+     "n": 48,
+     "eg": "div.flex, svg.size-3.transition-transform"
+    },
+    {
+     "props": "background-color, color",
+     "ms": 150,
+     "ease": "ease",
+     "easeName": "",
+     "n": 22,
+     "eg": "a.link.nav-tabs-item, button.nav-tabs-item.group"
+    },
+    {
+     "props": "transform, translate, scale, rotate",
+     "ms": 100,
+     "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+     "easeName": "",
+     "n": 4,
+     "eg": "nav.hidden.sticky"
+    },
+    {
+     "props": "transform, translate",
+     "ms": 75,
+     "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+     "easeName": "",
+     "n": 2,
+     "eg": "svg.size-3.transition-transform"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown",
+   "WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque",
+   "GSAP is bundled privately — exact tween values were not reachable; JS-driven motion above is sampled from inline styles (approximate durations, no easing). Good candidate for a REA deep dive.",
+   "Cursor-follow effects (cursor element detected) — capture does not move the mouse",
+   "1 iframe(s) not inspected"
+  ]
+ },
+ "prompt": "Use the measured design system of Fireblocks Flow API guide - Dynamic (dynamic.xyz/docs/flow/api), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #FAFAFA 92%, #EDF1FE 2.8%, #FEFCE8 0.9%\n- Text, by amount of text: #404246 59%, #1F2328 15%, #0A3069 10%, #116329 9%\n\n## Type\n- Display: Inter 12px/600, letter-spacing 0em, line-height 1.33\n- Body: Inter 18px, line-height 28px\n- Scale (px/weight): 24/600, 20/600, 16/600, 14/500\n- Families by text share: Inter 61%, paperMono 39%\n\n## Shape\n- Radii: 6px (470×); 16px (133×); 9999px (35×); 14px (8×)\n- Shadows: oklab(0.711828 -0.000561088 -0.00617272 / 0.3) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px (47×)\n- Borders: 1px solid oklab(0.159839 0.000654362 -0.00858998 / 0.1) (60×); 1px solid #FEF08A (11×); 1px solid #BFDBFE (8×)\n- Spacing: no consistent grid; section padding 40px; gaps 6px, 12px, 8px, 10px\n\n## Buttons\n- filled oklab(0.159839 0.000654362 -0.00858998 / 0.03), text #727377, radius 9999px, padding 0px 12px, 14px/400\n- filled oklab(0.999994 0.0000455678 0.0000200868 / 0.5), text #525357, radius 12px, padding 8px 14px, 16px/400\n- outline, text #727377, radius 12px, padding 12px 16px, 16px/400, border 1px oklab(0.912395 -0.000514954 -0.00579274 / 0.7)\n\n## Motion\n- Libraries: GSAP (global), WebGL canvas, Tailwind (utility classes)\n- Declared transition on height: 300ms cubic-bezier(0.4, 0, 0.2, 1) (60 elements)\n- Declared transition on opacity, transform, translate, scale, rotate: 150ms cubic-bezier(0.4, 0, 0.2, 1) (48 elements)\n- Declared transition on background-color, color: 150ms ease (22 elements)\n- Declared transition on transform, translate, scale, rotate: 100ms cubic-bezier(0.4, 0, 0.2, 1) (4 elements)\n- Declared transition on transform, translate: 75ms cubic-bezier(0.4, 0, 0.2, 1) (2 elements)\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n- WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque\n- GSAP is bundled privately — exact tween values were not reachable; JS-driven motion above is sampled from inline styles (approximate durations, no easing). Good candidate for a REA deep dive.\n- Cursor-follow effects (cursor element detected) — capture does not move the mouse\n- 1 iframe(s) not inspected\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

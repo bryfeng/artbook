@@ -1,0 +1,599 @@
+{
+ "key": "2026-10-17_motion-dev_3iot",
+ "site": "motion.dev",
+ "url": "https://motion.dev/",
+ "title": "Motion (prev Framer Motion): JavaScript & React animation library",
+ "collection": "technical-landing",
+ "clipped": "2026-10-17",
+ "patterns": [],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#000000",
+     "pct": 60.0
+    },
+    {
+     "c": "#141214",
+     "pct": 25.0
+    },
+    {
+     "c": "#F8F8F6",
+     "pct": 8.9
+    }
+   ],
+   "text": [
+    {
+     "c": "#1A1A1C",
+     "pct": 39.0
+    },
+    {
+     "c": "#080808",
+     "pct": 37.0
+    },
+    {
+     "c": "#FFFFFF",
+     "pct": 15.0
+    },
+    {
+     "c": "#F43F5E",
+     "pct": 9.0
+    }
+   ],
+   "accents": [],
+   "theme_color": ""
+  },
+  "type": {
+   "display": {
+    "family": "TASA Orbiter",
+    "px": 34.56,
+    "weight": 700,
+    "ls": -0.035,
+    "lh": 1.08,
+    "upper": false
+   },
+   "body": {
+    "family": "TASA Orbiter",
+    "px": 15.0,
+    "lh": 23.25
+   },
+   "families": [
+    {
+     "name": "TASA Orbiter",
+     "pct": 72
+    },
+    {
+     "name": "Geist Mono",
+     "pct": 25
+    },
+    {
+     "name": "-apple-system",
+     "pct": 4
+    }
+   ],
+   "scale": [
+    {
+     "px": 40.0,
+     "weight": 700,
+     "family": "TASA Orbiter"
+    },
+    {
+     "px": 20.0,
+     "weight": 700,
+     "family": "TASA Orbiter"
+    },
+    {
+     "px": 16.0,
+     "weight": 400,
+     "family": "TASA Orbiter"
+    },
+    {
+     "px": 15.0,
+     "weight": 400,
+     "family": "TASA Orbiter"
+    }
+   ],
+   "webfonts": "Geist Mono 100 900, TASA Orbiter 400 800"
+  },
+  "shape": {
+   "radii": [
+    {
+     "v": "50%",
+     "n": 8,
+     "eg": "button"
+    },
+    {
+     "v": "6px",
+     "n": 4,
+     "eg": "div.sth-timeline"
+    },
+    {
+     "v": "3px",
+     "n": 3,
+     "eg": "button.sth-bar.sth-editable-bar"
+    },
+    {
+     "v": "4px",
+     "n": 2,
+     "eg": "div.sth-message"
+    }
+   ],
+   "shadows": [
+    {
+     "v": "rgba(0, 0, 0, 0.2) 0px 1px 0px 0px, rgba(0, 0, 0, 0.6) 0px 18px 40px -16px",
+     "n": 3,
+     "eg": ""
+    }
+   ],
+   "borders": [
+    {
+     "v": "1px solid #343034",
+     "n": 17,
+     "eg": ""
+    },
+    {
+     "v": "2px solid oklch(0.145 0.01 148)",
+     "n": 6,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #00000000",
+     "n": 5,
+     "eg": ""
+    }
+   ],
+   "spacing": "4px grid; section padding 96px, 48px, 56px, 72px; gaps 12px, 16px, 8px, 4px"
+  },
+  "buttons": [
+   {
+    "filled": true,
+    "fill": "oklch(0.88 0.18 96)",
+    "text": "#080808",
+    "radius": "0px",
+    "padding": "12px 18px",
+    "size": 11.0,
+    "weight": 400,
+    "border": "",
+    "height": 48
+   },
+   {
+    "filled": true,
+    "fill": "oklch(0.94 0.008 96)",
+    "text": "#080808",
+    "radius": "0px",
+    "padding": "9px 12px",
+    "size": 15.0,
+    "weight": 400,
+    "border": "",
+    "height": 37
+   },
+   {
+    "filled": true,
+    "fill": "oklch(0.88 0.18 96)",
+    "text": "#080808",
+    "radius": "0px",
+    "padding": "12px 12px",
+    "size": 16.0,
+    "weight": 400,
+    "border": "",
+    "height": 43
+   }
+  ],
+  "motion": {
+   "libraries": "WebGL canvas",
+   "timeline": [
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.motion-typewriter-cursor",
+     "kind": "waapi",
+     "ms": 500,
+     "ease": "linear",
+     "kf": {
+      "opacity": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "offset": [
+       0,
+       0.5,
+       0.5,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.fresh-primary-action-content.fresh-primary-action-content--ho",
+     "kind": "transition",
+     "ms": 400,
+     "ease": "cubic-bezier(0.25, 0, 0, 1)",
+     "when": "between scrollY 6480–8640",
+     "approx": true,
+     "props": [
+      "clip-path"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "a.fresh-primary-action.product-nav-plus",
+     "kind": "transition",
+     "ms": 140,
+     "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+     "easeName": "expo-out",
+     "when": "between scrollY 6480–8640",
+     "approx": true,
+     "props": [
+      "border-bottom-color",
+      "border-left-color",
+      "border-right-color",
+      "border-top-color"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 5,
+     "label": "li",
+     "kind": "waapi",
+     "ms": 600,
+     "ease": "linear(0, 0.0065, 0.0243, 0.051, 0.0845, 0.1231, 0.1653, 0.21, 0.256, 0.3026, 0.349, 0.3947, 0.4393, 0.4824, 0.5237, 0.5632, 0.6005, 0.6357, 0.6688, 0.6997, 0.7284, 0.755, 0.7797, 0.8023, 0.8232, 0.8422, 0.8596, 0.8754, 0.8898, 0.9027, 0.9145, 0.925, 0.9345, 0.943, 0.9505, 0.9573, 0.9633, 0.9686, 0.9732, 0.9774, 0.981, 0.9841, 0.9869, 0.9893, 0.9913, 0.9931, 0.9947, 0.996, 0.9971, 0.998, 0.9988, 0.9994, 0.9999, 1.0003, 1.0007, 1.001, 1, 1, 1, 1)",
+     "when": "at scrollY≈1440",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "ul.lnl-collection-row",
+     "kind": "waapi",
+     "ms": 600,
+     "ease": "linear(0, 0.0053, 0.02, 0.0423, 0.0707, 0.1039, 0.1406, 0.1799, 0.221, 0.2631, 0.3056, 0.3481, 0.39, 0.4311, 0.471, 0.5095, 0.5466, 0.582, 0.6156, 0.6475, 0.6776, 0.7058, 0.7323, 0.757, 0.78, 0.8014, 0.8211, 0.8393, 0.8561, 0.8715, 0.8856, 0.8984, 0.9101, 0.9208, 0.9304, 0.9391, 0.947, 0.954, 0.9604, 0.966, 0.9711, 0.9755, 0.9795, 0.983, 0.9861, 0.9888, 0.9911, 0.9932, 0.9949, 0.9964, 0.9977, 0.9988, 0.9997, 1.0005, 1.0011, 1.0016, 1.002, 1.0024, 1, 1)",
+     "when": "at scrollY≈1440",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 6,
+     "label": "span, span",
+     "kind": "waapi",
+     "ms": 1750,
+     "ease": "linear(0, 0.0009, 0.0036, 0.0079, 0.0137, 0.0208, 0.0291, 0.0385, 0.0489, 0.0602, 0.0723, 0.085, 0.0984, 0.1123, 0.1267, 0.1414, 0.1566, 0.172, 0.1876, 0.2034, 0.2194, 0.2354, 0.2515, 0.2677, 0.2838, 0.2999, 0.3159, 0.3319, 0.3477, 0.3635, 0.379, 0.3944, 0.4096, 0.4247, 0.4395, 0.4541, 0.4685, 0.4827, 0.4966, 0.5103, 0.5237, 0.5369, 0.5499, 0.5625, 0.575, 0.5871, 0.599, 0.6107, 0.622, 0.6332, 0.644, 0.6546, 0.665, 0.6751, 0.6849, 0.6945, 0.7039, 0.713, 0.7219, 0.7305, 0.7389, 0.7471, 0.7551, 0.7628, 0.7704, 0.7777, 0.7848, 0.7917, 0.7985, 0.805, 0.8113, 0.8175, 0.8235, 0.8293, 0.8349, 0.8403, 0.8456, 0.8508, 0.8557, 0.8606, 0.8652, 0.8698, 0.8742, 0.8784, 0.8825, 0.8865, 0.8904, 0.8941, 0.8978, 0.9013, 0.9047, 0.9079, 0.9111, 0.9142, 0.9172, 0.92, 0.9228, 0.9255, 0.9281, 0.9306, 0.9331, 0.9354, 0.9377, 0.9399, 0.942, 0.9441, 0.9461, 0.948, 0.9498, 0.9516, 0.9533, 0.955, 0.9566, 0.9582, 0.9597, 0.9611, 0.9625, 0.9639, 0.9652, 0.9664, 0.9676, 0.9688, 0.9699, 0.971, 0.9721, 0.9731, 0.9741, 0.975, 0.9759, 0.9768, 0.9777, 0.9785, 0.9793, 0.98, 0.9808, 0.9815, 0.9822, 0.9828, 0.9835, 0.9841, 0.9847, 0.9852, 0.9858, 0.9863, 0.9868, 0.9873, 0.9878, 0.9882, 0.9887, 0.9891, 0.9895, 0.9899, 0.9903, 0.9906, 0.991, 0.9913, 0.9917, 0.992, 0.9923, 0.9926, 0.9928, 0.9931, 0.9934, 0.9936, 0.9939, 0.9941, 0.9943, 0.9945, 0.9947, 0.9949, 1, 1, 1, 1, 1)",
+     "when": "at scrollY≈7200",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.motion-typewriter-cursor",
+     "kind": "waapi",
+     "ms": 500,
+     "ease": "linear",
+     "when": "at scrollY≈11520",
+     "kf": {
+      "opacity": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "offset": [
+       0,
+       0.5,
+       0.5,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.sth-current",
+     "kind": "waapi",
+     "ms": 160,
+     "ease": "ease-in",
+     "when": "at scrollY≈11520",
+     "kf": {
+      "opacity": [
+       1,
+       0
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.sth-current",
+     "kind": "waapi",
+     "ms": 160,
+     "ease": "ease-in",
+     "when": "at scrollY≈11520",
+     "kf": {
+      "transform": [
+       "translateY(0px)",
+       "translateY(-12px)"
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div",
+     "kind": "waapi",
+     "ms": 160,
+     "ease": "ease-out",
+     "when": "at scrollY≈11520",
+     "kf": {
+      "opacity": [
+       1,
+       0
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.sth-current",
+     "kind": "waapi",
+     "ms": 240,
+     "ease": "ease-out",
+     "when": "at scrollY≈11871",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.sth-current",
+     "kind": "waapi",
+     "ms": 240,
+     "ease": "ease-out",
+     "when": "at scrollY≈11871",
+     "kf": {
+      "transform": [
+       "translateY(12px)",
+       "translateY(0px)"
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div",
+     "kind": "waapi",
+     "ms": 160,
+     "ease": "ease-out",
+     "when": "at scrollY≈11871",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "li",
+     "kind": "sampled",
+     "ms": 1060,
+     "ease": "ease",
+     "when": "at scrollY≈7920",
+     "approx": true,
+     "pairs": [
+      [
+       "x",
+       "0px",
+       "-67px"
+      ],
+      [
+       "y",
+       "0px",
+       "-16px"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "span.number-section-integer",
+     "kind": "sampled",
+     "ms": 1550,
+     "ease": "ease",
+     "when": "at scrollY≈7200",
+     "approx": true,
+     "pairs": [
+      [
+       "width",
+       "0.58496em",
+       "1.75488em"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "span.number-section-integer",
+     "kind": "sampled",
+     "ms": 1350,
+     "ease": "ease",
+     "when": "at scrollY≈7200",
+     "approx": true,
+     "pairs": [
+      [
+       "width",
+       "0.58496em",
+       "1.16992em"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "li",
+     "kind": "sampled",
+     "ms": 650,
+     "ease": "ease",
+     "when": "at scrollY≈1440",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "16px",
+       "0px"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 3,
+     "label": "li",
+     "kind": "sampled",
+     "ms": 730,
+     "ease": "ease",
+     "when": "at scrollY≈1440",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "16px",
+       "0px"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 3,
+     "label": "ul",
+     "kind": "sampled",
+     "ms": 1060,
+     "ease": "ease",
+     "when": "at scrollY≈5760",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "-8px",
+       "-15px"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "ul",
+     "kind": "sampled",
+     "ms": 1040,
+     "ease": "ease",
+     "when": "at scrollY≈8640",
+     "approx": true,
+     "pairs": [
+      [
+       "x",
+       "-24px",
+       "-42px"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    }
+   ],
+   "keyframes": {},
+   "declared_transitions": [
+    {
+     "props": "color, opacity",
+     "ms": 200,
+     "ease": "ease",
+     "easeName": "",
+     "n": 87,
+     "eg": "button, a, svg.sponsor-external"
+    },
+    {
+     "props": "color, background",
+     "ms": 150,
+     "ease": "ease",
+     "easeName": "",
+     "n": 37,
+     "eg": "button.copy-cmd-btn, a.feed-link, a"
+    },
+    {
+     "props": "opacity",
+     "ms": 150,
+     "ease": "cubic-bezier(0.25, 1, 0.5, 1)",
+     "easeName": "quart-out",
+     "n": 14,
+     "eg": "a.fresh-section-action.lnl-tile-link"
+    },
+    {
+     "props": "transform",
+     "ms": 160,
+     "ease": "ease",
+     "easeName": "",
+     "n": 6,
+     "eg": "g.sponsor-external-shaft"
+    },
+    {
+     "props": "transform",
+     "ms": 140,
+     "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+     "easeName": "expo-out",
+     "n": 5,
+     "eg": "a.fresh-primary-action.product-nav-plus, a.fresh-primary-action, a.fresh-primary"
+    },
+    {
+     "props": "clip-path",
+     "ms": 400,
+     "ease": "cubic-bezier(0.25, 0, 0, 1)",
+     "easeName": "",
+     "n": 5,
+     "eg": "span.fresh-primary-action-content.fresh-primary-action-content--ho"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown",
+   "WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque"
+  ]
+ },
+ "prompt": "Use the measured design system of Motion (prev Framer Motion): JavaScript & React animation library (motion.dev), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #000000 60%, #141214 25%, #F8F8F6 8.9%\n- Text, by amount of text: #1A1A1C 39%, #080808 37%, #FFFFFF 15%, #F43F5E 9%\n\n## Type\n- Display: TASA Orbiter 34.56px/700, letter-spacing -0.035em, line-height 1.08\n- Body: TASA Orbiter 15px, line-height 23.25px\n- Scale (px/weight): 40/700, 20/700, 16/400, 15/400\n- Families by text share: TASA Orbiter 72%, Geist Mono 25%, -apple-system 4%\n\n## Shape\n- Radii: 50% (8×); 6px (4×); 3px (3×); 4px (2×)\n- Shadows: rgba(0, 0, 0, 0.2) 0px 1px 0px 0px, rgba(0, 0, 0, 0.6) 0px 18px 40px -16px (3×)\n- Borders: 1px solid #343034 (17×); 2px solid oklch(0.145 0.01 148) (6×); 1px solid #00000000 (5×)\n- Spacing: 4px grid; section padding 96px, 48px, 56px, 72px; gaps 12px, 16px, 8px, 4px\n\n## Buttons\n- filled oklch(0.88 0.18 96), text #080808, radius 0px, padding 12px 18px, 11px/400\n- filled oklch(0.94 0.008 96), text #080808, radius 0px, padding 9px 12px, 15px/400\n- filled oklch(0.88 0.18 96), text #080808, radius 0px, padding 12px 12px, 16px/400\n\n## Motion\n- Libraries: WebGL canvas\n- On load, 1× span.motion-typewriter-cursor: {\"opacity\": [1, 1, 0, 0], \"offset\": [0, 0.5, 0.5, 1]}; 500ms, linear\n- On scroll, 1× span.fresh-primary-action-content.fresh-primary-action-content--ho: transition on clip-path; 400ms, cubic-bezier(0.25, 0, 0, 1), between scrollY 6480–8640, approximate\n- On scroll, 1× a.fresh-primary-action.product-nav-plus: transition on border-bottom-color, border-left-color, border-right-color, border-top-color; 140ms, cubic-bezier(0.16, 1, 0.3, 1) (expo-out), between scrollY 6480–8640, approximate\n- On scroll, 5× li: {\"opacity\": [0, 1]}; 600ms, linear(0, 0.0065, 0.0243, 0.051, 0.0845, 0.1231, 0.1653, 0.21, 0.256, 0.3026, 0.349, 0.3947, 0.4393, 0.4824, 0.5237, 0.5632, 0.6005, 0.6357, 0.6688, 0.6997, 0.7284, 0.755, 0.7797, 0.8023, 0.8232, 0.8422, 0.8596, 0.8754, 0.8898, 0.9027, 0.9145, 0.925, 0.9345, 0.943, 0.9505, 0.9573, 0.9633, 0.9686, 0.9732, 0.9774, 0.981, 0.9841, 0.9869, 0.9893, 0.9913, 0.9931, 0.9947, 0.996, 0.9971, 0.998, 0.9988, 0.9994, 0.9999, 1.0003, 1.0007, 1.001, 1, 1, 1, 1), at scrollY≈1440\n- On scroll, 1× ul.lnl-collection-row: {\"opacity\": [0, 1]}; 600ms, linear(0, 0.0053, 0.02, 0.0423, 0.0707, 0.1039, 0.1406, 0.1799, 0.221, 0.2631, 0.3056, 0.3481, 0.39, 0.4311, 0.471, 0.5095, 0.5466, 0.582, 0.6156, 0.6475, 0.6776, 0.7058, 0.7323, 0.757, 0.78, 0.8014, 0.8211, 0.8393, 0.8561, 0.8715, 0.8856, 0.8984, 0.9101, 0.9208, 0.9304, 0.9391, 0.947, 0.954, 0.9604, 0.966, 0.9711, 0.9755, 0.9795, 0.983, 0.9861, 0.9888, 0.9911, 0.9932, 0.9949, 0.9964, 0.9977, 0.9988, 0.9997, 1.0005, 1.0011, 1.0016, 1.002, 1.0024, 1, 1), at scrollY≈1440\n- On scroll, 6× span, span: {\"opacity\": [0, 1]}; 1750ms, linear(0, 0.0009, 0.0036, 0.0079, 0.0137, 0.0208, 0.0291, 0.0385, 0.0489, 0.0602, 0.0723, 0.085, 0.0984, 0.1123, 0.1267, 0.1414, 0.1566, 0.172, 0.1876, 0.2034, 0.2194, 0.2354, 0.2515, 0.2677, 0.2838, 0.2999, 0.3159, 0.3319, 0.3477, 0.3635, 0.379, 0.3944, 0.4096, 0.4247, 0.4395, 0.4541, 0.4685, 0.4827, 0.4966, 0.5103, 0.5237, 0.5369, 0.5499, 0.5625, 0.575, 0.5871, 0.599, 0.6107, 0.622, 0.6332, 0.644, 0.6546, 0.665, 0.6751, 0.6849, 0.6945, 0.7039, 0.713, 0.7219, 0.7305, 0.7389, 0.7471, 0.7551, 0.7628, 0.7704, 0.7777, 0.7848, 0.7917, 0.7985, 0.805, 0.8113, 0.8175, 0.8235, 0.8293, 0.8349, 0.8403, 0.8456, 0.8508, 0.8557, 0.8606, 0.8652, 0.8698, 0.8742, 0.8784, 0.8825, 0.8865, 0.8904, 0.8941, 0.8978, 0.9013, 0.9047, 0.9079, 0.9111, 0.9142, 0.9172, 0.92, 0.9228, 0.9255, 0.9281, 0.9306, 0.9331, 0.9354, 0.9377, 0.9399, 0.942, 0.9441, 0.9461, 0.948, 0.9498, 0.9516, 0.9533, 0.955, 0.9566, 0.9582, 0.9597, 0.9611, 0.9625, 0.9639, 0.9652, 0.9664, 0.9676, 0.9688, 0.9699, 0.971, 0.9721, 0.9731, 0.9741, 0.975, 0.9759, 0.9768, 0.9777, 0.9785, 0.9793, 0.98, 0.9808, 0.9815, 0.9822, 0.9828, 0.9835, 0.9841, 0.9847, 0.9852, 0.9858, 0.9863, 0.9868, 0.9873, 0.9878, 0.9882, 0.9887, 0.9891, 0.9895, 0.9899, 0.9903, 0.9906, 0.991, 0.9913, 0.9917, 0.992, 0.9923, 0.9926, 0.9928, 0.9931, 0.9934, 0.9936, 0.9939, 0.9941, 0.9943, 0.9945, 0.9947, 0.9949, 1, 1, 1, 1, 1), at scrollY≈7200\n- On scroll, 1× span.motion-typewriter-cursor: {\"opacity\": [1, 1, 0, 0], \"offset\": [0, 0.5, 0.5, 1]}; 500ms, linear, at scrollY≈11520\n- On scroll, 1× div.sth-current: {\"opacity\": [1, 0]}; 160ms, ease-in, at scrollY≈11520\n- On scroll, 1× div.sth-current: {\"transform\": [\"translateY(0px)\", \"translateY(-12px)\"]}; 160ms, ease-in, at scrollY≈11520\n- Declared transition on color, opacity: 200ms ease (87 elements)\n- Declared transition on color, background: 150ms ease (37 elements)\n- Declared transition on opacity: 150ms cubic-bezier(0.25, 1, 0.5, 1) (14 elements)\n- Declared transition on transform: 160ms ease (6 elements)\n- Declared transition on transform: 140ms cubic-bezier(0.16, 1, 0.3, 1) (5 elements)\n- Declared transition on clip-path: 400ms cubic-bezier(0.25, 0, 0, 1) (5 elements)\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n- WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

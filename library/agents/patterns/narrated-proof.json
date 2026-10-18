@@ -1,0 +1,39 @@
+{
+ "id": "narrated-proof",
+ "kind": "technique",
+ "facet": "motion",
+ "title": "Narrated proof",
+ "status": "emerging",
+ "summary": "The hero artifact acts out the claim in sequence: strike the old value, type the new one, blink a caret. About 1.3s from first move to caret.",
+ "use_when": "When the pitch fits in one before/after.",
+ "avoid_when": "Multi-step stories; past about 2s, people stop watching.",
+ "languages": [
+  "humane-editorial"
+ ],
+ "techniques": null,
+ "swatches": null,
+ "recipe": [
+  "del { animation: strike 260ms ease-out 700ms both; }   /* scaleX(0) → 1 on a line */\nins .ch { animation: type 1ms linear both; animation-delay: calc(1150ms + var(--i) * 100ms); }  /* visibility */\n.caret { animation: caret 900ms linear 1250ms infinite; }"
+ ],
+ "specimen_html": "<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #F4EBDA; display: grid; place-items: center; }\n.f { width: 420px; background: #1F1814; color: #e9e2d6; border-radius: 10px; padding: 18px 20px; font: 15px/1.9 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; box-shadow: 0 30px 80px -30px rgba(20,14,4,.55); }\n.name { color: #8a8178; font-size: 12px; }\n.del { color: #e58a7a; position: relative; }\n.del s { text-decoration: none; position: relative; }\n.del s::after { content: \"\"; position: absolute; left: 0; right: 0; top: 52%; height: 2px; background: #e58a7a; transform: scaleX(0); transform-origin: left; animation: strike 260ms ease-out 700ms forwards; }\n@keyframes strike { to { transform: scaleX(1); } }\n.ins { color: #9fd3a3; }\n.ch { visibility: hidden; animation: type 1ms linear forwards; animation-delay: calc(1150ms + var(--i) * 100ms); }\n@keyframes type { to { visibility: visible; } }\n.caret { display: inline-block; width: 8px; height: 17px; background: #9fd3a3; vertical-align: -3px; opacity: 0; animation: caret 900ms linear 1250ms infinite; }\n@keyframes caret { 0%, 45% { opacity: 1; } 55%, 100% { opacity: 0; } }\n</style>\n<div class=\"s\"><div class=\"f\"><div class=\"name\">settings.yml</div><div class=\"del\">− plan: <s>legacy</s></div>\n<div class=\"ins\">+ plan: <span class=\"ch\" style=\"--i:0\">f</span><span class=\"ch\" style=\"--i:1\">i</span><span class=\"ch\" style=\"--i:2\">e</span><span class=\"ch\" style=\"--i:3\">l</span><span class=\"ch\" style=\"--i:4\">d</span><span class=\"caret\"></span></div></div></div>",
+ "evidence": [
+  {
+   "site": "Jog",
+   "measured": "mark: CSS animation `dt-strike`, 260ms, ease-out, 700ms delay",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json"
+  },
+  {
+   "site": "Jog",
+   "measured": "3× span.t, span.t: CSS animation `dt-type`, 1ms, linear, ~100ms stagger",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json"
+  },
+  {
+   "site": "Jog",
+   "measured": "span.caret: CSS animation `dt-caret`, 900ms, linear, 1250ms delay",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json"
+  }
+ ],
+ "from_book": null,
+ "source": null,
+ "prompt": "Use the motion technique \"Narrated proof\" from the Artspo book \"The Artbook library\" (https://artbook.dev/library/).\n\nThe hero artifact acts out the claim in sequence: strike the old value, type the new one, blink a caret. About 1.3s from first move to caret.\n\n## Recipe\n\n_Rebuilt from measurements. A starting point, not any site's code._\n\n```css\ndel { animation: strike 260ms ease-out 700ms both; }   /* scaleX(0) → 1 on a line */\nins .ch { animation: type 1ms linear both; animation-delay: calc(1150ms + var(--i) * 100ms); }  /* visibility */\n.caret { animation: caret 900ms linear 1250ms infinite; }\n```\n\n## Specimen\n\n_A generic demo of the move, for reference: HTML and CSS, no scripts._\n\n```html\n<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #F4EBDA; display: grid; place-items: center; }\n.f { width: 420px; background: #1F1814; color: #e9e2d6; border-radius: 10px; padding: 18px 20px; font: 15px/1.9 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; box-shadow: 0 30px 80px -30px rgba(20,14,4,.55); }\n.name { color: #8a8178; font-size: 12px; }\n.del { color: #e58a7a; position: relative; }\n.del s { text-decoration: none; position: relative; }\n.del s::after { content: \"\"; position: absolute; left: 0; right: 0; top: 52%; height: 2px; background: #e58a7a; transform: scaleX(0); transform-origin: left; animation: strike 260ms ease-out 700ms forwards; }\n@keyframes strike { to { transform: scaleX(1); } }\n.ins { color: #9fd3a3; }\n.ch { visibility: hidden; animation: type 1ms linear forwards; animation-delay: calc(1150ms + var(--i) * 100ms); }\n@keyframes type { to { visibility: visible; } }\n.caret { display: inline-block; width: 8px; height: 17px; background: #9fd3a3; vertical-align: -3px; opacity: 0; animation: caret 900ms linear 1250ms infinite; }\n@keyframes caret { 0%, 45% { opacity: 1; } 55%, 100% { opacity: 0; } }\n</style>\n<div class=\"s\"><div class=\"f\"><div class=\"name\">settings.yml</div><div class=\"del\">− plan: <s>legacy</s></div>\n<div class=\"ins\">+ plan: <span class=\"ch\" style=\"--i:0\">f</span><span class=\"ch\" style=\"--i:1\">i</span><span class=\"ch\" style=\"--i:2\">e</span><span class=\"ch\" style=\"--i:3\">l</span><span class=\"ch\" style=\"--i:4\">d</span><span class=\"caret\"></span></div></div></div>\n```\n\n## Use when\n\nWhen the pitch fits in one before/after.\n\n## Avoid when\n\nMulti-step stories; past about 2s, people stop watching.\n\n## Pairs with\n\nArtifact as hero, Highlighter marks\n\nMeasured on: Jog.\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

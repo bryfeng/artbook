@@ -1,0 +1,35 @@
+{
+ "id": "spring-for-characters",
+ "kind": "technique",
+ "facet": "motion",
+ "title": "Springs for characters only",
+ "status": "established",
+ "summary": "An overshooting spring (back-out) is reserved for characters and objects: mascots, products, carousel items. Text and UI never spring.",
+ "use_when": "Giving personality to one element class.",
+ "avoid_when": "Body text, buttons or layout shifts; bouncy UI reads as a toy.",
+ "languages": [
+  "research-index",
+  "humane-editorial"
+ ],
+ "techniques": null,
+ "swatches": null,
+ "recipe": [
+  "--spring: cubic-bezier(0.34, 1.56, 0.64, 1);\n.mascot, .object { transition: transform 420ms var(--spring); }"
+ ],
+ "specimen_html": "<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #fff; color: #111; display: grid; align-content: center; gap: 22px; }\n.lane { position: relative; height: 56px; border-bottom: 1px dashed #ccc; }\n.lane .l { position: absolute; left: 0; top: -2px; }\n.ball { position: absolute; left: 0; top: 14px; width: 40px; height: 40px; border-radius: 50%; animation: go 900ms both infinite alternate; animation-delay: 300ms; }\n.spring .ball { background: #3BD966; animation-timing-function: cubic-bezier(0.34,1.56,0.64,1); }\n.ease .ball { background: #bbb; animation-timing-function: cubic-bezier(0.33,1,0.68,1); }\n@keyframes go { from { transform: translateX(0); } 60%, to { transform: translateX(560px); } }\n</style>\n<div class=\"s\"><div class=\"lane spring\"><span class=\"cap l\">back-out spring · characters, objects</span><i class=\"ball\"></i></div>\n<div class=\"lane ease\"><span class=\"cap l\">cubic-out · everything else</span><i class=\"ball\"></i></div></div>",
+ "evidence": [
+  {
+   "site": "Hone",
+   "measured": "svg.c-peek_face: element.animate [{\"translate\":\"-29.18px -5.040000000000001px\",\"scale\":\"1\"}], 420ms, cubic-bezier(0.34, 1.56, 0.64, 1) (back-out)",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_hone-com_yxt2.json"
+  },
+  {
+   "site": "Era",
+   "measured": "left, top — 500ms cubic-bezier(0.34, 1.56, 0.64, 1) (back-out)",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_era-world_cics.json"
+  }
+ ],
+ "from_book": null,
+ "source": null,
+ "prompt": "Use the motion technique \"Springs for characters only\" from the Artspo book \"The Artbook library\" (https://artbook.dev/library/).\n\nAn overshooting spring (back-out) is reserved for characters and objects: mascots, products, carousel items. Text and UI never spring.\n\n## Recipe\n\n_Rebuilt from measurements. A starting point, not any site's code._\n\n```css\n--spring: cubic-bezier(0.34, 1.56, 0.64, 1);\n.mascot, .object { transition: transform 420ms var(--spring); }\n```\n\n## Specimen\n\n_A generic demo of the move, for reference: HTML and CSS, no scripts._\n\n```html\n<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #fff; color: #111; display: grid; align-content: center; gap: 22px; }\n.lane { position: relative; height: 56px; border-bottom: 1px dashed #ccc; }\n.lane .l { position: absolute; left: 0; top: -2px; }\n.ball { position: absolute; left: 0; top: 14px; width: 40px; height: 40px; border-radius: 50%; animation: go 900ms both infinite alternate; animation-delay: 300ms; }\n.spring .ball { background: #3BD966; animation-timing-function: cubic-bezier(0.34,1.56,0.64,1); }\n.ease .ball { background: #bbb; animation-timing-function: cubic-bezier(0.33,1,0.68,1); }\n@keyframes go { from { transform: translateX(0); } 60%, to { transform: translateX(560px); } }\n</style>\n<div class=\"s\"><div class=\"lane spring\"><span class=\"cap l\">back-out spring · characters, objects</span><i class=\"ball\"></i></div>\n<div class=\"lane ease\"><span class=\"cap l\">cubic-out · everything else</span><i class=\"ball\"></i></div></div>\n```\n\n## Use when\n\nGiving personality to one element class.\n\n## Avoid when\n\nBody text, buttons or layout shifts; bouncy UI reads as a toy.\n\n## Pairs with\n\nObject carousel hero, Soft rise reveal\n\nMeasured on: Hone, Era.\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

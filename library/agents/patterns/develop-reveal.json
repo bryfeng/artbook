@@ -1,0 +1,29 @@
+{
+ "id": "develop-reveal",
+ "kind": "technique",
+ "facet": "motion",
+ "title": "Develop reveal",
+ "status": "emerging",
+ "summary": "Images appear overexposed and settle to normal, like a photo developing, staggered across a grid.",
+ "use_when": "Galleries of generated or photographic output.",
+ "avoid_when": "UI cards or text; the flash only works on imagery.",
+ "languages": [
+  "cinematic-media-canvas"
+ ],
+ "techniques": null,
+ "swatches": null,
+ "recipe": [
+  "@keyframes develop { from { filter: brightness(1000%) sepia(20%); } to { filter: brightness(100%) sepia(0%); } }\n.tile.in { animation: develop 750ms cubic-bezier(0, 0.55, 0.45, 1) both; }  /* add .in as each tile enters the viewport */"
+ ],
+ "specimen_html": "<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #0E0E0E; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 18px; }\ni { display: block; height: 146px; border-radius: 4px; background: var(--g); animation: develop 750ms cubic-bezier(0,0.55,0.45,1) both; animation-delay: calc(var(--i) * 240ms + 200ms); }\n@keyframes develop { from { filter: brightness(1000%) sepia(20%); } to { filter: brightness(100%) sepia(0%); } }\n</style>\n<div class=\"s\"><i style=\"--i:0;--g:linear-gradient(160deg,#2d4a63,#c08a5a)\"></i><i style=\"--i:1;--g:linear-gradient(200deg,#5b2a3e,#e0b36a)\"></i><i style=\"--i:2;--g:linear-gradient(170deg,#163a2c,#9fd0a6)\"></i>\n<i style=\"--i:3;--g:linear-gradient(190deg,#33244f,#d78bd0)\"></i><i style=\"--i:4;--g:linear-gradient(150deg,#4a3a20,#f0d080)\"></i><i style=\"--i:5;--g:linear-gradient(210deg,#1f3b4d,#7fc3d9)\"></i></div>",
+ "evidence": [
+  {
+   "site": "Melius",
+   "measured": "22× div.bg-black-3.relative: element.animate {\"filter\":[\"brightness(1000%) sepia(20%)\",\"brightness(100%) sepia(0%)\"]}, 750ms, cubic-bezier(0, 0.55, 0.45, 1) between scrollY 572–5040",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_melius-com_4nc8.json"
+  }
+ ],
+ "from_book": null,
+ "source": null,
+ "prompt": "Use the motion technique \"Develop reveal\" from the Artspo book \"The Artbook library\" (https://artbook.dev/library/).\n\nImages appear overexposed and settle to normal, like a photo developing, staggered across a grid.\n\n## Recipe\n\n_Rebuilt from measurements. A starting point, not any site's code._\n\n```css\n@keyframes develop { from { filter: brightness(1000%) sepia(20%); } to { filter: brightness(100%) sepia(0%); } }\n.tile.in { animation: develop 750ms cubic-bezier(0, 0.55, 0.45, 1) both; }  /* add .in as each tile enters the viewport */\n```\n\n## Specimen\n\n_A generic demo of the move, for reference: HTML and CSS, no scripts._\n\n```html\n<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #0E0E0E; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 18px; }\ni { display: block; height: 146px; border-radius: 4px; background: var(--g); animation: develop 750ms cubic-bezier(0,0.55,0.45,1) both; animation-delay: calc(var(--i) * 240ms + 200ms); }\n@keyframes develop { from { filter: brightness(1000%) sepia(20%); } to { filter: brightness(100%) sepia(0%); } }\n</style>\n<div class=\"s\"><i style=\"--i:0;--g:linear-gradient(160deg,#2d4a63,#c08a5a)\"></i><i style=\"--i:1;--g:linear-gradient(200deg,#5b2a3e,#e0b36a)\"></i><i style=\"--i:2;--g:linear-gradient(170deg,#163a2c,#9fd0a6)\"></i>\n<i style=\"--i:3;--g:linear-gradient(190deg,#33244f,#d78bd0)\"></i><i style=\"--i:4;--g:linear-gradient(150deg,#4a3a20,#f0d080)\"></i><i style=\"--i:5;--g:linear-gradient(210deg,#1f3b4d,#7fc3d9)\"></i></div>\n```\n\n## Use when\n\nGalleries of generated or photographic output.\n\n## Avoid when\n\nUI cards or text; the flash only works on imagery.\n\n## Pairs with\n\nCinematic entrance, Object carousel hero\n\nMeasured on: Melius.\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

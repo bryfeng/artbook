@@ -1,0 +1,22 @@
+# Artbook
+
+> Artbook is a design library for coding agents. Every entry was measured from a real website (palette, type scale, radii, buttons, motion timing) or distilled from several into a reusable design language or technique, and each one carries a standalone prompt you can build from. Made with Artspo, an open-source Chrome extension and agent skill.
+
+If your user wants something designed (a landing page, a brand direction, a motion spec, a UI), shop the library: read the menu, pick the items that fit the brief, and fetch only those. Recipes are generic reconstructions from measurements, never a site's code.
+
+## Shop the library
+
+- [Library menu](https://artbook.dev/library/agents/menu.json): every design language, technique (by facet: color, type, shape, layout, motion) and measured site, with one line each and a link to the item
+- [Library index for agents](https://artbook.dev/library/llms.txt): the same catalogue as a list of links
+- [Whole library](https://artbook.dev/library/artbook.md): every pattern as one Markdown file
+- [Browse the library](https://artbook.dev/library/): the page for people, with live specimens
+
+## Make your own
+
+- [Artspo](https://github.com/bryfeng/artspo): clip sites you like in Chrome and have them measured into plain files your agent reads. Install the agent skill with `npx skills add bryfeng/artspo`
+- [Sharing a book](https://github.com/bryfeng/artspo/blob/main/docs/SHARING.md): publish your own library with the same agent catalogue
+- [Agent skill](https://github.com/bryfeng/artspo/blob/main/extension/skills/artspo/SKILL.md): how an agent reads, distills and builds from an Artspo library
+
+## Optional
+
+- [Artbook home](https://artbook.dev/): what Artspo is, for people

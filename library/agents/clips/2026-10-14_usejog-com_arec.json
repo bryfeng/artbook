@@ -1,0 +1,516 @@
+{
+ "key": "2026-10-14_usejog-com_arec",
+ "site": "usejog.com",
+ "url": "https://usejog.com/",
+ "title": "Jog · GitHub runners for agent-scale development",
+ "collection": "inbox",
+ "clipped": "2026-10-14",
+ "patterns": [
+  "https://artbook.dev/library/agents/patterns/humane-editorial.json",
+  "https://artbook.dev/library/agents/patterns/analog-grain.json",
+  "https://artbook.dev/library/agents/patterns/highlighter-marks.json",
+  "https://artbook.dev/library/agents/patterns/warm-tinted-depth.json",
+  "https://artbook.dev/library/agents/patterns/artifact-as-hero.json",
+  "https://artbook.dev/library/agents/patterns/benchmark-as-headline.json",
+  "https://artbook.dev/library/agents/patterns/ruled-structure.json",
+  "https://artbook.dev/library/agents/patterns/motion-timing-tiers.json",
+  "https://artbook.dev/library/agents/patterns/narrated-proof.json",
+  "https://artbook.dev/library/agents/patterns/soft-rise-reveal.json",
+  "https://artbook.dev/library/agents/patterns/machine-voice-labels.json",
+  "https://artbook.dev/library/agents/patterns/serif-display-sans-ui.json"
+ ],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#F4EBDA",
+     "pct": 72.0
+    },
+    {
+     "c": "#1F1814",
+     "pct": 20.0
+    },
+    {
+     "c": "#FAF5EC9E",
+     "pct": 3.7
+    }
+   ],
+   "text": [
+    {
+     "c": "#4B4036",
+     "pct": 45.0
+    },
+    {
+     "c": "#2A2119",
+     "pct": 19.0
+    },
+    {
+     "c": "#574A3E",
+     "pct": 19.0
+    },
+    {
+     "c": "#A99B8B",
+     "pct": 14.0
+    }
+   ],
+   "accents": [],
+   "theme_color": "#f5f0e7"
+  },
+  "type": {
+   "display": {
+    "family": "Source Serif 4 Variable",
+    "px": 56.0,
+    "weight": 500,
+    "ls": -0.022,
+    "lh": 1.04,
+    "upper": false
+   },
+   "body": {
+    "family": "Inter Variable",
+    "px": 16.0,
+    "lh": 25.6
+   },
+   "families": [
+    {
+     "name": "Inter Variable",
+     "pct": 72
+    },
+    {
+     "name": "Source Serif 4 Variable",
+     "pct": 16
+    },
+    {
+     "name": "IBM Plex Mono",
+     "pct": 9
+    },
+    {
+     "name": "ui-monospace",
+     "pct": 4
+    }
+   ],
+   "scale": [
+    {
+     "px": 56.0,
+     "weight": 500,
+     "family": "Source Serif 4 Variable"
+    },
+    {
+     "px": 52.0,
+     "weight": 500,
+     "family": "Source Serif 4 Variable"
+    },
+    {
+     "px": 26.0,
+     "weight": 500,
+     "family": "Source Serif 4 Variable"
+    },
+    {
+     "px": 20.0,
+     "weight": 400,
+     "family": "Inter Variable"
+    }
+   ],
+   "webfonts": "Inter Variable 100 900, Source Serif 4 Variable 200 900, IBM Plex Mono 400, IBM Plex Mono 500"
+  },
+  "shape": {
+   "radii": [
+    {
+     "v": "999px",
+     "n": 6,
+     "eg": "span.fm-tag"
+    },
+    {
+     "v": "3px 3px 0px 0px",
+     "n": 6,
+     "eg": "i.dt-bar"
+    },
+    {
+     "v": "6px",
+     "n": 4,
+     "eg": "a.dt-signin.dt-signin-out"
+    },
+    {
+     "v": "1px",
+     "n": 3,
+     "eg": "i"
+    }
+   ],
+   "shadows": [
+    {
+     "v": "rgb(191, 176, 150) 0px 0px 0px 1px, rgba(52, 40, 18, 0.07) 0px 1px 2px 0px",
+     "n": 2,
+     "eg": ""
+    },
+    {
+     "v": "rgba(20, 14, 4, 0.55) 0px 30px 80px -30px",
+     "n": 1,
+     "eg": ""
+    },
+    {
+     "v": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset, rgba(52, 40, 18, 0.1) 0px 0px 0px 1px, rgba(52, 40, 18, 0.2) 0px 10px 28px -14px",
+     "n": 1,
+     "eg": ""
+    }
+   ],
+   "borders": [
+    {
+     "v": "1px solid #D9CDB9",
+     "n": 15,
+     "eg": ""
+    },
+    {
+     "v": "1px solid color(srgb 0.164706 0.129412 0.0980392 / 0.2)",
+     "n": 5,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #00000000",
+     "n": 2,
+     "eg": ""
+    }
+   ],
+   "spacing": "no consistent grid; section padding 128px, 24px, 45px, 56px; gaps 8px, 6px, 24px, 3.25px"
+  },
+  "buttons": [
+   {
+    "filled": true,
+    "fill": "#FFFFFF8C",
+    "text": "#2A2119",
+    "radius": "6px",
+    "padding": "0px 0px",
+    "size": 14.0,
+    "weight": 540,
+    "border": "",
+    "height": 34
+   },
+   {
+    "filled": false,
+    "fill": "transparent",
+    "text": "#F5F0E7",
+    "radius": "6px 0px 0px 6px",
+    "padding": "0px 18px",
+    "size": 15.0,
+    "weight": 560,
+    "border": "1px #00000000",
+    "height": 44
+   },
+   {
+    "filled": false,
+    "fill": "transparent",
+    "text": "color(srgb 0.960784 0.941177 0.905882 / 0.88)",
+    "radius": "0px 6px 6px 0px",
+    "padding": "0px 18px",
+    "size": 15.0,
+    "weight": 520,
+    "border": "1px #00000000",
+    "height": 44
+   }
+  ],
+  "motion": {
+   "libraries": "WebGL canvas, Tailwind (utility classes)",
+   "timeline": [
+    {
+     "group": "load",
+     "n": 1,
+     "label": "i.dt-bar",
+     "kind": "transition",
+     "ms": 900,
+     "ease": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+     "stagger": 70,
+     "approx": true,
+     "props": [
+      "transform"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 4,
+     "label": "span.dt-price, span.dt-price",
+     "kind": "transition",
+     "ms": 360,
+     "ease": "ease",
+     "stagger": 70,
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 2,
+     "label": "mark, mark",
+     "kind": "animation",
+     "ms": 260,
+     "ease": "ease-out",
+     "delay": 700,
+     "name": "dt-mark"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "mark",
+     "kind": "animation",
+     "ms": 260,
+     "ease": "ease-out",
+     "delay": 700,
+     "name": "dt-strike"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.m",
+     "kind": "animation",
+     "ms": 200,
+     "ease": "ease-out",
+     "delay": 1150,
+     "name": "dt-fade"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.c",
+     "kind": "animation",
+     "ms": 200,
+     "ease": "ease-out",
+     "delay": 1150,
+     "name": "dt-fade"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.caret",
+     "kind": "animation",
+     "ms": 900,
+     "ease": "linear",
+     "delay": 1250,
+     "name": "dt-caret"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.dt-agent-logo",
+     "kind": "transition",
+     "ms": 240,
+     "ease": "ease-in",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.dt-agent-logo",
+     "kind": "transition",
+     "ms": 420,
+     "ease": "ease",
+     "delay": 100,
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.dt-agent-logo",
+     "kind": "transition",
+     "ms": 420,
+     "ease": "cubic-bezier(0.2, 0.7, 0.2, 1)",
+     "delay": 100,
+     "approx": true,
+     "props": [
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "i",
+     "kind": "transition",
+     "ms": 600,
+     "ease": "ease",
+     "when": "at scrollY≈720",
+     "approx": true,
+     "props": [
+      "background-color"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "li.dt-logo",
+     "kind": "transition",
+     "ms": 600,
+     "ease": "ease",
+     "when": "at scrollY≈720",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "li.dt-logo.on",
+     "kind": "transition",
+     "ms": 600,
+     "ease": "ease",
+     "when": "at scrollY≈720",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "i.dt-bar",
+     "kind": "transition",
+     "ms": 900,
+     "ease": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+     "stagger": 70,
+     "when": "at scrollY≈1440",
+     "approx": true,
+     "props": [
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "span.dt-price, span.dt-price",
+     "kind": "transition",
+     "ms": 360,
+     "ease": "ease",
+     "stagger": 70,
+     "when": "between scrollY 1440–2160",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.dt-agent-logo",
+     "kind": "transition",
+     "ms": 420,
+     "ease": "cubic-bezier(0.2, 0.7, 0.2, 1)",
+     "stagger": 100,
+     "when": "between scrollY 2160–3548",
+     "approx": true,
+     "props": [
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.dt-agent-logo",
+     "kind": "transition",
+     "ms": 240,
+     "ease": "ease-in",
+     "when": "between scrollY 2160–3548",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.dt-agent-logo",
+     "kind": "transition",
+     "ms": 420,
+     "ease": "ease",
+     "delay": 100,
+     "when": "between scrollY 2160–3548",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "i.dt-bar",
+     "kind": "animation",
+     "ms": 6000,
+     "ease": "linear",
+     "infinite": true,
+     "name": "dt-shimmer-y"
+    }
+   ],
+   "keyframes": {
+    "dt-fade": "@keyframes dt-fade { 0% { opacity: 0; } }",
+    "dt-mark": "@keyframes dt-mark { 0% { background: 0px 0px; } }",
+    "dt-strike": "@keyframes dt-strike { 0% { transform: scaleX(0); } }",
+    "dt-sweep": "@keyframes dt-sweep { 0% { transform: scaleX(0); } }",
+    "dt-caret": "@keyframes dt-caret { 0%, 45%, 70% { opacity: 1; } 55%, 60%, 100% { opacity: 0; } }",
+    "dt-type": "@keyframes dt-type { 0% { visibility: hidden; } }",
+    "dt-shimmer-y": "@keyframes dt-shimmer-y { 0%, 70% { transform: translateY(100%); } 100% { transform: translateY(-100%); } }"
+   },
+   "declared_transitions": [
+    {
+     "props": "background-color, color, transform, border-color",
+     "ms": 120,
+     "ease": "ease",
+     "easeName": "",
+     "n": 30,
+     "eg": "a, a.dt-signin.dt-signin-out, button"
+    },
+    {
+     "props": "color, filter, opacity",
+     "ms": 180,
+     "ease": "ease",
+     "easeName": "",
+     "n": 30,
+     "eg": "span.dt-bar-name, span.pv-logo.namespace, span.pv-logo.blacksmith"
+    },
+    {
+     "props": "transform",
+     "ms": 900,
+     "ease": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+     "easeName": "",
+     "n": 6,
+     "eg": "i.dt-bar"
+    },
+    {
+     "props": "opacity",
+     "ms": 360,
+     "ease": "ease",
+     "easeName": "",
+     "n": 6,
+     "eg": "span.dt-price"
+    },
+    {
+     "props": "opacity",
+     "ms": 420,
+     "ease": "ease",
+     "easeName": "",
+     "n": 3,
+     "eg": "span.dt-agent-logo"
+    },
+    {
+     "props": "transform",
+     "ms": 420,
+     "ease": "cubic-bezier(0.2, 0.7, 0.2, 1)",
+     "easeName": "",
+     "n": 3,
+     "eg": "span.dt-agent-logo"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown",
+   "WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque"
+  ]
+ },
+ "prompt": "Use the measured design system of Jog · GitHub runners for agent-scale development (usejog.com), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #F4EBDA 72%, #1F1814 20%, #FAF5EC9E 3.7%\n- Text, by amount of text: #4B4036 45%, #2A2119 19%, #574A3E 19%, #A99B8B 14%\n\n## Type\n- Display: Source Serif 4 Variable 56px/500, letter-spacing -0.022em, line-height 1.04\n- Body: Inter Variable 16px, line-height 25.6px\n- Scale (px/weight): 56/500, 52/500, 26/500, 20/400\n- Families by text share: Inter Variable 72%, Source Serif 4 Variable 16%, IBM Plex Mono 9%, ui-monospace 4%\n\n## Shape\n- Radii: 999px (6×); 3px 3px 0px 0px (6×); 6px (4×); 1px (3×)\n- Shadows: rgb(191, 176, 150) 0px 0px 0px 1px, rgba(52, 40, 18, 0.07) 0px 1px 2px 0px (2×); rgba(20, 14, 4, 0.55) 0px 30px 80px -30px (1×); rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset, rgba(52, 40, 18, 0.1) 0px 0px 0px 1px, rgba(52, 40, 18, 0.2) 0px 10px 28px -14px (1×)\n- Borders: 1px solid #D9CDB9 (15×); 1px solid color(srgb 0.164706 0.129412 0.0980392 / 0.2) (5×); 1px solid #00000000 (2×)\n- Spacing: no consistent grid; section padding 128px, 24px, 45px, 56px; gaps 8px, 6px, 24px, 3.25px\n\n## Buttons\n- filled #FFFFFF8C, text #2A2119, radius 6px, padding 0px 0px, 14px/540\n- outline, text #F5F0E7, radius 6px 0px 0px 6px, padding 0px 18px, 15px/560, border 1px #00000000\n- outline, text color(srgb 0.960784 0.941177 0.905882 / 0.88), radius 0px 6px 6px 0px, padding 0px 18px, 15px/520, border 1px #00000000\n\n## Motion\n- Libraries: WebGL canvas, Tailwind (utility classes)\n- On load, 1× i.dt-bar: transition on transform; 900ms, cubic-bezier(0.2, 0.8, 0.2, 1), 70ms stagger, approximate\n- On load, 4× span.dt-price, span.dt-price: transition on opacity; 360ms, ease, 70ms stagger, approximate\n- On load, 2× mark, mark: animation dt-mark; 260ms, ease-out, 700ms delay\n- On load, 1× mark: animation dt-strike; 260ms, ease-out, 700ms delay\n- On load, 1× span.m: animation dt-fade; 200ms, ease-out, 1150ms delay\n- On load, 1× span.c: animation dt-fade; 200ms, ease-out, 1150ms delay\n- On load, 1× span.caret: animation dt-caret; 900ms, linear, 1250ms delay\n- On load, 1× span.dt-agent-logo: transition on opacity, transform; 240ms, ease-in, approximate\n- On scroll, 1× i: transition on background-color; 600ms, ease, at scrollY≈720, approximate\n- On scroll, 1× li.dt-logo: transition on opacity, transform; 600ms, ease, at scrollY≈720, approximate\n- On scroll, 1× li.dt-logo.on: transition on opacity, transform; 600ms, ease, at scrollY≈720, approximate\n- On scroll, 1× i.dt-bar: transition on transform; 900ms, cubic-bezier(0.2, 0.8, 0.2, 1), 70ms stagger, at scrollY≈1440, approximate\n- On scroll, 4× span.dt-price, span.dt-price: transition on opacity; 360ms, ease, 70ms stagger, between scrollY 1440–2160, approximate\n- On scroll, 1× span.dt-agent-logo: transition on transform; 420ms, cubic-bezier(0.2, 0.7, 0.2, 1), 100ms stagger, between scrollY 2160–3548, approximate\n- On scroll, 1× span.dt-agent-logo: transition on opacity, transform; 240ms, ease-in, between scrollY 2160–3548, approximate\n- On scroll, 1× span.dt-agent-logo: transition on opacity; 420ms, ease, 100ms delay, between scrollY 2160–3548, approximate\n- Looping, 1× i.dt-bar: animation dt-shimmer-y; 6000ms, linear, infinite\n- Declared transition on background-color, color, transform, border-color: 120ms ease (30 elements)\n- Declared transition on color, filter, opacity: 180ms ease (30 elements)\n- Declared transition on transform: 900ms cubic-bezier(0.2, 0.8, 0.2, 1) (6 elements)\n- Declared transition on opacity: 360ms ease (6 elements)\n- Declared transition on opacity: 420ms ease (3 elements)\n- Declared transition on transform: 420ms cubic-bezier(0.2, 0.7, 0.2, 1) (3 elements)\n```css\n@keyframes dt-fade { 0% { opacity: 0; } }\n```\n```css\n@keyframes dt-mark { 0% { background: 0px 0px; } }\n```\n```css\n@keyframes dt-strike { 0% { transform: scaleX(0); } }\n```\n```css\n@keyframes dt-sweep { 0% { transform: scaleX(0); } }\n```\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n- WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque\n\n## Patterns in this book built on it\nHumane editorial, Analog grain, Highlighter marks, Warm-tinted depth, Artifact as hero, Benchmark as headline, Ruled structure, Four-tier motion timing, Narrated proof, Soft rise reveal, Machine-voice labels, Serif display, sans UI\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

@@ -1,0 +1,79 @@
+# The Artbook library
+
+> An Artspo book: 4 design languages, 25 techniques and 12 measured websites (palette, type, shape and motion timing), for coding agents to build from. Every item carries a standalone prompt.
+
+Start with the menu: it lists everything with facets and one line each. Fetch only the items that fit your brief; each one's `prompt` field works on its own. Recipes are generic reconstructions from measurements, never a site's code.
+
+## Shop
+
+- [Menu](https://artbook.dev/library/agents/menu.json): every language, technique and clip, by facet, with links
+- [Whole book](https://artbook.dev/library/artbook.md): all patterns and works as one Markdown file
+- [Browse](https://artbook.dev/library/): the same book as a page, with live specimens
+
+## Languages
+
+- [Humane editorial](https://artbook.dev/library/agents/patterns/humane-editorial.json): A well-made magazine about technology that feels human: calm, warm, crafted. The product is technical, but the page leads with feeling.
+- [Research index](https://artbook.dev/library/agents/patterns/research-index.json): A lab notebook made public. Numbered, ruled, precise, confident. Color works as an index or a highlighter, never as decoration.
+- [Cinematic media canvas](https://artbook.dev/library/agents/patterns/cinematic-media-canvas.json): A screening room. Dark, media-first, and things develop into view instead of sliding in.
+- [Retro machine pop](https://artbook.dev/library/agents/patterns/retro-machine-pop.json): Loud, funny, nostalgic computing. It's confident enough to joke ('We raised a really big Series A').
+
+## Techniques: color
+
+- [Accent rationing](https://artbook.dev/library/agents/patterns/accent-rationing.json): One saturated color is reserved for the action and the data. Everything else is neutral, so the eye goes where the money is.
+- [Analog grain](https://artbook.dev/library/agents/patterns/analog-grain.json): A paper, film or halftone texture over flat color, to take the digital sterility off a page.
+- [Color-indexed sections](https://artbook.dev/library/agents/patterns/color-indexed-sections.json): Each section gets its own color as wayfinding, either a chip next to the section number or a full-bleed band, so color tells you where you are.
+- [Highlighter marks](https://artbook.dev/library/agents/patterns/highlighter-marks.json): Key words get a flat background block like a marker pen, so emphasis comes from color behind the text instead of weight or size.
+- [Warm-tinted depth](https://artbook.dev/library/agents/patterns/warm-tinted-depth.json): Shadows and lines are tinted with the ground color's hue instead of gray, so elevation feels like paper lifting, not plastic.
+
+## Techniques: type
+
+- [Machine-voice labels](https://artbook.dev/library/agents/patterns/machine-voice-labels.json): A mono or pixel face as a secondary voice for labels, metadata, numbers and code. It's the machine talking, next to the human headline.
+- [Serif display, sans UI](https://artbook.dev/library/agents/patterns/serif-display-sans-ui.json): Headlines in a text serif with tight tracking; everything you interact with in a neutral sans. The serif carries the voice, the sans does the work.
+- [One family, scale does the work](https://artbook.dev/library/agents/patterns/one-family-scale-hierarchy.json): A single grotesk family for every role, with hierarchy made only through size and space. Big steps, few weights.
+- [Oversized tight display](https://artbook.dev/library/agents/patterns/oversized-tight-display.json): Display type far beyond comfortable size (120–150px) with leading below 1, so words become shapes.
+
+## Techniques: shape
+
+- [Hard edges, flat depth](https://artbook.dev/library/agents/patterns/hard-edges-flat-depth.json): Square corners (0–2px) and no shadows. Hierarchy comes from color bands and rules, not elevation.
+
+## Techniques: layout
+
+- [Artifact as hero](https://artbook.dev/library/agents/patterns/artifact-as-hero.json): The hero shows the product's literal interaction (the prompt box you type into, the one-line diff you'd make, the code and what it compiles into), not a screenshot or an abstraction.
+- [Announcement bar](https://artbook.dev/library/agents/patterns/announcement-bar.json): A thin full-width strip above the nav carrying the latest milestone (in this library, always a funding round) with one link.
+- [Ruled structure](https://artbook.dev/library/agents/patterns/ruled-structure.json): Hairline rules divide columns, list rows and FAQ entries, so the grid is visible like a printed table.
+- [Benchmark as headline](https://artbook.dev/library/agents/patterns/benchmark-as-headline.json): The claim is a number against named competitors, set huge and backed by a chart right below it.
+- [Numbered sections](https://artbook.dev/library/agents/patterns/numbered-sections.json): Sections numbered 01, 02 … like chapters, so a long page reads as an ordered argument and not a scroll of features.
+- [Object carousel hero](https://artbook.dev/library/agents/patterns/object-carousel-hero.json): The hero is a row of objects or media with the focused one centered and full, and its neighbors scaled down and faded.
+
+## Techniques: motion
+
+- [Four-tier motion timing](https://artbook.dev/library/agents/patterns/motion-timing-tiers.json): The 103 distinct durations measured across the eight clips cluster into four bands: 29 under 300ms, 41 between 300 and 800ms, 20 between 800 and 1600ms, 13 above. The bands blur at their edges, but picking a value from a band and keeping to it is most of a motion system.
+- [Soft rise reveal](https://artbook.dev/library/agents/patterns/soft-rise-reveal.json): Content fades in while rising a short distance, with a strong ease-out and a small stagger. It's the most common motion in the library.
+- [Static by design](https://artbook.dev/library/agents/patterns/static-by-design.json): Little or no scroll motion, as a deliberate choice: content is simply there. Motion is limited to hover color and loaders.
+- [Ambient breathing glow](https://artbook.dev/library/agents/patterns/ambient-breathing-glow.json): A slow loop (3.5–5s) gently pulsing opacity and scale on a glow behind the thing that matters: the hero object, or the plan you want chosen.
+- [Inertial smooth scroll](https://artbook.dev/library/agents/patterns/inertial-smooth-scroll.json): Scroll is taken over by a smoothing library, so the page glides with momentum. It sets the pacing for every other scroll effect.
+- [Springs for characters only](https://artbook.dev/library/agents/patterns/spring-for-characters.json): An overshooting spring (back-out) is reserved for characters and objects: mascots, products, carousel items. Text and UI never spring.
+- [Cinematic entrance](https://artbook.dev/library/agents/patterns/cinematic-entrance.json): The hero arrives slowly (about 1.5s), scaling down from 1.2 while it fades in on a long expo-out, like a camera settling.
+- [Develop reveal](https://artbook.dev/library/agents/patterns/develop-reveal.json): Images appear overexposed and settle to normal, like a photo developing, staggered across a grid.
+- [Narrated proof](https://artbook.dev/library/agents/patterns/narrated-proof.json): The hero artifact acts out the claim in sequence: strike the old value, type the new one, blink a caret. About 1.3s from first move to caret.
+
+## Measured sites
+
+- [bencho.dev](https://artbook.dev/library/agents/clips/2026-10-17_bencho-dev_ok20.json): #17181A, #FFFFFF; display Inter; 65 animations
+- [motion.dev](https://artbook.dev/library/agents/clips/2026-10-17_motion-dev_3iot.json): #000000, #141214, #F8F8F6; display TASA Orbiter; 20 animations
+- [pen.dev](https://artbook.dev/library/agents/clips/2026-10-17_pen-dev_qjnk.json): #DBE0E6, #EAEDF0, #0D0D0D; display InterDisplay; 31 animations
+- [dynamic.xyz/docs/flow/api](https://artbook.dev/library/agents/clips/2026-10-16_dynamic-xyz_a0q0.json): #FAFAFA, #EDF1FE, #FEFCE8; display Inter
+- [gesso.build](https://artbook.dev/library/agents/clips/2026-10-16_gesso-build_4oz3.json): #F2E9D6, #000000, #252525; display featureDisplay; 31 animations
+- [chenglou.me/handwired](https://artbook.dev/library/agents/clips/2026-10-15_chenglou-me_ikur.json): #FFFDF8, #1E1A16, #A64D1D; display Iowan Old Style
+- [hone.com](https://artbook.dev/library/agents/clips/2026-10-15_hone-com_yxt2.json): #FFFFFF, #000000, #001115; display FT Aktual; 78 animations
+- [melius.com](https://artbook.dev/library/agents/clips/2026-10-15_melius-com_4nc8.json): #FAFAFA, #0E0E0E, #202020; display recklessStandard; 50 animations
+- [typesafe.ai](https://artbook.dev/library/agents/clips/2026-10-15_typesafe-ai_7sp7.json): #F386A1, #1E1E1E, #FEFEFE; display Die Grotesk C Medium; 10 animations
+- [era.world](https://artbook.dev/library/agents/clips/2026-10-14_era-world_cics.json): #FFFFFF, #000000; display IvyOra Display; 11 animations
+- [preferencemodel.com](https://artbook.dev/library/agents/clips/2026-10-14_preferencemodel-com_by8f.json): #FFFFFF, #E8E8E8, #FAB3F6; display MartianMono
+- [usejog.com](https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json): #F4EBDA, #1F1814, #FAF5EC; display Source Serif 4 Variable; 19 animations
+
+## Optional
+
+- [Artspo](https://github.com/bryfeng/artspo): the Chrome extension and agent skill that measured these sites. Install the skill with `npx skills add bryfeng/artspo`, then import this book with `python3 import_book.py https://artbook.dev/library/artbook.md`
+
+Rules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.

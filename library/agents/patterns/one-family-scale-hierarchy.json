@@ -1,0 +1,39 @@
+{
+ "id": "one-family-scale-hierarchy",
+ "kind": "technique",
+ "facet": "type",
+ "title": "One family, scale does the work",
+ "status": "established",
+ "summary": "A single grotesk family for every role, with hierarchy made only through size and space. Big steps, few weights.",
+ "use_when": "Systematic, research-flavored brands; it's cheap to keep consistent.",
+ "avoid_when": "When the family is generic; with one face, the face *is* the brand.",
+ "languages": [
+  "research-index"
+ ],
+ "techniques": null,
+ "swatches": null,
+ "recipe": [
+  "--font: \"<one grotesk>\";  font-weight: 400 (500 for UI only)\n--scale: 13 16 18 28 48 67 120;   /* ≈1.5× steps; top step is 7.5× body */"
+ ],
+ "specimen_html": "<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #fff; color: #000; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; font-weight: 400; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: baseline; padding-right: 0; }\n.k { font: 11px/1 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; color: #888; text-align: right; }\n.t { white-space: nowrap; letter-spacing: -0.01em; line-height: 1; }\n</style>\n<div class=\"s\">\n<span class=\"k\">13</span><span class=\"t\" style=\"font-size:13px\">Captions and metadata</span>\n<span class=\"k\">16</span><span class=\"t\" style=\"font-size:16px\">Body copy, set plainly</span>\n<span class=\"k\">28</span><span class=\"t\" style=\"font-size:28px\">Section heads</span>\n<span class=\"k\">48</span><span class=\"t\" style=\"font-size:48px\">Page statements</span>\n<span class=\"k\">120</span><span class=\"t\" style=\"font-size:120px\">Scale</span></div>",
+ "evidence": [
+  {
+   "site": "Hone",
+   "measured": "Families by text share: FT Aktual 100%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_hone-com_yxt2.json"
+  },
+  {
+   "site": "Hone",
+   "measured": "Type scale (px): 120 / 67 / 48 / 28 / 18 / 16 / 13",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_hone-com_yxt2.json"
+  },
+  {
+   "site": "Preference Model",
+   "measured": "Families by text share: TWKLausanne 88%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_preferencemodel-com_by8f.json"
+  }
+ ],
+ "from_book": null,
+ "source": null,
+ "prompt": "Use the type technique \"One family, scale does the work\" from the Artspo book \"The Artbook library\" (https://artbook.dev/library/).\n\nA single grotesk family for every role, with hierarchy made only through size and space. Big steps, few weights.\n\n## Recipe\n\n_Rebuilt from measurements. A starting point, not any site's code._\n\n```css\n--font: \"<one grotesk>\";  font-weight: 400 (500 for UI only)\n--scale: 13 16 18 28 48 67 120;   /* ≈1.5× steps; top step is 7.5× body */\n```\n\n## Specimen\n\n_A generic demo of the move, for reference: HTML and CSS, no scripts._\n\n```html\n<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #fff; color: #000; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; font-weight: 400; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: baseline; padding-right: 0; }\n.k { font: 11px/1 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; color: #888; text-align: right; }\n.t { white-space: nowrap; letter-spacing: -0.01em; line-height: 1; }\n</style>\n<div class=\"s\">\n<span class=\"k\">13</span><span class=\"t\" style=\"font-size:13px\">Captions and metadata</span>\n<span class=\"k\">16</span><span class=\"t\" style=\"font-size:16px\">Body copy, set plainly</span>\n<span class=\"k\">28</span><span class=\"t\" style=\"font-size:28px\">Section heads</span>\n<span class=\"k\">48</span><span class=\"t\" style=\"font-size:48px\">Page statements</span>\n<span class=\"k\">120</span><span class=\"t\" style=\"font-size:120px\">Scale</span></div>\n```\n\n## Use when\n\nSystematic, research-flavored brands; it's cheap to keep consistent.\n\n## Avoid when\n\nWhen the family is generic; with one face, the face *is* the brand.\n\n## Pairs with\n\nOversized tight display, Numbered sections\n\nMeasured on: Hone, Preference Model.\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

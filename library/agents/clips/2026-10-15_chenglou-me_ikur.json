@@ -1,0 +1,178 @@
+{
+ "key": "2026-10-15_chenglou-me_ikur",
+ "site": "chenglou.me/handwired",
+ "url": "https://chenglou.me/handwired/",
+ "title": "Handwired: turn your regular JavaScript code into a neural net",
+ "collection": "inbox",
+ "clipped": "2026-10-15",
+ "patterns": [
+  "https://artbook.dev/library/agents/patterns/humane-editorial.json",
+  "https://artbook.dev/library/agents/patterns/warm-tinted-depth.json",
+  "https://artbook.dev/library/agents/patterns/artifact-as-hero.json",
+  "https://artbook.dev/library/agents/patterns/static-by-design.json",
+  "https://artbook.dev/library/agents/patterns/machine-voice-labels.json",
+  "https://artbook.dev/library/agents/patterns/serif-display-sans-ui.json"
+ ],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#FFFDF8",
+     "pct": 25.0
+    },
+    {
+     "c": "#1E1A16",
+     "pct": 4.2
+    },
+    {
+     "c": "#A64D1D21",
+     "pct": 0.6
+    },
+    {
+     "c": null,
+     "pct": 70.0
+    }
+   ],
+   "text": [
+    {
+     "c": "#5F564D",
+     "pct": 62.0
+    },
+    {
+     "c": "#1E1A16",
+     "pct": 22.0
+    },
+    {
+     "c": "#F3EEE4",
+     "pct": 9.0
+    },
+    {
+     "c": "#72675C",
+     "pct": 4.0
+    }
+   ],
+   "accents": [],
+   "theme_color": "#f3eee4"
+  },
+  "type": {
+   "display": {
+    "family": "Iowan Old Style",
+    "px": 60.0,
+    "weight": 400,
+    "ls": -0.022,
+    "lh": 1.07,
+    "upper": false
+   },
+   "body": {
+    "family": "ui-sans-serif",
+    "px": 15.0,
+    "lh": 24.0
+   },
+   "families": [
+    {
+     "name": "ui-sans-serif",
+     "pct": 51
+    },
+    {
+     "name": "Iowan Old Style",
+     "pct": 29
+    },
+    {
+     "name": "ui-monospace",
+     "pct": 20
+    }
+   ],
+   "scale": [
+    {
+     "px": 60.0,
+     "weight": 400,
+     "family": "Iowan Old Style"
+    },
+    {
+     "px": 20.0,
+     "weight": 600,
+     "family": "ui-sans-serif"
+    },
+    {
+     "px": 19.0,
+     "weight": 400,
+     "family": "Iowan Old Style"
+    },
+    {
+     "px": 16.0,
+     "weight": 700,
+     "family": "Iowan Old Style"
+    }
+   ],
+   "webfonts": ""
+  },
+  "shape": {
+   "radii": [
+    {
+     "v": "4px",
+     "n": 8,
+     "eg": "i"
+    },
+    {
+     "v": "12px",
+     "n": 3,
+     "eg": "a.card.demo"
+    },
+    {
+     "v": "8px",
+     "n": 1,
+     "eg": "div.code"
+    }
+   ],
+   "shadows": [
+    {
+     "v": "rgba(60, 42, 22, 0.05) 0px 1px 1px 0px, rgba(60, 42, 22, 0.06) 0px 2px 6px 0px",
+     "n": 3,
+     "eg": ""
+    }
+   ],
+   "borders": [
+    {
+     "v": "1px solid #A64D1D7F",
+     "n": 4,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #DCD2C4",
+     "n": 3,
+     "eg": ""
+    }
+   ],
+   "spacing": "8px grid; section padding 24px, 64px; gaps 24px, 16px, 8px, 48px"
+  },
+  "buttons": [],
+  "motion": {
+   "libraries": "none detected (plain CSS/JS)",
+   "timeline": [],
+   "keyframes": {},
+   "declared_transitions": [
+    {
+     "props": "text-decoration-color, color, border-color, fill",
+     "ms": 120,
+     "ease": "cubic-bezier(0.2, 0.7, 0.2, 1)",
+     "easeName": "",
+     "n": 10,
+     "eg": "a.brand, a, a.card.demo"
+    },
+    {
+     "props": "transform, box-shadow",
+     "ms": 280,
+     "ease": "cubic-bezier(0.2, 0.7, 0.2, 1)",
+     "easeName": "",
+     "n": 6,
+     "eg": "a.card.demo"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown"
+  ]
+ },
+ "prompt": "Use the measured design system of Handwired: turn your regular JavaScript code into a neural net (chenglou.me/handwired), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #FFFDF8 25%, #1E1A16 4.2%, #A64D1D21 0.6%, imagery 70%\n- Text, by amount of text: #5F564D 62%, #1E1A16 22%, #F3EEE4 9%, #72675C 4%\n\n## Type\n- Display: Iowan Old Style 60px/400, letter-spacing -0.022em, line-height 1.07\n- Body: ui-sans-serif 15px, line-height 24px\n- Scale (px/weight): 60/400, 20/600, 19/400, 16/700\n- Families by text share: ui-sans-serif 51%, Iowan Old Style 29%, ui-monospace 20%\n\n## Shape\n- Radii: 4px (8×); 12px (3×); 8px (1×)\n- Shadows: rgba(60, 42, 22, 0.05) 0px 1px 1px 0px, rgba(60, 42, 22, 0.06) 0px 2px 6px 0px (3×)\n- Borders: 1px solid #A64D1D7F (4×); 1px solid #DCD2C4 (3×)\n- Spacing: 8px grid; section padding 24px, 64px; gaps 24px, 16px, 8px, 48px\n\n## Motion\n- Libraries: none detected (plain CSS/JS)\n- Declared transition on text-decoration-color, color, border-color, fill: 120ms cubic-bezier(0.2, 0.7, 0.2, 1) (10 elements)\n- Declared transition on transform, box-shadow: 280ms cubic-bezier(0.2, 0.7, 0.2, 1) (6 elements)\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n\n## Patterns in this book built on it\nHumane editorial, Warm-tinted depth, Artifact as hero, Static by design, Machine-voice labels, Serif display, sans UI\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

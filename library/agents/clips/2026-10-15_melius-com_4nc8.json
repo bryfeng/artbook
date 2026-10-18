@@ -1,0 +1,1117 @@
+{
+ "key": "2026-10-15_melius-com_4nc8",
+ "site": "melius.com",
+ "url": "https://www.melius.com/",
+ "title": "Melius – the AI-native operating system for creatives",
+ "collection": "inbox",
+ "clipped": "2026-10-15",
+ "patterns": [
+  "https://artbook.dev/library/agents/patterns/cinematic-media-canvas.json",
+  "https://artbook.dev/library/agents/patterns/humane-editorial.json",
+  "https://artbook.dev/library/agents/patterns/retro-machine-pop.json",
+  "https://artbook.dev/library/agents/patterns/accent-rationing.json",
+  "https://artbook.dev/library/agents/patterns/analog-grain.json",
+  "https://artbook.dev/library/agents/patterns/highlighter-marks.json",
+  "https://artbook.dev/library/agents/patterns/announcement-bar.json",
+  "https://artbook.dev/library/agents/patterns/artifact-as-hero.json",
+  "https://artbook.dev/library/agents/patterns/object-carousel-hero.json",
+  "https://artbook.dev/library/agents/patterns/ambient-breathing-glow.json",
+  "https://artbook.dev/library/agents/patterns/cinematic-entrance.json",
+  "https://artbook.dev/library/agents/patterns/develop-reveal.json",
+  "https://artbook.dev/library/agents/patterns/inertial-smooth-scroll.json",
+  "https://artbook.dev/library/agents/patterns/motion-timing-tiers.json",
+  "https://artbook.dev/library/agents/patterns/soft-rise-reveal.json",
+  "https://artbook.dev/library/agents/patterns/machine-voice-labels.json",
+  "https://artbook.dev/library/agents/patterns/serif-display-sans-ui.json"
+ ],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#FAFAFA",
+     "pct": 47.0
+    },
+    {
+     "c": "#0E0E0E",
+     "pct": 16.0
+    },
+    {
+     "c": "#202020",
+     "pct": 7.5
+    },
+    {
+     "c": "#FFF78B",
+     "pct": 7.0
+    },
+    {
+     "c": "#2A2A2A",
+     "pct": 3.5
+    },
+    {
+     "c": "#D9D9D9",
+     "pct": 0.6
+    }
+   ],
+   "text": [
+    {
+     "c": "#FAFAFA",
+     "pct": 58.0
+    },
+    {
+     "c": "#0E0E0E",
+     "pct": 28.0
+    },
+    {
+     "c": "#D9D9D9",
+     "pct": 8.0
+    },
+    {
+     "c": "#676767",
+     "pct": 6.0
+    }
+   ],
+   "accents": [
+    {
+     "c": "#F04E23"
+    },
+    {
+     "c": "#FFF78B"
+    }
+   ],
+   "theme_color": ""
+  },
+  "type": {
+   "display": {
+    "family": "recklessStandard",
+    "px": 56.0,
+    "weight": 400,
+    "ls": -0.02,
+    "lh": 1.0,
+    "upper": false
+   },
+   "body": {
+    "family": "ui-sans-serif",
+    "px": 16.0,
+    "lh": 24.0
+   },
+   "families": [
+    {
+     "name": "easeStandard",
+     "pct": 91
+    },
+    {
+     "name": "futurist",
+     "pct": 5
+    },
+    {
+     "name": "ui-sans-serif",
+     "pct": 2
+    },
+    {
+     "name": "recklessStandard",
+     "pct": 1
+    }
+   ],
+   "scale": [
+    {
+     "px": 56.0,
+     "weight": 400,
+     "family": "recklessStandard"
+    },
+    {
+     "px": 36.0,
+     "weight": 400,
+     "family": "recklessStandard"
+    },
+    {
+     "px": 19.0,
+     "weight": 400,
+     "family": "easeStandard"
+    },
+    {
+     "px": 16.0,
+     "weight": 400,
+     "family": "ui-sans-serif"
+    }
+   ],
+   "webfonts": "easeStandard 400, recklessStandard 400, futurist 400"
+  },
+  "shape": {
+   "radii": [
+    {
+     "v": "2px",
+     "n": 57,
+     "eg": "span.w-fit.max-w-full"
+    },
+    {
+     "v": "4px",
+     "n": 29,
+     "eg": "span.t-b-3-relaxed.bg-offblack"
+    },
+    {
+     "v": "8px",
+     "n": 26,
+     "eg": "div.border-gray-light-2-faded.bg-gray-dark-1"
+    },
+    {
+     "v": "6px",
+     "n": 19,
+     "eg": "a.[--pixel-size:2px].group/button"
+    }
+   ],
+   "shadows": [
+    {
+     "v": "rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px",
+     "n": 2,
+     "eg": ""
+    },
+    {
+     "v": "rgba(0, 0, 0, 0.12) 0px 12px 64px 0px",
+     "n": 1,
+     "eg": ""
+    },
+    {
+     "v": "oklab(0.645276 0.168091 0.118133 / 0.297843) 0px 0px 19.8382px 0px, oklab(0.645276 0.168091 0.118133 / 0.149191) 0px 0px 25.9461px 0px",
+     "n": 1,
+     "eg": ""
+    }
+   ],
+   "borders": [
+    {
+     "v": "1px solid #2A2A2A",
+     "n": 22,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #B9B9B966",
+     "n": 9,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #B9B9B9",
+     "n": 8,
+     "eg": ""
+    }
+   ],
+   "spacing": "4px grid; section padding 16px, 32px, 80px, 120px; gaps 8px, 16px, 4px, 6px"
+  },
+  "buttons": [
+   {
+    "filled": true,
+    "fill": "#F04E23",
+    "text": "#FAFAFA",
+    "radius": "6px",
+    "padding": "14px 14px",
+    "size": 12.8,
+    "weight": 400,
+    "border": "",
+    "height": 40
+   },
+   {
+    "filled": true,
+    "fill": "#1A1616",
+    "text": "#FAFAFA",
+    "radius": "6px",
+    "padding": "24px 24px",
+    "size": 12.8,
+    "weight": 400,
+    "border": "",
+    "height": 48
+   },
+   {
+    "filled": true,
+    "fill": "lab(100 -0.0000298023 0.0000119209 / 0.6)",
+    "text": "#0E0E0E",
+    "radius": "4px",
+    "padding": "0px 10px",
+    "size": 12.0,
+    "weight": 400,
+    "border": "",
+    "height": 28
+   }
+  ],
+  "motion": {
+   "libraries": "Lenis smooth scroll, WebGL canvas, Tailwind (utility classes)",
+   "timeline": [
+    {
+     "group": "load",
+     "n": 1,
+     "label": "img.transition-[filter,opacity]",
+     "kind": "transition",
+     "ms": 1000,
+     "ease": "ease",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "button.t-b-2.relative",
+     "kind": "transition",
+     "ms": 300,
+     "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+     "approx": true,
+     "props": [
+      "background-color"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "canvas.block.h-full",
+     "kind": "transition",
+     "ms": 300,
+     "ease": "ease-in-out",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.pointer-events-none.absolute",
+     "kind": "transition",
+     "ms": 350,
+     "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 4,
+     "label": "div.t-tag-usecase-2.bg-yellow, div.t-tag-usecase-2.bg-yellow",
+     "kind": "waapi",
+     "ms": 600,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "delay": 350,
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 5,
+     "label": "div.bg-orange.size-full",
+     "kind": "waapi",
+     "ms": 5000,
+     "ease": "ease-in-out",
+     "kf": {
+      "opacity": [
+       0.18,
+       0.25,
+       0.18
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.pointer-events-none.absolute",
+     "kind": "waapi",
+     "ms": 450,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 4,
+     "label": "span.bg-yellow.max-w-full, span.bg-yellow.max-w-full",
+     "kind": "waapi",
+     "ms": 300,
+     "ease": "ease-out",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.form--fields",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "ease-out",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "h1.t-h-1.relative",
+     "kind": "waapi",
+     "ms": 1500,
+     "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+     "easeName": "expo-out",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.flex",
+     "kind": "waapi",
+     "ms": 1500,
+     "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+     "easeName": "expo-out",
+     "delay": 200,
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.flex.flex-col",
+     "kind": "waapi",
+     "ms": 1200,
+     "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+     "easeName": "expo-out",
+     "delay": 500,
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.border-gray-light-2-faded.bg-gray-dark-1",
+     "kind": "waapi",
+     "ms": 1500,
+     "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+     "easeName": "expo-out",
+     "delay": 200,
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "svg.w-full.scale-0",
+     "kind": "sampled",
+     "ms": 2690,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "0",
+       "0.45"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.flex.touch-pan-y",
+     "kind": "sampled",
+     "ms": 3990,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "x",
+       "0px",
+       "-178px"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.border-gray-light-2-faded.bg-gray-dark-1",
+     "kind": "sampled",
+     "ms": 1500,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "1.2",
+       "1"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "canvas.block.h-full",
+     "kind": "sampled",
+     "ms": 320,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.pointer-events-none.absolute",
+     "kind": "sampled",
+     "ms": 440,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "0.96",
+       "1"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 4,
+     "label": "span.bg-yellow.max-w-full, span.bg-yellow.max-w-full",
+     "kind": "sampled",
+     "ms": 290,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "5px",
+       "0px"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "h1.t-h-1.relative",
+     "kind": "sampled",
+     "ms": 1490,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "1.2",
+       "1"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.flex",
+     "kind": "sampled",
+     "ms": 1500,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "1.2",
+       "1"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.flex.flex-col",
+     "kind": "sampled",
+     "ms": 1200,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "12px",
+       "0px"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "img.transition-[filter,opacity]",
+     "kind": "transition",
+     "ms": 1000,
+     "ease": "ease",
+     "stagger": 50,
+     "when": "between scrollY 572–3961",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 5,
+     "label": "button.custom-touch-manipulation.relative, button.custom-touch-manipulation.",
+     "kind": "transition",
+     "ms": 200,
+     "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+     "when": "between scrollY 1124–2832",
+     "approx": true,
+     "props": [
+      "color"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 22,
+     "label": "div.bg-black-3.relative",
+     "kind": "waapi",
+     "ms": 750,
+     "ease": "cubic-bezier(0, 0.55, 0.45, 1)",
+     "when": "between scrollY 572–5040",
+     "kf": {
+      "filter": [
+       "brightness(1000%) sepia(20%)",
+       "brightness(100%) sepia(0%)"
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 22,
+     "label": "div.pointer-events-none.absolute, div.pointer-events-none.absol",
+     "kind": "waapi",
+     "ms": 750,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 572–5040",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 22,
+     "label": "div.pointer-events-none.absolute, div.pointer-events-none.absol",
+     "kind": "waapi",
+     "ms": 750,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "between scrollY 572–5040",
+     "kf": {
+      "transform": [
+       "translateY(16px) scale(0.98)",
+       "translateY(0) scale(1)"
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "div.absolute.inset-0",
+     "kind": "waapi",
+     "ms": 800,
+     "ease": "cubic-bezier(0.65, 0, 0.35, 1)",
+     "easeName": "cubic-in-out",
+     "when": "between scrollY 1124–2832",
+     "kf": {
+      "opacity": [
+       1,
+       0
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.bg-orange.absolute",
+     "kind": "waapi",
+     "ms": 200,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "delay": 500,
+     "when": "at scrollY≈1301",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 5,
+     "label": "span.block, span.block",
+     "kind": "waapi",
+     "ms": 450,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "delay": 50,
+     "when": "at scrollY≈1301",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "div, div",
+     "kind": "waapi",
+     "ms": 600,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "delay": 500,
+     "when": "at scrollY≈3725",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.max-lg:px-contain",
+     "kind": "waapi",
+     "ms": 600,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "when": "at scrollY≈4606",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.max-lg:px-contain.flex",
+     "kind": "waapi",
+     "ms": 600,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "delay": 200,
+     "when": "at scrollY≈4606",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 5,
+     "label": "div.w-full.lg:w-auto, div.w-full.lg:w-auto",
+     "kind": "waapi",
+     "ms": 600,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "delay": 400,
+     "when": "at scrollY≈4606",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "div.absolute.top-8",
+     "kind": "waapi",
+     "ms": 600,
+     "ease": "cubic-bezier(0.33, 1, 0.68, 1)",
+     "easeName": "cubic-out",
+     "delay": 100,
+     "stagger": 400,
+     "when": "between scrollY 5040–5665",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.relative.flex",
+     "kind": "sampled",
+     "ms": 2050,
+     "ease": "ease",
+     "when": "at scrollY≈171",
+     "approx": true,
+     "pairs": [
+      [
+       "height",
+       "51px",
+       "57px"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 4,
+     "label": "div.relative.flex",
+     "kind": "sampled",
+     "ms": 300,
+     "ease": "ease",
+     "when": "between scrollY 2158–3579",
+     "approx": true,
+     "pairs": [
+      [
+       "height",
+       "57px",
+       "76px"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.border-gray-light-2-faded.bg-gray-dark-1",
+     "kind": "sampled",
+     "ms": 1040,
+     "ease": "ease",
+     "when": "at scrollY≈171",
+     "approx": true,
+     "pairs": [
+      [
+       "x",
+       "576px",
+       "243px"
+      ],
+      [
+       "y",
+       "-219px",
+       "216px"
+      ],
+      [
+       "width",
+       "288px",
+       "353px"
+      ],
+      [
+       "border-radius",
+       "16px",
+       "8px"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "span.bg-orange.absolute",
+     "kind": "sampled",
+     "ms": 510,
+     "ease": "ease",
+     "when": "between scrollY 1124–1698",
+     "approx": true,
+     "pairs": [
+      [
+       "x",
+       "8px",
+       "115px"
+      ],
+      [
+       "width",
+       "96px",
+       "104px"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.bg-orange.absolute",
+     "kind": "sampled",
+     "ms": 920,
+     "ease": "ease",
+     "when": "at scrollY≈2285",
+     "approx": true,
+     "pairs": [
+      [
+       "x",
+       "230px",
+       "420px"
+      ],
+      [
+       "width",
+       "95px",
+       "81px"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.relative.flex",
+     "kind": "sampled",
+     "ms": 360,
+     "ease": "ease",
+     "when": "at scrollY≈171",
+     "approx": true,
+     "pairs": [
+      [
+       "opacity",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.text-gray-light-2.relative",
+     "kind": "sampled",
+     "ms": 1040,
+     "ease": "ease",
+     "when": "at scrollY≈171",
+     "approx": true,
+     "pairs": [
+      [
+       "rotate",
+       "0deg",
+       "360deg"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 42,
+     "label": "g",
+     "kind": "sampled",
+     "ms": 250,
+     "ease": "ease",
+     "stagger": 80,
+     "when": "between scrollY 572–5039",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.overflow-hidden",
+     "kind": "sampled",
+     "ms": 370,
+     "ease": "ease",
+     "when": "at scrollY≈572",
+     "approx": true,
+     "pairs": [
+      [
+       "opacity",
+       "0",
+       "1"
+      ],
+      [
+       "height",
+       "0px",
+       "48px"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.absolute",
+     "kind": "sampled",
+     "ms": 140,
+     "ease": "ease",
+     "when": "at scrollY≈1082",
+     "approx": true,
+     "pairs": [
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.absolute.inset-0",
+     "kind": "sampled",
+     "ms": 140,
+     "ease": "ease",
+     "when": "at scrollY≈1082",
+     "approx": true,
+     "pairs": [
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 5,
+     "label": "span.block, span.block",
+     "kind": "sampled",
+     "ms": 450,
+     "ease": "ease",
+     "stagger": 70,
+     "when": "between scrollY 1339–1421",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "10px",
+       "0px"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "loop",
+     "n": 3,
+     "label": "div.animate-noise.absolute",
+     "kind": "animation",
+     "ms": 3000,
+     "ease": "linear",
+     "infinite": true,
+     "name": "noise"
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "div.c-pricing-card.transition-border",
+     "kind": "animation",
+     "ms": 3500,
+     "ease": "linear",
+     "infinite": true,
+     "name": "pricing-card-glow-breathe"
+    },
+    {
+     "group": "loop",
+     "n": 5,
+     "label": "div.bg-orange.size-full",
+     "kind": "animation",
+     "ms": 5000,
+     "ease": "ease-in-out",
+     "infinite": true,
+     "name": "Animation"
+    }
+   ],
+   "keyframes": {
+    "noise": "@keyframes noise { 0%, 100% { background-position: 0px 0px; } 20% { background-position: 96px -64px; } 40% { background-position: -80px 112px; } 60% { background-position: 128px 48px; } 80% { background-position: -48px -96px; } }",
+    "pricing-card-glow-breathe": "@keyframes pricing-card-glow-breathe { 0%, 100% { box-shadow: 0 0 14px color-mix(in srgb, var(--color-orange) 22%, transparent), 0 0 24px color-mix(in srgb, var(--color-orange) 12%, transparent); } 50% { box-shadow: 0 0 20px color-mix(in srgb, var(--color-orange) 30%, transparent), 0 0 26px color-mix(in srgb, var(--color-orange) 15%, transparent); } }",
+    "caret-blink": "@keyframes caret-blink { 0% { opacity: 1; } 100% { opacity: 0; } }"
+   },
+   "declared_transitions": [
+    {
+     "props": "opacity",
+     "ms": 1000,
+     "ease": "ease",
+     "easeName": "",
+     "n": 34,
+     "eg": "img.transition-[filter,opacity]"
+    },
+    {
+     "props": "background-color, border-color, color, opacity",
+     "ms": 200,
+     "ease": "cubic-bezier(0.37, 0, 0.63, 1)",
+     "easeName": "",
+     "n": 116,
+     "eg": "a.[--pixel-size:2px].group/button, button.[--pixel-size:2px].group/button"
+    },
+    {
+     "props": "color, background-color, border-color, outline-color, text-decoration-color",
+     "ms": 200,
+     "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+     "easeName": "",
+     "n": 162,
+     "eg": "span.t-b-3-relaxed.bg-offblack, a.t-b-3-relaxed, button.t-b-2.flex"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown",
+   "WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque",
+   "3 autoplay video(s) — motion is baked into video, not code",
+   "Cursor-follow effects (cursor element detected) — capture does not move the mouse"
+  ]
+ },
+ "prompt": "Use the measured design system of Melius – the AI-native operating system for creatives (melius.com), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #FAFAFA 47%, #0E0E0E 16%, #202020 7.5%, #FFF78B 7%, #2A2A2A 3.5%, #D9D9D9 0.6%\n- Text, by amount of text: #FAFAFA 58%, #0E0E0E 28%, #D9D9D9 8%, #676767 6%\n- Accent candidates: #F04E23, #FFF78B\n\n## Type\n- Display: recklessStandard 56px/400, letter-spacing -0.02em, line-height 1\n- Body: ui-sans-serif 16px, line-height 24px\n- Scale (px/weight): 56/400, 36/400, 19/400, 16/400\n- Families by text share: easeStandard 91%, futurist 5%, ui-sans-serif 2%, recklessStandard 1%\n\n## Shape\n- Radii: 2px (57×); 4px (29×); 8px (26×); 6px (19×)\n- Shadows: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px (2×); rgba(0, 0, 0, 0.12) 0px 12px 64px 0px (1×); oklab(0.645276 0.168091 0.118133 / 0.297843) 0px 0px 19.8382px 0px, oklab(0.645276 0.168091 0.118133 / 0.149191) 0px 0px 25.9461px 0px (1×)\n- Borders: 1px solid #2A2A2A (22×); 1px solid #B9B9B966 (9×); 1px solid #B9B9B9 (8×)\n- Spacing: 4px grid; section padding 16px, 32px, 80px, 120px; gaps 8px, 16px, 4px, 6px\n\n## Buttons\n- filled #F04E23, text #FAFAFA, radius 6px, padding 14px 14px, 12.8px/400\n- filled #1A1616, text #FAFAFA, radius 6px, padding 24px 24px, 12.8px/400\n- filled lab(100 -0.0000298023 0.0000119209 / 0.6), text #0E0E0E, radius 4px, padding 0px 10px, 12px/400\n\n## Motion\n- Libraries: Lenis smooth scroll, WebGL canvas, Tailwind (utility classes)\n- On load, 1× img.transition-[filter,opacity]: transition on opacity; 1000ms, ease, approximate\n- On load, 1× button.t-b-2.relative: transition on background-color; 300ms, cubic-bezier(0.4, 0, 0.2, 1), approximate\n- On load, 1× canvas.block.h-full: transition on opacity; 300ms, ease-in-out, approximate\n- On load, 1× span.pointer-events-none.absolute: transition on opacity; 350ms, cubic-bezier(0.4, 0, 0.2, 1), approximate\n- On load, 4× div.t-tag-usecase-2.bg-yellow, div.t-tag-usecase-2.bg-yellow: {\"opacity\": [0, 1]}; 600ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), 350ms delay\n- On load, 5× div.bg-orange.size-full: {\"opacity\": [0.18, 0.25, 0.18]}; 5000ms, ease-in-out\n- On load, 1× div.pointer-events-none.absolute: {\"opacity\": [0, 1]}; 450ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out)\n- On load, 4× span.bg-yellow.max-w-full, span.bg-yellow.max-w-full: {\"opacity\": [0, 1]}; 300ms, ease-out\n- On scroll, 1× img.transition-[filter,opacity]: transition on opacity; 1000ms, ease, 50ms stagger, between scrollY 572–3961, approximate\n- On scroll, 5× button.custom-touch-manipulation.relative, button.custom-touch-manipulation.: transition on color; 200ms, cubic-bezier(0.4, 0, 0.2, 1), between scrollY 1124–2832, approximate\n- On scroll, 22× div.bg-black-3.relative: {\"filter\": [\"brightness(1000%) sepia(20%)\", \"brightness(100%) sepia(0%)\"]}; 750ms, cubic-bezier(0, 0.55, 0.45, 1), between scrollY 572–5040\n- On scroll, 22× div.pointer-events-none.absolute, div.pointer-events-none.absol: {\"opacity\": [0, 1]}; 750ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), between scrollY 572–5040\n- On scroll, 22× div.pointer-events-none.absolute, div.pointer-events-none.absol: {\"transform\": [\"translateY(16px) scale(0.98)\", \"translateY(0) scale(1)\"]}; 750ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), between scrollY 572–5040\n- On scroll, 4× div.absolute.inset-0: {\"opacity\": [1, 0]}; 800ms, cubic-bezier(0.65, 0, 0.35, 1) (cubic-in-out), between scrollY 1124–2832\n- On scroll, 1× span.bg-orange.absolute: {\"opacity\": [0, 1]}; 200ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), 500ms delay, at scrollY≈1301\n- On scroll, 5× span.block, span.block: {\"opacity\": [0, 1]}; 450ms, cubic-bezier(0.33, 1, 0.68, 1) (cubic-out), 50ms delay, at scrollY≈1301\n- Looping, 3× div.animate-noise.absolute: animation noise; 3000ms, linear, infinite\n- Looping, 1× div.c-pricing-card.transition-border: animation pricing-card-glow-breathe; 3500ms, linear, infinite\n- Looping, 5× div.bg-orange.size-full: animation Animation; 5000ms, ease-in-out, infinite\n- Declared transition on opacity: 1000ms ease (34 elements)\n- Declared transition on background-color, border-color, color, opacity: 200ms cubic-bezier(0.37, 0, 0.63, 1) (116 elements)\n- Declared transition on color, background-color, border-color, outline-color, text-decoration-color: 200ms cubic-bezier(0.4, 0, 0.2, 1) (162 elements)\n```css\n@keyframes noise { 0%, 100% { background-position: 0px 0px; } 20% { background-position: 96px -64px; } 40% { background-position: -80px 112px; } 60% { background-position: 128px 48px; } 80% { background-position: -48px -96px; } }\n```\n```css\n@keyframes pricing-card-glow-breathe { 0%, 100% { box-shadow: 0 0 14px color-mix(in srgb, var(--color-orange) 22%, transparent), 0 0 24px color-mix(in srgb, var(--color-orange) 12%, transparent); } 50% { box-shadow: 0 0 20px color-mix(in srgb, var(--color-orange) 30%, transparent), 0 0 26px color-mix(in srgb, var(--color-orange) 15%, transparent); } }\n```\n```css\n@keyframes caret-blink { 0% { opacity: 1; } 100% { opacity: 0; } }\n```\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n- WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque\n- 3 autoplay video(s) — motion is baked into video, not code\n- Cursor-follow effects (cursor element detected) — capture does not move the mouse\n\n## Patterns in this book built on it\nCinematic media canvas, Humane editorial, Retro machine pop, Accent rationing, Analog grain, Highlighter marks, Announcement bar, Artifact as hero, Object carousel hero, Ambient breathing glow, Cinematic entrance, Develop reveal, Inertial smooth scroll, Four-tier motion timing, Soft rise reveal, Machine-voice labels, Serif display, sans UI\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

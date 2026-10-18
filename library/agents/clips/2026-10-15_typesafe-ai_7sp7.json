@@ -1,0 +1,324 @@
+{
+ "key": "2026-10-15_typesafe-ai_7sp7",
+ "site": "typesafe.ai",
+ "url": "https://typesafe.ai/",
+ "title": "Home - TypeSafe AI",
+ "collection": "inbox",
+ "clipped": "2026-10-15",
+ "patterns": [
+  "https://artbook.dev/library/agents/patterns/research-index.json",
+  "https://artbook.dev/library/agents/patterns/retro-machine-pop.json",
+  "https://artbook.dev/library/agents/patterns/analog-grain.json",
+  "https://artbook.dev/library/agents/patterns/color-indexed-sections.json",
+  "https://artbook.dev/library/agents/patterns/announcement-bar.json",
+  "https://artbook.dev/library/agents/patterns/benchmark-as-headline.json",
+  "https://artbook.dev/library/agents/patterns/static-by-design.json",
+  "https://artbook.dev/library/agents/patterns/hard-edges-flat-depth.json",
+  "https://artbook.dev/library/agents/patterns/machine-voice-labels.json",
+  "https://artbook.dev/library/agents/patterns/oversized-tight-display.json"
+ ],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#F386A1",
+     "pct": 42.0
+    },
+    {
+     "c": "#1E1E1E",
+     "pct": 21.0
+    },
+    {
+     "c": "#FEFEFE",
+     "pct": 12.0
+    },
+    {
+     "c": "#03AA5CBD",
+     "pct": 5.0
+    },
+    {
+     "c": null,
+     "pct": 19.0
+    }
+   ],
+   "text": [
+    {
+     "c": "#1E1E1EDB",
+     "pct": 63.0
+    },
+    {
+     "c": "#FEFEFE",
+     "pct": 22.0
+    },
+    {
+     "c": "#000000",
+     "pct": 11.0
+    },
+    {
+     "c": "#F386A1",
+     "pct": 2.0
+    }
+   ],
+   "accents": [],
+   "theme_color": ""
+  },
+  "type": {
+   "display": {
+    "family": "Die Grotesk C Medium",
+    "px": 150.0,
+    "weight": 500,
+    "ls": 0,
+    "lh": 0.8,
+    "upper": false
+   },
+   "body": {
+    "family": "JetBrains Mono",
+    "px": 12.0,
+    "lh": 14.4
+   },
+   "families": [
+    {
+     "name": "Die Grotesk C Regular",
+     "pct": 42
+    },
+    {
+     "name": "JetBrains Mono",
+     "pct": 27
+    },
+    {
+     "name": "sans-serif",
+     "pct": 11
+    },
+    {
+     "name": "LisaTerminal Paper 2X3Y Medium",
+     "pct": 11
+    },
+    {
+     "name": "Die Grotesk C Medium",
+     "pct": 10
+    }
+   ],
+   "scale": [
+    {
+     "px": 150.0,
+     "weight": 500,
+     "family": "Die Grotesk C Medium"
+    },
+    {
+     "px": 64.0,
+     "weight": 500,
+     "family": "Die Grotesk C Medium"
+    },
+    {
+     "px": 22.0,
+     "weight": 400,
+     "family": "Die Grotesk C Regular"
+    },
+    {
+     "px": 18.0,
+     "weight": 500,
+     "family": "LisaTerminal Paper 2X3Y Medium"
+    }
+   ],
+   "webfonts": "JetBrains Mono 300, Die Grotesk C Medium 500, Die Grotesk C Regular 400, LisaTerminal Paper 2X3Y Medium 500, Inter 400"
+  },
+  "shape": {
+   "radii": [],
+   "shadows": [
+    {
+     "v": "rgba(0, 0, 0, 0.25) 0px 4px 4px 0px",
+     "n": 1,
+     "eg": ""
+    }
+   ],
+   "borders": [],
+   "spacing": "no consistent grid; section padding 30px, 100px, 60px, 200px; gaps 10px, 50px, 5px, 3px"
+  },
+  "buttons": [
+   {
+    "filled": true,
+    "fill": "#FEFEFE",
+    "text": "#0000EE",
+    "radius": "0px",
+    "padding": "0px 5px",
+    "size": 12.0,
+    "weight": 400,
+    "border": "",
+    "height": 36
+   },
+   {
+    "filled": true,
+    "fill": "#F386A1",
+    "text": "#111111",
+    "radius": "0px",
+    "padding": "4px 12px",
+    "size": 16.0,
+    "weight": 500,
+    "border": "",
+    "height": 36
+   },
+   {
+    "filled": true,
+    "fill": "#FEFEFE",
+    "text": "#1E1E1E",
+    "radius": "0px",
+    "padding": "0px 5px",
+    "size": 18.0,
+    "weight": 500,
+    "border": "",
+    "height": 36
+   }
+  ],
+  "motion": {
+   "libraries": "Framer Motion / Framer",
+   "timeline": [
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div",
+     "kind": "transition",
+     "ms": 50,
+     "ease": "linear",
+     "stagger": 10,
+     "approx": true,
+     "props": [
+      "width"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.framer-Gmp0k",
+     "kind": "waapi",
+     "ms": 10000,
+     "ease": "linear",
+     "kf": {
+      "opacity": [
+       0.001,
+       0.001
+      ]
+     }
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.framer-8uBx0.framer-LHxDv",
+     "kind": "sampled",
+     "ms": 390,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "94px",
+       "0px"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div",
+     "kind": "sampled",
+     "ms": 990,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "width",
+       "0%",
+       "85%"
+      ]
+     ]
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "ellipse",
+     "kind": "animation",
+     "ms": 2000,
+     "ease": "linear",
+     "infinite": true,
+     "name": "kf_Ellipse_16_opacity_0"
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "ellipse",
+     "kind": "animation",
+     "ms": 2000,
+     "ease": "linear",
+     "infinite": true,
+     "name": "kf_Ellipse_16_2_opacity_0"
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "ellipse",
+     "kind": "animation",
+     "ms": 2000,
+     "ease": "linear",
+     "infinite": true,
+     "name": "kf_Ellipse_17_opacity_0"
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "ellipse",
+     "kind": "animation",
+     "ms": 2000,
+     "ease": "linear",
+     "infinite": true,
+     "name": "kf_Ellipse_18_opacity_0"
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "ellipse",
+     "kind": "animation",
+     "ms": 2000,
+     "ease": "linear",
+     "infinite": true,
+     "name": "kf_Ellipse_19_opacity_0"
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "ellipse",
+     "kind": "animation",
+     "ms": 2000,
+     "ease": "linear",
+     "infinite": true,
+     "name": "kf_Ellipse_16_3_opacity_0"
+    }
+   ],
+   "keyframes": {
+    "kf_Ellipse_16_opacity_0": "@keyframes kf_Ellipse_16_opacity_0 { 0% { animation-timing-function: linear; opacity: 1; } 100% { opacity: 1; } }",
+    "kf_Ellipse_16_2_opacity_0": "@keyframes kf_Ellipse_16_2_opacity_0 { 0% { animation-timing-function: linear; opacity: 1; } 100% { opacity: 1; } }",
+    "kf_Ellipse_17_opacity_0": "@keyframes kf_Ellipse_17_opacity_0 { 0% { animation-timing-function: linear; opacity: 0; } 24.67% { animation-timing-function: linear; opacity: 0; } 25.97% { animation-timing-function: linear; opacity: 1; } 50.64% { animation-timing-function: linear; opacity: 1; } 51.94% { animation-timing-function: linear; opacity: 0; } 100% { opacity: 0; } }",
+    "kf_Ellipse_18_opacity_0": "@keyframes kf_Ellipse_18_opacity_0 { 0% { animation-timing-function: linear; opacity: 0; } 100% { opacity: 0; } }",
+    "kf_Ellipse_19_opacity_0": "@keyframes kf_Ellipse_19_opacity_0 { 0% { animation-timing-function: linear; opacity: 0; } 100% { opacity: 0; } }",
+    "kf_Ellipse_16_3_opacity_0": "@keyframes kf_Ellipse_16_3_opacity_0 { 0% { animation-timing-function: linear; opacity: 1; } 100% { opacity: 1; } }",
+    "kf_Ellipse_17_2_opacity_0": "@keyframes kf_Ellipse_17_2_opacity_0 { 0% { animation-timing-function: linear; opacity: 0; } 76.61% { animation-timing-function: linear; opacity: 0; } 77.91% { animation-timing-function: linear; opacity: 1; } 100% { opacity: 1; } }",
+    "kf_Ellipse_16_4_opacity_0": "@keyframes kf_Ellipse_16_4_opacity_0 { 0% { animation-timing-function: linear; opacity: 1; } 24.67% { animation-timing-function: linear; opacity: 1; } 25.97% { animation-timing-function: linear; opacity: 0; } 100% { opacity: 0; } }"
+   },
+   "declared_transitions": [
+    {
+     "props": "color, text-decoration-color, text-decoration-thickness, text-underline-offset",
+     "ms": 500,
+     "ease": "cubic-bezier(0.12, 0.23, 0.5, 1)",
+     "easeName": "",
+     "n": 10,
+     "eg": "a.framer-text.framer-styles-preset-md0wl4, a.framer-text.framer-styles-preset-1t"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown",
+   "2 autoplay video(s) — motion is baked into video, not code",
+   "2 iframe(s) not inspected"
+  ]
+ },
+ "prompt": "Use the measured design system of Home - TypeSafe AI (typesafe.ai), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #F386A1 42%, #1E1E1E 21%, #FEFEFE 12%, #03AA5CBD 5%, imagery 19%\n- Text, by amount of text: #1E1E1EDB 63%, #FEFEFE 22%, #000000 11%, #F386A1 2%\n\n## Type\n- Display: Die Grotesk C Medium 150px/500, letter-spacing 0em, line-height 0.8\n- Body: JetBrains Mono 12px, line-height 14.4px\n- Scale (px/weight): 150/500, 64/500, 22/400, 18/500\n- Families by text share: Die Grotesk C Regular 42%, JetBrains Mono 27%, sans-serif 11%, LisaTerminal Paper 2X3Y Medium 11%, Die Grotesk C Medium 10%\n\n## Shape\n- Shadows: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px (1×)\n- Spacing: no consistent grid; section padding 30px, 100px, 60px, 200px; gaps 10px, 50px, 5px, 3px\n\n## Buttons\n- filled #FEFEFE, text #0000EE, radius 0px, padding 0px 5px, 12px/400\n- filled #F386A1, text #111111, radius 0px, padding 4px 12px, 16px/500\n- filled #FEFEFE, text #1E1E1E, radius 0px, padding 0px 5px, 18px/500\n\n## Motion\n- Libraries: Framer Motion / Framer\n- On load, 1× div: transition on width; 50ms, linear, 10ms stagger, approximate\n- On load, 1× div.framer-Gmp0k: {\"opacity\": [0.001, 0.001]}; 10000ms, linear\n- On load, 1× div.framer-8uBx0.framer-LHxDv: y 94px 0px; 390ms, ease, approximate\n- On load, 1× div: width 0% 85%; 990ms, ease, approximate\n- Looping, 1× ellipse: animation kf_Ellipse_16_opacity_0; 2000ms, linear, infinite\n- Looping, 1× ellipse: animation kf_Ellipse_16_2_opacity_0; 2000ms, linear, infinite\n- Looping, 1× ellipse: animation kf_Ellipse_17_opacity_0; 2000ms, linear, infinite\n- Looping, 1× ellipse: animation kf_Ellipse_18_opacity_0; 2000ms, linear, infinite\n- Looping, 1× ellipse: animation kf_Ellipse_19_opacity_0; 2000ms, linear, infinite\n- Looping, 1× ellipse: animation kf_Ellipse_16_3_opacity_0; 2000ms, linear, infinite\n- Declared transition on color, text-decoration-color, text-decoration-thickness, text-underline-offset: 500ms cubic-bezier(0.12, 0.23, 0.5, 1) (10 elements)\n```css\n@keyframes kf_Ellipse_16_opacity_0 { 0% { animation-timing-function: linear; opacity: 1; } 100% { opacity: 1; } }\n```\n```css\n@keyframes kf_Ellipse_16_2_opacity_0 { 0% { animation-timing-function: linear; opacity: 1; } 100% { opacity: 1; } }\n```\n```css\n@keyframes kf_Ellipse_17_opacity_0 { 0% { animation-timing-function: linear; opacity: 0; } 24.67% { animation-timing-function: linear; opacity: 0; } 25.97% { animation-timing-function: linear; opacity: 1; } 50.64% { animation-timing-function: linear; opacity: 1; } 51.94% { animation-timing-function: linear; opacity: 0; } 100% { opacity: 0; } }\n```\n```css\n@keyframes kf_Ellipse_18_opacity_0 { 0% { animation-timing-function: linear; opacity: 0; } 100% { opacity: 0; } }\n```\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n- 2 autoplay video(s) — motion is baked into video, not code\n- 2 iframe(s) not inspected\n\n## Patterns in this book built on it\nResearch index, Retro machine pop, Analog grain, Color-indexed sections, Announcement bar, Benchmark as headline, Static by design, Hard edges, flat depth, Machine-voice labels, Oversized tight display\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

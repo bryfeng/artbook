@@ -1,0 +1,40 @@
+{
+ "id": "static-by-design",
+ "kind": "technique",
+ "facet": "motion",
+ "title": "Static by design",
+ "status": "established",
+ "summary": "Little or no scroll motion, as a deliberate choice: content is simply there. Motion is limited to hover color and loaders.",
+ "use_when": "Loud visual systems (motion would be too much), austere ones (motion would be off-voice), or pages where the artifact is already the show.",
+ "avoid_when": "Pages whose story needs pacing.",
+ "languages": [
+  "research-index",
+  "retro-machine-pop"
+ ],
+ "techniques": null,
+ "swatches": null,
+ "recipe": [
+  "/* the whole motion system: */\na, button, .row { transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0, 0.2, 1); }"
+ ],
+ "specimen_html": "<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #fff; color: #111; }\n.r { display: flex; justify-content: space-between; padding: 14px 10px; border-top: 1px solid #ddd; font-size: 17px; transition: color 300ms cubic-bezier(0.4,0,0.2,1), background-color 300ms cubic-bezier(0.4,0,0.2,1); cursor: default; }\n.r:hover { background: #000; color: #fff; }\n.r span:last-child { font: 12px ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; opacity: .6; }\n</style>\n<div class=\"s\"><span class=\"cap\">nothing moves on load or scroll · hover a row</span>\n<div class=\"r\" style=\"margin-top:12px\"><span>Research</span><span>06 papers</span></div><div class=\"r\"><span>Environments</span><span>14 suites</span></div><div class=\"r\"><span>Team</span><span>11 people</span></div><div class=\"r\"><span>Careers</span><span>3 roles</span></div></div>",
+ "evidence": [
+  {
+   "site": "Preference Model",
+   "measured": "border-color, color, background-color, outline-color, text-decoration-color — 300ms cubic-bezier(0.4, 0, 0.2, 1) (material standard) — 68 elements",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_preferencemodel-com_by8f.json"
+  },
+  {
+   "site": "TypeSafe AI",
+   "measured": "**On scroll** - nothing animated while scrolling",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_typesafe-ai_7sp7.json"
+  },
+  {
+   "site": "Handwired",
+   "measured": "**On load** - nothing animated during load",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_chenglou-me_ikur.json"
+  }
+ ],
+ "from_book": null,
+ "source": null,
+ "prompt": "Use the motion technique \"Static by design\" from the Artspo book \"The Artbook library\" (https://artbook.dev/library/).\n\nLittle or no scroll motion, as a deliberate choice: content is simply there. Motion is limited to hover color and loaders.\n\n## Recipe\n\n_Rebuilt from measurements. A starting point, not any site's code._\n\n```css\n/* the whole motion system: */\na, button, .row { transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0, 0.2, 1); }\n```\n\n## Specimen\n\n_A generic demo of the move, for reference: HTML and CSS, no scripts._\n\n```html\n<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #fff; color: #111; }\n.r { display: flex; justify-content: space-between; padding: 14px 10px; border-top: 1px solid #ddd; font-size: 17px; transition: color 300ms cubic-bezier(0.4,0,0.2,1), background-color 300ms cubic-bezier(0.4,0,0.2,1); cursor: default; }\n.r:hover { background: #000; color: #fff; }\n.r span:last-child { font: 12px ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; opacity: .6; }\n</style>\n<div class=\"s\"><span class=\"cap\">nothing moves on load or scroll · hover a row</span>\n<div class=\"r\" style=\"margin-top:12px\"><span>Research</span><span>06 papers</span></div><div class=\"r\"><span>Environments</span><span>14 suites</span></div><div class=\"r\"><span>Team</span><span>11 people</span></div><div class=\"r\"><span>Careers</span><span>3 roles</span></div></div>\n```\n\n## Use when\n\nLoud visual systems (motion would be too much), austere ones (motion would be off-voice), or pages where the artifact is already the show.\n\n## Avoid when\n\nPages whose story needs pacing.\n\n## Pairs with\n\nHard edges, flat depth, Oversized tight display\n\nMeasured on: Preference Model, TypeSafe AI, Handwired.\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

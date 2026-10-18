@@ -1,0 +1,89 @@
+{
+ "id": "humane-editorial",
+ "kind": "language",
+ "facet": null,
+ "title": "Humane editorial",
+ "status": "established",
+ "summary": "A well-made magazine about technology that feels human: calm, warm, crafted. The product is technical, but the page leads with feeling.",
+ "use_when": "Products that want trust through calm: developer tools that sell on taste, consumer AI, anything priced on quality rather than features.",
+ "avoid_when": "Dense dashboards, or anything that must feel fast and aggressive. Serif plus slow motion reads as considered, not urgent.",
+ "languages": null,
+ "techniques": [
+  "analog-grain",
+  "warm-tinted-depth",
+  "artifact-as-hero",
+  "object-carousel-hero",
+  "ambient-breathing-glow",
+  "narrated-proof",
+  "soft-rise-reveal",
+  "spring-for-characters",
+  "serif-display-sans-ui"
+ ],
+ "swatches": [
+  "#F4EBDA",
+  "#FAF5EC",
+  "#2A2119",
+  "#4B4036",
+  "#A99B8B",
+  "#D9CDB9"
+ ],
+ "recipe": [
+  "--ground: #F4EBDA;  --ground-raised: #FAF5EC;  --ink: #2A2119;  --ink-body: #4B4036;  --ink-muted: #A99B8B;\n--line: 1px solid #D9CDB9;\n--shadow-soft: 0 1px 2px rgba(52, 40, 18, 0.07);  --shadow-lift: 0 30px 80px -30px rgba(20, 14, 4, 0.55);\n--radius-control: 6px;  --radius-tag: 999px;\n--font-display: \"<text serif>\", Georgia, serif;   /* tracking -0.02em, leading 1.04 */\n--font-ui: \"<humanist sans>\", system-ui;   --font-code: \"<mono>\", ui-monospace;\n--t-reveal: 550ms cubic-bezier(0.22, 1, 0.36, 1);  --stagger: 40ms;  --rise: 18px;"
+ ],
+ "specimen_html": "<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #F4EBDA; color: #2A2119; display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: center; }\nh1 { font: 500 40px/1.04 \"Iowan Old Style\", \"Charter\", Georgia, serif; letter-spacing: -0.022em; margin: 0 0 12px; }\np { color: #4B4036; margin: 0 0 18px; max-width: 34ch; }\n.btn { display: inline-block; background: #1F1814; color: #F5F0E7; border-radius: 6px; padding: 10px 16px; font-size: 14px; }\n.tag { display: inline-block; border: 1px solid #D9CDB9; border-radius: 999px; padding: 2px 10px; font-size: 12px; color: #4B4036; margin-bottom: 14px; }\n.card { background: #FAF5EC; border-radius: 10px; padding: 18px; box-shadow: 0 1px 2px rgba(52,40,18,.07), 0 0 0 1px rgb(191,176,150), 0 30px 80px -30px rgba(20,14,4,.55); font: 13px/1.7 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; }\n.del { color: #9a3b2b; } .ins { color: #2f6b3f; }\n.r { opacity: 0; transform: translateY(18px); animation: rise 550ms cubic-bezier(0.22,1,0.36,1) forwards; animation-delay: calc(var(--i) * 40ms + 150ms); }\n@keyframes rise { to { opacity: 1; transform: none; } }\n</style>\n<div class=\"s\"><div><span class=\"tag r\" style=\"--i:0\">Field notes</span>\n<h1 class=\"r\" style=\"--i:1\">Quiet tools for careful work.</h1>\n<p class=\"r\" style=\"--i:2\">Change one line. Everything else stays where you left it.</p>\n<span class=\"btn r\" style=\"--i:3\">Start writing</span></div>\n<div class=\"card r\" style=\"--i:4\"><div class=\"cap\">settings.yml</div><div class=\"del\">− plan: legacy</div><div class=\"ins\">+ plan: fieldnote</div></div></div>",
+ "evidence": [
+  {
+   "site": "Jog",
+   "measured": "Display: \"Source Serif 4 Variable\" 56px/500, letter-spacing -1.232px (-0.022em), line-height 58.24px (1.04)",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json"
+  },
+  {
+   "site": "Jog",
+   "measured": "#F4EBDA — 72%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json"
+  },
+  {
+   "site": "Jog",
+   "measured": "rgba(52, 40, 18, 0.07) 0px 1px 2px 0px",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json"
+  },
+  {
+   "site": "Era",
+   "measured": "Families by text share: IvyOra Display 92%, Figtree 8%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_era-world_cics.json"
+  },
+  {
+   "site": "Era",
+   "measured": "element.animate {\"opacity\":[0,1]}, 550ms, cubic-bezier(0.22, 1, 0.36, 1) (quint-out), ~40ms stagger",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_era-world_cics.json"
+  },
+  {
+   "site": "Era",
+   "measured": "Translucent product objects glowing at center, with neighbors faded at the sides",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_era-world_cics.json"
+  },
+  {
+   "site": "Jog",
+   "measured": "Hero is a painted landscape inside a rounded card on textured paper",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json"
+  },
+  {
+   "site": "Handwired",
+   "measured": "Display: \"Iowan Old Style\" 60px/400, letter-spacing -1.32px (-0.022em), line-height 64px (1.07)",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_chenglou-me_ikur.json"
+  },
+  {
+   "site": "Handwired",
+   "measured": "theme-color meta: #f3eee4",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_chenglou-me_ikur.json"
+  },
+  {
+   "site": "Handwired",
+   "measured": "Serif headline beside a dark code block that wires into a rust-colored node diagram, on warm paper",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_chenglou-me_ikur.json"
+  }
+ ],
+ "from_book": null,
+ "source": null,
+ "prompt": "Use the design language \"Humane editorial\" from the Artspo book \"The Artbook library\" (https://artbook.dev/library/).\n\n_A well-made magazine about technology that feels human: calm, warm, crafted. The product is technical, but the page leads with feeling._\n\n## Defining traits\n\n- **Type.** Serif display with a sans for UI (Jog: Source Serif 4 56/500 at -0.022em, line-height 1.04; Handwired: Iowan Old Style 60/400 at the same -0.022em; Era: IvyOra serif for almost all text). Mono shows up only where the product is code.\n- **Color.** Warm paper (#F4EBDA, 72% of Jog; #F3EEE4 behind Handwired's #FFFDF8 cards) or airy white (84% of Era); brown-black ink instead of pure black (#4B4036, #5F564D); one quiet accent (Era's green #369169, Handwired's rust #A64D1D).\n- **Imagery.** Art, objects or a crafted artifact as the hero, not UI chrome: an impressionist painting framed in a card (Jog), glowing translucent bags (Era), a code block that becomes a hand-drawn wiring diagram (Handwired).\n- **Shape.** Soft but not bubbly: 6px controls, pill tags, one large hero card; warm-tinted shadows or glows instead of gray ones.\n- **Motion.** Slow and quiet, or none: 550–900ms ease-out fades with 18px rises and 40–70ms staggers; ambient breathing loops of 4s or more; springs only on objects. Handwired shows the language holds up fully static, with only 120/280ms hover transitions.\n\n## Techniques it uses\n\n- Serif display, sans UI: Headlines in a text serif with tight tracking; everything you interact with in a neutral sans.\n- Analog grain: A paper, film or halftone texture over flat color, to take the digital sterility off a page.\n- Warm-tinted depth: Shadows and lines are tinted with the ground color's hue instead of gray, so elevation feels like paper lifting, not plastic.\n- Soft rise reveal: Content fades in while rising a short distance, with a strong ease-out and a small stagger.\n- Ambient breathing glow: A slow loop (3.5–5s) gently pulsing opacity and scale on a glow behind the thing that matters: the hero object, or the plan you want chosen.\n- Object carousel hero: The hero is a row of objects or media with the focused one centered and full, and its neighbors scaled down and faded.\n- Artifact as hero: The hero shows the product's literal interaction (the prompt box you type into, the one-line diff you'd make, the code and what it compiles into), not a screenshot or an abstraction.\n- Narrated proof: The hero artifact acts out the claim in sequence: strike the old value, type the new one, blink a caret.\n- Springs for characters only: An overshooting spring (back-out) is reserved for characters and objects: mascots, products, carousel items.\n\n## Starter tokens\n\n```css\n--ground: #F4EBDA;  --ground-raised: #FAF5EC;  --ink: #2A2119;  --ink-body: #4B4036;  --ink-muted: #A99B8B;\n--line: 1px solid #D9CDB9;\n--shadow-soft: 0 1px 2px rgba(52, 40, 18, 0.07);  --shadow-lift: 0 30px 80px -30px rgba(20, 14, 4, 0.55);\n--radius-control: 6px;  --radius-tag: 999px;\n--font-display: \"<text serif>\", Georgia, serif;   /* tracking -0.02em, leading 1.04 */\n--font-ui: \"<humanist sans>\", system-ui;   --font-code: \"<mono>\", ui-monospace;\n--t-reveal: 550ms cubic-bezier(0.22, 1, 0.36, 1);  --stagger: 40ms;  --rise: 18px;\n```\n\n## Specimen\n\n_A generic demo of the move, for reference: HTML and CSS, no scripts._\n\n```html\n<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #F4EBDA; color: #2A2119; display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: center; }\nh1 { font: 500 40px/1.04 \"Iowan Old Style\", \"Charter\", Georgia, serif; letter-spacing: -0.022em; margin: 0 0 12px; }\np { color: #4B4036; margin: 0 0 18px; max-width: 34ch; }\n.btn { display: inline-block; background: #1F1814; color: #F5F0E7; border-radius: 6px; padding: 10px 16px; font-size: 14px; }\n.tag { display: inline-block; border: 1px solid #D9CDB9; border-radius: 999px; padding: 2px 10px; font-size: 12px; color: #4B4036; margin-bottom: 14px; }\n.card { background: #FAF5EC; border-radius: 10px; padding: 18px; box-shadow: 0 1px 2px rgba(52,40,18,.07), 0 0 0 1px rgb(191,176,150), 0 30px 80px -30px rgba(20,14,4,.55); font: 13px/1.7 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; }\n.del { color: #9a3b2b; } .ins { color: #2f6b3f; }\n.r { opacity: 0; transform: translateY(18px); animation: rise 550ms cubic-bezier(0.22,1,0.36,1) forwards; animation-delay: calc(var(--i) * 40ms + 150ms); }\n@keyframes rise { to { opacity: 1; transform: none; } }\n</style>\n<div class=\"s\"><div><span class=\"tag r\" style=\"--i:0\">Field notes</span>\n<h1 class=\"r\" style=\"--i:1\">Quiet tools for careful work.</h1>\n<p class=\"r\" style=\"--i:2\">Change one line. Everything else stays where you left it.</p>\n<span class=\"btn r\" style=\"--i:3\">Start writing</span></div>\n<div class=\"card r\" style=\"--i:4\"><div class=\"cap\">settings.yml</div><div class=\"del\">− plan: legacy</div><div class=\"ins\">+ plan: fieldnote</div></div></div>\n```\n\n## Use when\n\nProducts that want trust through calm: developer tools that sell on taste, consumer AI, anything priced on quality rather than features.\n\n## Avoid when\n\nDense dashboards, or anything that must feel fast and aggressive. Serif plus slow motion reads as considered, not urgent.\n\nMeasured on: Jog, Era, Handwired.\n\nIts techniques are written up in full at https://artbook.dev/library/artbook.md\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

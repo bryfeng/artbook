@@ -1,0 +1,403 @@
+{
+ "key": "2026-10-14_era-world_cics",
+ "site": "era.world",
+ "url": "https://era.world/",
+ "title": "era · creating intelligence to fit objects you love",
+ "collection": "inbox",
+ "clipped": "2026-10-14",
+ "patterns": [
+  "https://artbook.dev/library/agents/patterns/humane-editorial.json",
+  "https://artbook.dev/library/agents/patterns/accent-rationing.json",
+  "https://artbook.dev/library/agents/patterns/object-carousel-hero.json",
+  "https://artbook.dev/library/agents/patterns/ambient-breathing-glow.json",
+  "https://artbook.dev/library/agents/patterns/motion-timing-tiers.json",
+  "https://artbook.dev/library/agents/patterns/soft-rise-reveal.json",
+  "https://artbook.dev/library/agents/patterns/spring-for-characters.json",
+  "https://artbook.dev/library/agents/patterns/serif-display-sans-ui.json"
+ ],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#FFFFFF",
+     "pct": 75.0
+    },
+    {
+     "c": "#000000",
+     "pct": 16.0
+    },
+    {
+     "c": "#00000047",
+     "pct": 8.9
+    }
+   ],
+   "text": [
+    {
+     "c": "#121212",
+     "pct": 89.0
+    },
+    {
+     "c": "#369169",
+     "pct": 9.0
+    },
+    {
+     "c": "#000000",
+     "pct": 2.0
+    },
+    {
+     "c": "#DEFCEF",
+     "pct": 0.0
+    }
+   ],
+   "accents": [],
+   "theme_color": ""
+  },
+  "type": {
+   "display": {
+    "family": "IvyOra Display",
+    "px": 28.0,
+    "weight": 600,
+    "ls": 0.043,
+    "lh": 1.29,
+    "upper": false
+   },
+   "body": {
+    "family": "IvyOra Display",
+    "px": 16.0,
+    "lh": 22.0
+   },
+   "families": [
+    {
+     "name": "IvyOra Display",
+     "pct": 92
+    },
+    {
+     "name": "Figtree",
+     "pct": 8
+    }
+   ],
+   "scale": [
+    {
+     "px": 28.0,
+     "weight": 600,
+     "family": "IvyOra Display"
+    },
+    {
+     "px": 16.0,
+     "weight": 600,
+     "family": "Figtree"
+    },
+    {
+     "px": 12.0,
+     "weight": 500,
+     "family": "Figtree"
+    },
+    {
+     "px": 10.0,
+     "weight": 400,
+     "family": "Figtree"
+    }
+   ],
+   "webfonts": "IvyOra Display 400, Figtree 300 900"
+  },
+  "shape": {
+   "radii": [
+    {
+     "v": "50%",
+     "n": 31,
+     "eg": "div"
+    },
+    {
+     "v": "1px",
+     "n": 24,
+     "eg": "div"
+    },
+    {
+     "v": "999px",
+     "n": 1,
+     "eg": "button.era-launch-pill"
+    },
+    {
+     "v": "14px",
+     "n": 1,
+     "eg": "button.era-launch-card"
+    }
+   ],
+   "shadows": [
+    {
+     "v": "rgba(244, 244, 220, 0.55) 0px 0px 24px 0px, rgba(255, 235, 190, 0.6) 0px 0px 8px 0px, rgba(0, 0, 0, 0.2) 0px 6px 20px 0px",
+     "n": 1,
+     "eg": ""
+    },
+    {
+     "v": "rgba(0, 0, 0, 0.04) 0px 1px 2px 0px",
+     "n": 1,
+     "eg": ""
+    }
+   ],
+   "borders": [
+    {
+     "v": "1px solid #369169",
+     "n": 1,
+     "eg": ""
+    }
+   ],
+   "spacing": "no consistent grid; section padding 54px, 80px, 49px, 38px; gaps 36px, 1px, 12px, 94.32px"
+  },
+  "buttons": [
+   {
+    "filled": true,
+    "fill": "#FFFFFF",
+    "text": "#121212",
+    "radius": "0px",
+    "padding": "12px 68px",
+    "size": 16.0,
+    "weight": 400,
+    "border": "",
+    "height": 48
+   },
+   {
+    "filled": true,
+    "fill": "#00000047",
+    "text": "#FFFFFF",
+    "radius": "999px",
+    "padding": "12px 26px",
+    "size": 16.0,
+    "weight": 400,
+    "border": "",
+    "height": 49
+   },
+   {
+    "filled": true,
+    "fill": "#369169",
+    "text": "#DEFCEF",
+    "radius": "21px",
+    "padding": "0px 12px",
+    "size": 12.0,
+    "weight": 500,
+    "border": "",
+    "height": 28
+   }
+  ],
+  "motion": {
+   "libraries": "none detected (plain CSS/JS)",
+   "timeline": [
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div",
+     "kind": "transition",
+     "ms": 400,
+     "ease": "cubic-bezier(0.34, 1.2, 0.64, 1)",
+     "approx": true,
+     "props": [
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 9,
+     "label": "div, div",
+     "kind": "waapi",
+     "ms": 550,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "stagger": 40,
+     "when": "between scrollY 211–1620",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.mx-auto.flex",
+     "kind": "waapi",
+     "ms": 600,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "when": "at scrollY≈2340",
+     "kf": {
+      "opacity": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "group": "scroll",
+     "n": 9,
+     "label": "div, div",
+     "kind": "sampled",
+     "ms": 550,
+     "ease": "ease",
+     "stagger": 40,
+     "when": "between scrollY 211–1620",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "18px",
+       "0px"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.mx-auto.flex",
+     "kind": "sampled",
+     "ms": 600,
+     "ease": "ease",
+     "when": "at scrollY≈2340",
+     "approx": true,
+     "pairs": [
+      [
+       "y",
+       "18px",
+       "0px"
+      ],
+      [
+       "opacity",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "path",
+     "kind": "animation",
+     "ms": 2500,
+     "ease": "linear",
+     "infinite": true,
+     "name": "al-1-a-0-thumb"
+    },
+    {
+     "group": "loop",
+     "n": 2,
+     "label": "path",
+     "kind": "animation",
+     "ms": 2500,
+     "ease": "linear",
+     "infinite": true,
+     "name": "al-1-a-0-index"
+    },
+    {
+     "group": "loop",
+     "n": 3,
+     "label": "path",
+     "kind": "animation",
+     "ms": 2500,
+     "ease": "linear",
+     "infinite": true,
+     "name": "al-1-a-0-middle"
+    },
+    {
+     "group": "loop",
+     "n": 4,
+     "label": "path",
+     "kind": "animation",
+     "ms": 2500,
+     "ease": "linear",
+     "infinite": true,
+     "name": "al-1-a-0-ring"
+    },
+    {
+     "group": "loop",
+     "n": 5,
+     "label": "path",
+     "kind": "animation",
+     "ms": 2500,
+     "ease": "linear",
+     "infinite": true,
+     "name": "al-1-a-0-pinky"
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "div",
+     "kind": "animation",
+     "ms": 4200,
+     "ease": "linear",
+     "infinite": true,
+     "name": "launchBagGlowBreath"
+    }
+   ],
+   "keyframes": {
+    "hero-scroll-hint-bounce": "@keyframes hero-scroll-hint-bounce { 0%, 100% { transform: translateY(0px); opacity: 0.55; } 50% { transform: translateY(5px); opacity: 0.85; } }",
+    "al-1-a-0-thumb": "@keyframes al-1-a-0-thumb { 0% { d: path(\"M 1000.71 580 L 993.34 578.07 L 986.29 575.2 L 979.68 571.43 L 973.62 566.82 L 968.21 561.45 L 963.55 555.43 L 959.71 548.85 L 956.75 541.83 L 954.74 534.49 L 953.72 526.94 L 953.69 519.33 L 954.66 511.77 L 956.59 504.41 L 959.46 497.35 L 963.23 490.74 L 967.85 484.68 L 973.21 479.27 L 979.23 474.61 L 985.81 470.77 L 992.83 467.82 L 1000.17 465.81 L 1007.72 464.78 L 1015.33 464.75 L 1022.89 465.72 L 1030.26 467.65 L 1037.31 470.52 L 1043.92 474.3 L 1049.98 478.91 L 1055.39 484.27 L 1060.05 490.29 L 1063.89 496.87 L 1066.85 503.89 L 1068.86 511.24 L 106",
+    "al-1-a-0-index": "@keyframes al-1-a-0-index { 0% { d: path(\"M 982.3 419.72 L 977.35 425.51 L 971.69 430.6 L 965.4 434.9 L 958.61 438.34 L 951.42 440.86 L 943.97 442.42 L 936.37 443.01 L 928.77 442.6 L 921.28 441.19 L 914.05 438.82 L 907.19 435.52 L 900.81 431.35 L 895.03 426.4 L 889.94 420.73 L 885.64 414.45 L 882.2 407.65 L 879.68 400.47 L 878.11 393.01 L 877.53 385.42 L 877.94 377.81 L 879.34 370.33 L 881.71 363.09 L 885.02 356.23 L 889.19 349.86 L 894.14 344.07 L 899.8 338.98 L 906.09 334.68 L 912.88 331.24 L 920.07 328.72 L 927.52 327.16 L 935.12 326.58 L 942.72 326.99 L 950.21 328.39 L 957.44 330.76 L 964.",
+    "al-1-a-0-middle": "@keyframes al-1-a-0-middle { 0% { d: path(\"M 901.44 355.84 L 901.62 363.45 L 900.8 371.02 L 898.99 378.42 L 896.22 385.52 L 892.55 392.19 L 888.05 398.33 L 882.78 403.83 L 876.84 408.6 L 870.33 412.56 L 863.36 415.62 L 856.05 417.74 L 848.52 418.89 L 840.91 419.06 L 833.33 418.24 L 825.94 416.43 L 818.84 413.67 L 812.17 410 L 806.03 405.49 L 800.53 400.23 L 795.76 394.29 L 791.8 387.78 L 788.74 380.81 L 786.62 373.49 L 785.47 365.96 L 785.3 358.35 L 786.12 350.78 L 787.93 343.38 L 790.69 336.29 L 794.36 329.61 L 798.87 323.47 L 804.13 317.97 L 810.07 313.2 L 816.58 309.25 L 823.55 306.18 L 830",
+    "al-1-a-0-ring": "@keyframes al-1-a-0-ring { 0% { d: path(\"M 804.37 357.11 L 809.32 362.89 L 813.47 369.28 L 816.75 376.15 L 819.1 383.4 L 820.47 390.89 L 820.87 398.49 L 820.27 406.08 L 818.69 413.53 L 816.15 420.71 L 812.68 427.49 L 808.36 433.76 L 803.25 439.41 L 797.47 444.37 L 791.08 448.52 L 784.21 451.8 L 776.97 454.14 L 769.48 455.52 L 761.87 455.91 L 754.28 455.32 L 746.83 453.74 L 739.65 451.19 L 732.87 447.73 L 726.6 443.41 L 720.95 438.3 L 716 432.52 L 711.84 426.13 L 708.56 419.26 L 706.22 412.01 L 704.84 404.52 L 704.45 396.92 L 705.04 389.33 L 706.63 381.88 L 709.17 374.7 L 712.63 367.91 L 716.95",
+    "al-1-a-0-pinky": "@keyframes al-1-a-0-pinky { 0% { d: path(\"M 728.58 413.82 L 736.01 415.48 L 743.16 418.09 L 749.91 421.63 L 756.13 426.01 L 761.73 431.18 L 766.61 437.03 L 770.68 443.46 L 773.89 450.37 L 776.16 457.64 L 777.46 465.14 L 777.76 472.75 L 777.07 480.34 L 775.41 487.77 L 772.79 494.92 L 769.26 501.67 L 764.87 507.89 L 759.7 513.49 L 753.85 518.36 L 747.42 522.44 L 740.51 525.64 L 733.24 527.92 L 725.74 529.22 L 718.13 529.52 L 710.55 528.82 L 703.11 527.16 L 695.96 524.55 L 689.22 521.01 L 682.99 516.63 L 677.4 511.46 L 672.52 505.61 L 668.44 499.18 L 665.24 492.27 L 662.96 485 L 661.67 477.5 L 66",
+    "launchBagGlowBreath": "@keyframes launchBagGlowBreath { 0%, 100% { opacity: 0.22; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.03); } }",
+    "launchBagGlowHalo": "@keyframes launchBagGlowHalo { 0%, 100% { opacity: 0.14; transform: scale(1.04); } 50% { opacity: 0.32; transform: scale(1.1); } }"
+   },
+   "declared_transitions": [
+    {
+     "props": "left, top",
+     "ms": 500,
+     "ease": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+     "easeName": "back-out",
+     "n": 68,
+     "eg": "div"
+    },
+    {
+     "props": "filter",
+     "ms": 300,
+     "ease": "ease",
+     "easeName": "",
+     "n": 34,
+     "eg": "div"
+    },
+    {
+     "props": "transform",
+     "ms": 400,
+     "ease": "cubic-bezier(0.34, 1.2, 0.64, 1)",
+     "easeName": "",
+     "n": 6,
+     "eg": "div"
+    },
+    {
+     "props": "opacity",
+     "ms": 200,
+     "ease": "ease",
+     "easeName": "",
+     "n": 2,
+     "eg": "canvas"
+    },
+    {
+     "props": "transform, filter",
+     "ms": 250,
+     "ease": "cubic-bezier(0.22, 1, 0.36, 1)",
+     "easeName": "quint-out",
+     "n": 2,
+     "eg": "button.era-launch-pill"
+    },
+    {
+     "props": "transform, box-shadow",
+     "ms": 220,
+     "ease": "ease",
+     "easeName": "",
+     "n": 2,
+     "eg": "a.primavera-video-link"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown"
+  ]
+ },
+ "prompt": "Use the measured design system of era · creating intelligence to fit objects you love (era.world), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #FFFFFF 75%, #000000 16%, #00000047 8.9%\n- Text, by amount of text: #121212 89%, #369169 9%, #000000 2%, #DEFCEF 0%\n\n## Type\n- Display: IvyOra Display 28px/600, letter-spacing 0.043em, line-height 1.29\n- Body: IvyOra Display 16px, line-height 22px\n- Scale (px/weight): 28/600, 16/600, 12/500, 10/400\n- Families by text share: IvyOra Display 92%, Figtree 8%\n\n## Shape\n- Radii: 50% (31×); 1px (24×); 999px (1×); 14px (1×)\n- Shadows: rgba(244, 244, 220, 0.55) 0px 0px 24px 0px, rgba(255, 235, 190, 0.6) 0px 0px 8px 0px, rgba(0, 0, 0, 0.2) 0px 6px 20px 0px (1×); rgba(0, 0, 0, 0.04) 0px 1px 2px 0px (1×)\n- Borders: 1px solid #369169 (1×)\n- Spacing: no consistent grid; section padding 54px, 80px, 49px, 38px; gaps 36px, 1px, 12px, 94.32px\n\n## Buttons\n- filled #FFFFFF, text #121212, radius 0px, padding 12px 68px, 16px/400\n- filled #00000047, text #FFFFFF, radius 999px, padding 12px 26px, 16px/400\n- filled #369169, text #DEFCEF, radius 21px, padding 0px 12px, 12px/500\n\n## Motion\n- Libraries: none detected (plain CSS/JS)\n- On load, 1× div: transition on transform; 400ms, cubic-bezier(0.34, 1.2, 0.64, 1), approximate\n- On scroll, 9× div, div: {\"opacity\": [0, 1]}; 550ms, cubic-bezier(0.22, 1, 0.36, 1) (quint-out), 40ms stagger, between scrollY 211–1620\n- On scroll, 1× div.mx-auto.flex: {\"opacity\": [0, 1]}; 600ms, cubic-bezier(0.22, 1, 0.36, 1) (quint-out), at scrollY≈2340\n- On scroll, 9× div, div: y 18px 0px, opacity 0 1; 550ms, ease, 40ms stagger, between scrollY 211–1620, approximate\n- On scroll, 1× div.mx-auto.flex: y 18px 0px, opacity 0 1; 600ms, ease, at scrollY≈2340, approximate\n- Looping, 1× path: animation al-1-a-0-thumb; 2500ms, linear, infinite\n- Looping, 2× path: animation al-1-a-0-index; 2500ms, linear, infinite\n- Looping, 3× path: animation al-1-a-0-middle; 2500ms, linear, infinite\n- Looping, 4× path: animation al-1-a-0-ring; 2500ms, linear, infinite\n- Looping, 5× path: animation al-1-a-0-pinky; 2500ms, linear, infinite\n- Looping, 1× div: animation launchBagGlowBreath; 4200ms, linear, infinite\n- Declared transition on left, top: 500ms cubic-bezier(0.34, 1.56, 0.64, 1) (68 elements)\n- Declared transition on filter: 300ms ease (34 elements)\n- Declared transition on transform: 400ms cubic-bezier(0.34, 1.2, 0.64, 1) (6 elements)\n- Declared transition on opacity: 200ms ease (2 elements)\n- Declared transition on transform, filter: 250ms cubic-bezier(0.22, 1, 0.36, 1) (2 elements)\n- Declared transition on transform, box-shadow: 220ms ease (2 elements)\n```css\n@keyframes hero-scroll-hint-bounce { 0%, 100% { transform: translateY(0px); opacity: 0.55; } 50% { transform: translateY(5px); opacity: 0.85; } }\n```\n```css\n@keyframes al-1-a-0-thumb { 0% { d: path(\"M 1000.71 580 L 993.34 578.07 L 986.29 575.2 L 979.68 571.43 L 973.62 566.82 L 968.21 561.45 L 963.55 555.43 L 959.71 548.85 L 956.75 541.83 L 954.74 534.49 L 953.72 526.94 L 953.69 519.33 L 954.66 511.77 L 956.59 504.41 L 959.46 497.35 L 963.23 490.74 L 967.85 484.68 L 973.21 479.27 L 979.23 474.61 L 985.81 470.77 L 992.83 467.82 L 1000.17 465.81 L 1007.72 464.78 L 1015.33 464.75 L 1022.89 465.72 L 1030.26 467.65 L 1037.31 470.52 L 1043.92 474.3 L 1049.98 478.91 L 1055.39 484.27 L 1060.05 490.29 L 1063.89 496.87 L 1066.85 503.89 L 1068.86 511.24 L 106\n```\n```css\n@keyframes al-1-a-0-index { 0% { d: path(\"M 982.3 419.72 L 977.35 425.51 L 971.69 430.6 L 965.4 434.9 L 958.61 438.34 L 951.42 440.86 L 943.97 442.42 L 936.37 443.01 L 928.77 442.6 L 921.28 441.19 L 914.05 438.82 L 907.19 435.52 L 900.81 431.35 L 895.03 426.4 L 889.94 420.73 L 885.64 414.45 L 882.2 407.65 L 879.68 400.47 L 878.11 393.01 L 877.53 385.42 L 877.94 377.81 L 879.34 370.33 L 881.71 363.09 L 885.02 356.23 L 889.19 349.86 L 894.14 344.07 L 899.8 338.98 L 906.09 334.68 L 912.88 331.24 L 920.07 328.72 L 927.52 327.16 L 935.12 326.58 L 942.72 326.99 L 950.21 328.39 L 957.44 330.76 L 964.\n```\n```css\n@keyframes al-1-a-0-middle { 0% { d: path(\"M 901.44 355.84 L 901.62 363.45 L 900.8 371.02 L 898.99 378.42 L 896.22 385.52 L 892.55 392.19 L 888.05 398.33 L 882.78 403.83 L 876.84 408.6 L 870.33 412.56 L 863.36 415.62 L 856.05 417.74 L 848.52 418.89 L 840.91 419.06 L 833.33 418.24 L 825.94 416.43 L 818.84 413.67 L 812.17 410 L 806.03 405.49 L 800.53 400.23 L 795.76 394.29 L 791.8 387.78 L 788.74 380.81 L 786.62 373.49 L 785.47 365.96 L 785.3 358.35 L 786.12 350.78 L 787.93 343.38 L 790.69 336.29 L 794.36 329.61 L 798.87 323.47 L 804.13 317.97 L 810.07 313.2 L 816.58 309.25 L 823.55 306.18 L 830\n```\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n\n## Patterns in this book built on it\nHumane editorial, Accent rationing, Object carousel hero, Ambient breathing glow, Four-tier motion timing, Soft rise reveal, Springs for characters only, Serif display, sans UI\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

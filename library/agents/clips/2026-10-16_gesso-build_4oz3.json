@@ -1,0 +1,661 @@
+{
+ "key": "2026-10-16_gesso-build_4oz3",
+ "site": "gesso.build",
+ "url": "https://gesso.build/",
+ "title": "Gesso - AI creative team for builders",
+ "collection": "docsinspo",
+ "clipped": "2026-10-16",
+ "patterns": [],
+ "measured": {
+  "palette": {
+   "surfaces": [
+    {
+     "c": "#F2E9D6",
+     "pct": 21.0
+    },
+    {
+     "c": "#000000",
+     "pct": 21.0
+    },
+    {
+     "c": "#252525",
+     "pct": 13.0
+    },
+    {
+     "c": "#786B67",
+     "pct": 11.0
+    },
+    {
+     "c": "#FFFFFF",
+     "pct": 8.1
+    },
+    {
+     "c": "#585C54",
+     "pct": 7.8
+    }
+   ],
+   "text": [
+    {
+     "c": "#4A4F4D",
+     "pct": 49.0
+    },
+    {
+     "c": "#FFFFFF",
+     "pct": 20.0
+    },
+    {
+     "c": "#3A3A3F",
+     "pct": 13.0
+    },
+    {
+     "c": "#FFFFFF8C",
+     "pct": 10.0
+    }
+   ],
+   "accents": [
+    {
+     "c": "#111114"
+    }
+   ],
+   "theme_color": "#000000"
+  },
+  "type": {
+   "display": {
+    "family": "featureDisplay",
+    "px": 42.0,
+    "weight": 400,
+    "ls": 0.02,
+    "lh": 1.5,
+    "upper": false
+   },
+   "body": {
+    "family": "graphik",
+    "px": 17.0,
+    "lh": 28.0
+   },
+   "families": [
+    {
+     "name": "graphik",
+     "pct": 90
+    },
+    {
+     "name": "switzer",
+     "pct": 8
+    },
+    {
+     "name": "featureDisplay",
+     "pct": 2
+    }
+   ],
+   "scale": [
+    {
+     "px": 38.0,
+     "weight": 400,
+     "family": "featureDisplay"
+    },
+    {
+     "px": 24.0,
+     "weight": 400,
+     "family": "graphik"
+    },
+    {
+     "px": 19.0,
+     "weight": 400,
+     "family": "graphik"
+    },
+    {
+     "px": 18.0,
+     "weight": 400,
+     "family": "graphik"
+    }
+   ],
+   "webfonts": "graphik 400, switzer 100 900, featureDisplay 400"
+  },
+  "shape": {
+   "radii": [
+    {
+     "v": "9999px",
+     "n": 6,
+     "eg": "a.inline-flex.cursor-pointer"
+    },
+    {
+     "v": "8px",
+     "n": 6,
+     "eg": "span.gesso-shell-module__hxgRAq__expo"
+    },
+    {
+     "v": "10px",
+     "n": 5,
+     "eg": "a.inline-flex.cursor-pointer"
+    },
+    {
+     "v": "5px",
+     "n": 5,
+     "eg": "span.pricing-row-module__7TvSHG__chip"
+    }
+   ],
+   "shadows": [
+    {
+     "v": "rgba(0, 0, 0, 0.5) 0px 8px 32px 0px",
+     "n": 2,
+     "eg": ""
+    }
+   ],
+   "borders": [
+    {
+     "v": "1px solid #00000029",
+     "n": 9,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #000000",
+     "n": 5,
+     "eg": ""
+    },
+    {
+     "v": "1px solid #E2EBFF1F",
+     "n": 4,
+     "eg": ""
+    }
+   ],
+   "spacing": "no consistent grid; section padding 22px, 128px, 34px, 56px; gaps 9px, 24px, 4px, 5px"
+  },
+  "buttons": [
+   {
+    "filled": true,
+    "fill": "#111114",
+    "text": "#FFFFFF",
+    "radius": "10px",
+    "padding": "14px 28px",
+    "size": 15.0,
+    "weight": 500,
+    "border": "",
+    "height": 51
+   },
+   {
+    "filled": true,
+    "fill": "#FFFFFF",
+    "text": "#000000",
+    "radius": "9999px",
+    "padding": "10px 20px",
+    "size": 14.0,
+    "weight": 500,
+    "border": "",
+    "height": 40
+   },
+   {
+    "filled": true,
+    "fill": "#FFFFFF",
+    "text": "#000000",
+    "radius": "10px",
+    "padding": "10px 20px",
+    "size": 14.0,
+    "weight": 500,
+    "border": "",
+    "height": 40
+   }
+  ],
+  "motion": {
+   "libraries": "WebGL canvas, Tailwind (utility classes)",
+   "timeline": [
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.retro-chrome-module__qOwzBW__hea",
+     "kind": "animation",
+     "ms": 180,
+     "ease": "ease-out",
+     "name": "retro-chrome-module__qOwzBW__bootFade"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.retro-chrome-module__qOwzBW__hea",
+     "kind": "transition",
+     "ms": 220,
+     "ease": "ease",
+     "approx": true,
+     "props": [
+      "padding-left",
+      "padding-right"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "img.page-module__tOu2uW__heroSkyArt",
+     "kind": "animation",
+     "ms": 400,
+     "ease": "ease-out",
+     "delay": 200,
+     "name": "page-module__tOu2uW__bandSharpen"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.gesso-shell-module__hxgRAq__fram",
+     "kind": "transition",
+     "ms": 240,
+     "ease": "ease-out",
+     "approx": true,
+     "props": [
+      "background-color"
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "h1.retro-chrome-module__qOwzBW__her",
+     "kind": "animation",
+     "ms": 220,
+     "ease": "ease-out",
+     "delay": 60,
+     "name": "retro-chrome-module__qOwzBW__bootRise"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "p.retro-chrome-module__qOwzBW__her",
+     "kind": "animation",
+     "ms": 220,
+     "ease": "ease-out",
+     "delay": 140,
+     "name": "retro-chrome-module__qOwzBW__bootRise"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "span.retro-chrome-module__qOwzBW__her",
+     "kind": "animation",
+     "ms": 220,
+     "ease": "ease-out",
+     "delay": 220,
+     "name": "retro-chrome-module__qOwzBW__bootRise"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div",
+     "kind": "animation",
+     "ms": 620,
+     "ease": "ease-out",
+     "delay": 320,
+     "name": "hero-scene-module__6e21lG__genieIn"
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div",
+     "kind": "animation",
+     "ms": 480,
+     "ease": "ease-out",
+     "name": "hero-scene-module__6e21lG__genieIn"
+    },
+    {
+     "group": "load",
+     "n": 4,
+     "label": "div.relative, div.relative",
+     "kind": "sampled",
+     "ms": 300,
+     "ease": "ease",
+     "stagger": 80,
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 4,
+     "label": "span.corner-marker.lg-pin",
+     "kind": "sampled",
+     "ms": 160,
+     "ease": "ease",
+     "stagger": 20,
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.relative",
+     "kind": "sampled",
+     "ms": 180,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "scale",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 3,
+     "label": "div.absolute, div.absolute",
+     "kind": "sampled",
+     "ms": 1560,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "x",
+       "3px",
+       "8px"
+      ],
+      [
+       "y",
+       "6px",
+       "4px"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "path",
+     "kind": "sampled",
+     "ms": 710,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "stroke-dashoffset",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    {
+     "group": "load",
+     "n": 1,
+     "label": "div.fixed.inset-0",
+     "kind": "sampled",
+     "ms": 340,
+     "ease": "ease",
+     "approx": true,
+     "pairs": [
+      [
+       "opacity",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.retro-chrome-module__qOwzBW__hea",
+     "kind": "transition",
+     "ms": 220,
+     "ease": "ease",
+     "stagger": 10,
+     "when": "at scrollY≈720",
+     "approx": true,
+     "props": [
+      "padding-left",
+      "padding-right"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "div.stack-section-module__Ah4QJq__ca, div.stack-section-module_",
+     "kind": "animation",
+     "ms": 240,
+     "ease": "ease-out",
+     "when": "between scrollY 1440–2160",
+     "name": "stack-section-module__Ah4QJq__labelIn"
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.stack-section-module__Ah4QJq__zo",
+     "kind": "animation",
+     "ms": 130,
+     "ease": "steps(3)",
+     "delay": 80,
+     "when": "between scrollY 1440–2160",
+     "name": "stack-section-module__Ah4QJq__zoomRect"
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.gesso-shell-module__hxgRAq__fram",
+     "kind": "transition",
+     "ms": 240,
+     "ease": "ease-out",
+     "stagger": 90,
+     "when": "between scrollY 1440–2880",
+     "approx": true,
+     "props": [
+      "background-color"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 2,
+     "label": "div.stack-section-module__Ah4QJq__wi, div.stack-section-module_",
+     "kind": "animation",
+     "ms": 170,
+     "ease": "cubic-bezier(0.2, 0.9, 0.25, 1)",
+     "delay": 190,
+     "when": "between scrollY 1440–2160",
+     "name": "stack-section-module__Ah4QJq__winOpen"
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.agent-cursor-module__TFhqSq__cur.agent-cursor-module__TFhqSq__cur",
+     "kind": "transition",
+     "ms": 600,
+     "ease": "ease-out",
+     "when": "at scrollY≈1440",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.stack-section-module__Ah4QJq__zo",
+     "kind": "animation",
+     "ms": 60,
+     "ease": "ease-out",
+     "delay": 230,
+     "when": "between scrollY 1440–2160",
+     "name": "stack-section-module__Ah4QJq__zoomRectOut"
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.agent-cursor-module__TFhqSq__cur.agent-cursor-module__TFhqSq__cur",
+     "kind": "transition",
+     "ms": 800,
+     "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+     "when": "at scrollY≈1440",
+     "approx": true,
+     "props": [
+      "top",
+      "left"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "img.gesso-shell-module__hxgRAq__fram.gesso-shell-module__hxgRAq__fram",
+     "kind": "transition",
+     "ms": 180,
+     "ease": "ease-out",
+     "when": "at scrollY≈2880",
+     "approx": true,
+     "props": [
+      "opacity"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "span.claims-section-module__wJeWjq__t",
+     "kind": "animation",
+     "ms": 110,
+     "ease": "cubic-bezier(0.2, 0.75, 0.3, 1)",
+     "when": "at scrollY≈3600",
+     "name": "claims-section-module__wJeWjq__flapTurnB"
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.pricing-row-module__7TvSHG__head",
+     "kind": "transition",
+     "ms": 600,
+     "ease": "ease",
+     "when": "at scrollY≈4320",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "h2.panel-cards-module__yScaJq__head",
+     "kind": "transition",
+     "ms": 600,
+     "ease": "ease",
+     "when": "at scrollY≈4320",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 3,
+     "label": "article, article",
+     "kind": "transition",
+     "ms": 600,
+     "ease": "ease",
+     "stagger": 90,
+     "when": "at scrollY≈4320",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "scroll",
+     "n": 1,
+     "label": "div.pricing-row-module__7TvSHG__team",
+     "kind": "transition",
+     "ms": 600,
+     "ease": "ease",
+     "delay": 390,
+     "when": "at scrollY≈4320",
+     "approx": true,
+     "props": [
+      "opacity",
+      "transform"
+     ]
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "img.claims-section-module__wJeWjq__m",
+     "kind": "animation",
+     "ms": 500,
+     "ease": "linear",
+     "infinite": true,
+     "name": "claims-section-module__wJeWjq__gessoChomp"
+    },
+    {
+     "group": "loop",
+     "n": 1,
+     "label": "div.footer-grain.pointer-events-none",
+     "kind": "animation",
+     "ms": 600,
+     "ease": "linear",
+     "infinite": true,
+     "name": "footer-grain"
+    }
+   ],
+   "keyframes": {
+    "footer-grain": "@keyframes footer-grain { 0% { transform: translate(0px); } 10% { transform: translate(-3%, -4%); } 20% { transform: translate(3%, 2%); } 30% { transform: translate(-4%, 3%); } 40% { transform: translate(2%, -3%); } 50% { transform: translate(-2%, 4%); } 60% { transform: translate(4%, -2%); } 70% { transform: translate(-3%, -3%); } 80% { transform: translate(2%, 4%); } 90% { transform: translate(-4%, -2%); } 100% { transform: translate(0px); } }"
+   },
+   "declared_transitions": [
+    {
+     "props": "opacity, background-color, transform",
+     "ms": 150,
+     "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+     "easeName": "",
+     "n": 33,
+     "eg": "a.inline-flex.cursor-pointer, a.underline, a.font-switzer.text-sm"
+    },
+    {
+     "props": "opacity, transform",
+     "ms": 600,
+     "ease": "ease",
+     "easeName": "",
+     "n": 19,
+     "eg": "h2.panel-cards-module__yScaJq__head, article, div.pricing-row-module__7TvSHG__ra"
+    },
+    {
+     "props": "opacity",
+     "ms": 150,
+     "ease": "ease",
+     "easeName": "",
+     "n": 9,
+     "eg": "summary.faq-section-module__pi9kiW__ques"
+    },
+    {
+     "props": "transform",
+     "ms": 200,
+     "ease": "ease",
+     "easeName": "",
+     "n": 9,
+     "eg": "span.faq-section-module__pi9kiW__mark"
+    },
+    {
+     "props": "opacity",
+     "ms": 700,
+     "ease": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+     "easeName": "",
+     "n": 6,
+     "eg": "div.gesso-shell-module__hxgRAq__canv, div.gesso-shell-module__hxgRAq__worl"
+    },
+    {
+     "props": "color, background-color, border-color, outline-color, text-decoration-color",
+     "ms": 200,
+     "ease": "cubic-bezier(0, 0, 0.2, 1)",
+     "easeName": "",
+     "n": 24,
+     "eg": "a.font-switzer"
+    }
+   ]
+  },
+  "not_captured": [
+   "Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks",
+   "Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown",
+   "WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque",
+   "1 autoplay video(s) — motion is baked into video, not code",
+   "Cursor-follow effects (cursor element detected) — capture does not move the mouse"
+  ]
+ },
+ "prompt": "Use the measured design system of Gesso - AI creative team for builders (gesso.build), from the Artspo book \"The Artbook library\" (https://artbook.dev/library/), as a reference. These are measurements of the live site, not its code: rebuild the feel with your own content.\n\n## Palette\n- Surfaces, by share of the page: #F2E9D6 21%, #000000 21%, #252525 13%, #786B67 11%, #FFFFFF 8.1%, #585C54 7.8%\n- Text, by amount of text: #4A4F4D 49%, #FFFFFF 20%, #3A3A3F 13%, #FFFFFF8C 10%\n- Accent candidates: #111114\n\n## Type\n- Display: featureDisplay 42px/400, letter-spacing 0.02em, line-height 1.5\n- Body: graphik 17px, line-height 28px\n- Scale (px/weight): 38/400, 24/400, 19/400, 18/400\n- Families by text share: graphik 90%, switzer 8%, featureDisplay 2%\n\n## Shape\n- Radii: 9999px (6×); 8px (6×); 10px (5×); 5px (5×)\n- Shadows: rgba(0, 0, 0, 0.5) 0px 8px 32px 0px (2×)\n- Borders: 1px solid #00000029 (9×); 1px solid #000000 (5×); 1px solid #E2EBFF1F (4×)\n- Spacing: no consistent grid; section padding 22px, 128px, 34px, 56px; gaps 9px, 24px, 4px, 5px\n\n## Buttons\n- filled #111114, text #FFFFFF, radius 10px, padding 14px 28px, 15px/500\n- filled #FFFFFF, text #000000, radius 9999px, padding 10px 20px, 14px/500\n- filled #FFFFFF, text #000000, radius 10px, padding 10px 20px, 14px/500\n\n## Motion\n- Libraries: WebGL canvas, Tailwind (utility classes)\n- On load, 1× div.retro-chrome-module__qOwzBW__hea: animation retro-chrome-module__qOwzBW__bootFade; 180ms, ease-out\n- On load, 1× div.retro-chrome-module__qOwzBW__hea: transition on padding-left, padding-right; 220ms, ease, approximate\n- On load, 1× img.page-module__tOu2uW__heroSkyArt: animation page-module__tOu2uW__bandSharpen; 400ms, ease-out, 200ms delay\n- On load, 1× div.gesso-shell-module__hxgRAq__fram: transition on background-color; 240ms, ease-out, approximate\n- On load, 1× h1.retro-chrome-module__qOwzBW__her: animation retro-chrome-module__qOwzBW__bootRise; 220ms, ease-out, 60ms delay\n- On load, 1× p.retro-chrome-module__qOwzBW__her: animation retro-chrome-module__qOwzBW__bootRise; 220ms, ease-out, 140ms delay\n- On load, 1× span.retro-chrome-module__qOwzBW__her: animation retro-chrome-module__qOwzBW__bootRise; 220ms, ease-out, 220ms delay\n- On load, 1× div: animation hero-scene-module__6e21lG__genieIn; 620ms, ease-out, 320ms delay\n- On scroll, 1× div.retro-chrome-module__qOwzBW__hea: transition on padding-left, padding-right; 220ms, ease, 10ms stagger, at scrollY≈720, approximate\n- On scroll, 2× div.stack-section-module__Ah4QJq__ca, div.stack-section-module_: animation stack-section-module__Ah4QJq__labelIn; 240ms, ease-out, between scrollY 1440–2160\n- On scroll, 1× div.stack-section-module__Ah4QJq__zo: animation stack-section-module__Ah4QJq__zoomRect; 130ms, steps(3), 80ms delay, between scrollY 1440–2160\n- On scroll, 1× div.gesso-shell-module__hxgRAq__fram: transition on background-color; 240ms, ease-out, 90ms stagger, between scrollY 1440–2880, approximate\n- On scroll, 2× div.stack-section-module__Ah4QJq__wi, div.stack-section-module_: animation stack-section-module__Ah4QJq__winOpen; 170ms, cubic-bezier(0.2, 0.9, 0.25, 1), 190ms delay, between scrollY 1440–2160\n- On scroll, 1× div.agent-cursor-module__TFhqSq__cur.agent-cursor-module__TFhqSq__cur: transition on opacity; 600ms, ease-out, at scrollY≈1440, approximate\n- On scroll, 1× div.stack-section-module__Ah4QJq__zo: animation stack-section-module__Ah4QJq__zoomRectOut; 60ms, ease-out, 230ms delay, between scrollY 1440–2160\n- On scroll, 1× div.agent-cursor-module__TFhqSq__cur.agent-cursor-module__TFhqSq__cur: transition on top, left; 800ms, cubic-bezier(0.4, 0, 0.2, 1), at scrollY≈1440, approximate\n- Looping, 1× img.claims-section-module__wJeWjq__m: animation claims-section-module__wJeWjq__gessoChomp; 500ms, linear, infinite\n- Looping, 1× div.footer-grain.pointer-events-none: animation footer-grain; 600ms, linear, infinite\n- Declared transition on opacity, background-color, transform: 150ms cubic-bezier(0.4, 0, 0.2, 1) (33 elements)\n- Declared transition on opacity, transform: 600ms ease (19 elements)\n- Declared transition on opacity: 150ms ease (9 elements)\n- Declared transition on transform: 200ms ease (9 elements)\n- Declared transition on opacity: 700ms cubic-bezier(0.22, 0.61, 0.36, 1) (6 elements)\n- Declared transition on color, background-color, border-color, outline-color, text-decoration-color: 200ms cubic-bezier(0, 0, 0.2, 1) (24 elements)\n```css\n@keyframes footer-grain { 0% { transform: translate(0px); } 10% { transform: translate(-3%, -4%); } 20% { transform: translate(3%, 2%); } 30% { transform: translate(-4%, 3%); } 40% { transform: translate(2%, -3%); } 50% { transform: translate(-2%, 4%); } 60% { transform: translate(4%, -2%); } 70% { transform: translate(-3%, -3%); } 80% { transform: translate(2%, 4%); } 90% { transform: translate(-4%, -2%); } 100% { transform: translate(0px); } }\n```\n\n## Not captured (don't invent these)\n- Click-triggered interactions (menus, modals, tabs, accordions) — capture never clicks\n- Hover states were not forced — see Declared transitions for their timing; the visual end state is unknown\n- WebGL scene internals (shaders, 3D motion) — canvas detected, contents opaque\n- 1 autoplay video(s) — motion is baked into video, not code\n- Cursor-follow effects (cursor element detected) — capture does not move the mouse\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

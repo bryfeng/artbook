@@ -1,0 +1,782 @@
+{
+ "artbook": "1",
+ "title": "The Artbook library",
+ "url": "https://artbook.dev/library/",
+ "built": "2026-10-18 15:50",
+ "made_with": "https://github.com/bryfeng/artspo",
+ "how_to_shop": [
+  "Pick one language for the overall look, or techniques (by facet) for single moves. Starred and established items are the strongest.",
+  "Fetch the href of each item you choose. Its `prompt` field stands alone: paste it into your working context and build from it.",
+  "For raw numbers, fetch a clip: one measured site's palette, type scale, radii, buttons and motion timing.",
+  "To take everything at once, read artbook.md. To keep these patterns in your user's own Artspo library, run the importer below."
+ ],
+ "rules": "Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.",
+ "counts": {
+  "languages": 4,
+  "techniques": 25,
+  "clips": 12,
+  "clips_pending_inspection": 1
+ },
+ "languages": [
+  {
+   "id": "humane-editorial",
+   "title": "Humane editorial",
+   "status": "established",
+   "what": "A well-made magazine about technology that feels human: calm, warm, crafted. The product is technical, but the page leads with feeling.",
+   "seen_in": 3,
+   "href": "https://artbook.dev/library/agents/patterns/humane-editorial.json",
+   "swatches": [
+    "#F4EBDA",
+    "#FAF5EC",
+    "#2A2119",
+    "#4B4036",
+    "#A99B8B",
+    "#D9CDB9"
+   ],
+   "techniques": [
+    "analog-grain",
+    "warm-tinted-depth",
+    "artifact-as-hero",
+    "object-carousel-hero",
+    "ambient-breathing-glow",
+    "narrated-proof",
+    "soft-rise-reveal",
+    "spring-for-characters",
+    "serif-display-sans-ui"
+   ]
+  },
+  {
+   "id": "research-index",
+   "title": "Research index",
+   "status": "established",
+   "what": "A lab notebook made public. Numbered, ruled, precise, confident. Color works as an index or a highlighter, never as decoration.",
+   "seen_in": 2,
+   "href": "https://artbook.dev/library/agents/patterns/research-index.json",
+   "swatches": [
+    "#FFFFFF",
+    "#E8E8E8",
+    "#000000",
+    "#6B8683",
+    "#BCF891",
+    "#CEE4E2"
+   ],
+   "techniques": [
+    "color-indexed-sections",
+    "highlighter-marks",
+    "numbered-sections",
+    "ruled-structure",
+    "spring-for-characters",
+    "static-by-design",
+    "hard-edges-flat-depth",
+    "machine-voice-labels",
+    "one-family-scale-hierarchy"
+   ]
+  },
+  {
+   "id": "cinematic-media-canvas",
+   "title": "Cinematic media canvas",
+   "status": "emerging",
+   "what": "A screening room. Dark, media-first, and things develop into view instead of sliding in.",
+   "seen_in": 1,
+   "href": "https://artbook.dev/library/agents/patterns/cinematic-media-canvas.json",
+   "swatches": [
+    "#FAFAFA",
+    "#0E0E0E",
+    "#202020",
+    "#2A2A2A",
+    "#F04E23",
+    "#FFF78B"
+   ],
+   "techniques": [
+    "accent-rationing",
+    "analog-grain",
+    "artifact-as-hero",
+    "object-carousel-hero",
+    "ambient-breathing-glow",
+    "cinematic-entrance",
+    "develop-reveal",
+    "inertial-smooth-scroll",
+    "serif-display-sans-ui"
+   ]
+  },
+  {
+   "id": "retro-machine-pop",
+   "title": "Retro machine pop",
+   "status": "emerging",
+   "what": "Loud, funny, nostalgic computing. It's confident enough to joke ('We raised a really big Series A').",
+   "seen_in": 1,
+   "href": "https://artbook.dev/library/agents/patterns/retro-machine-pop.json",
+   "swatches": [
+    "#F386A1",
+    "#161616",
+    "#FEFEFE",
+    "#1E1E1E"
+   ],
+   "techniques": [
+    "analog-grain",
+    "color-indexed-sections",
+    "benchmark-as-headline",
+    "static-by-design",
+    "hard-edges-flat-depth",
+    "machine-voice-labels",
+    "oversized-tight-display"
+   ]
+  }
+ ],
+ "techniques": {
+  "color": [
+   {
+    "id": "accent-rationing",
+    "title": "Accent rationing",
+    "status": "established",
+    "what": "One saturated color is reserved for the action and the data. Everything else is neutral, so the eye goes where the money is.",
+    "seen_in": 4,
+    "href": "https://artbook.dev/library/agents/patterns/accent-rationing.json",
+    "languages": [
+     "cinematic-media-canvas"
+    ]
+   },
+   {
+    "id": "analog-grain",
+    "title": "Analog grain",
+    "status": "established",
+    "what": "A paper, film or halftone texture over flat color, to take the digital sterility off a page.",
+    "seen_in": 3,
+    "href": "https://artbook.dev/library/agents/patterns/analog-grain.json",
+    "languages": [
+     "humane-editorial",
+     "retro-machine-pop",
+     "cinematic-media-canvas"
+    ]
+   },
+   {
+    "id": "color-indexed-sections",
+    "title": "Color-indexed sections",
+    "status": "established",
+    "what": "Each section gets its own color as wayfinding, either a chip next to the section number or a full-bleed band, so color tells you where you are.",
+    "seen_in": 3,
+    "href": "https://artbook.dev/library/agents/patterns/color-indexed-sections.json",
+    "languages": [
+     "research-index",
+     "retro-machine-pop"
+    ]
+   },
+   {
+    "id": "highlighter-marks",
+    "title": "Highlighter marks",
+    "status": "established",
+    "what": "Key words get a flat background block like a marker pen, so emphasis comes from color behind the text instead of weight or size.",
+    "seen_in": 3,
+    "href": "https://artbook.dev/library/agents/patterns/highlighter-marks.json",
+    "languages": [
+     "research-index"
+    ]
+   },
+   {
+    "id": "warm-tinted-depth",
+    "title": "Warm-tinted depth",
+    "status": "established",
+    "what": "Shadows and lines are tinted with the ground color's hue instead of gray, so elevation feels like paper lifting, not plastic.",
+    "seen_in": 2,
+    "href": "https://artbook.dev/library/agents/patterns/warm-tinted-depth.json",
+    "languages": [
+     "humane-editorial"
+    ]
+   }
+  ],
+  "type": [
+   {
+    "id": "machine-voice-labels",
+    "title": "Machine-voice labels",
+    "status": "established",
+    "what": "A mono or pixel face as a secondary voice for labels, metadata, numbers and code. It's the machine talking, next to the human headline.",
+    "seen_in": 5,
+    "href": "https://artbook.dev/library/agents/patterns/machine-voice-labels.json",
+    "languages": [
+     "research-index",
+     "retro-machine-pop"
+    ]
+   },
+   {
+    "id": "serif-display-sans-ui",
+    "title": "Serif display, sans UI",
+    "status": "established",
+    "what": "Headlines in a text serif with tight tracking; everything you interact with in a neutral sans. The serif carries the voice, the sans does the work.",
+    "seen_in": 4,
+    "href": "https://artbook.dev/library/agents/patterns/serif-display-sans-ui.json",
+    "languages": [
+     "humane-editorial",
+     "cinematic-media-canvas"
+    ]
+   },
+   {
+    "id": "one-family-scale-hierarchy",
+    "title": "One family, scale does the work",
+    "status": "established",
+    "what": "A single grotesk family for every role, with hierarchy made only through size and space. Big steps, few weights.",
+    "seen_in": 2,
+    "href": "https://artbook.dev/library/agents/patterns/one-family-scale-hierarchy.json",
+    "languages": [
+     "research-index"
+    ]
+   },
+   {
+    "id": "oversized-tight-display",
+    "title": "Oversized tight display",
+    "status": "established",
+    "what": "Display type far beyond comfortable size (120–150px) with leading below 1, so words become shapes.",
+    "seen_in": 2,
+    "href": "https://artbook.dev/library/agents/patterns/oversized-tight-display.json",
+    "languages": [
+     "retro-machine-pop"
+    ]
+   }
+  ],
+  "shape": [
+   {
+    "id": "hard-edges-flat-depth",
+    "title": "Hard edges, flat depth",
+    "status": "established",
+    "what": "Square corners (0–2px) and no shadows. Hierarchy comes from color bands and rules, not elevation.",
+    "seen_in": 3,
+    "href": "https://artbook.dev/library/agents/patterns/hard-edges-flat-depth.json",
+    "languages": [
+     "research-index",
+     "retro-machine-pop"
+    ]
+   }
+  ],
+  "layout": [
+   {
+    "id": "artifact-as-hero",
+    "title": "Artifact as hero",
+    "status": "established",
+    "what": "The hero shows the product's literal interaction (the prompt box you type into, the one-line diff you'd make, the code and what it compiles into), not a screenshot or an abstraction.",
+    "seen_in": 4,
+    "href": "https://artbook.dev/library/agents/patterns/artifact-as-hero.json",
+    "languages": [
+     "humane-editorial",
+     "cinematic-media-canvas"
+    ]
+   },
+   {
+    "id": "announcement-bar",
+    "title": "Announcement bar",
+    "status": "established",
+    "what": "A thin full-width strip above the nav carrying the latest milestone (in this library, always a funding round) with one link.",
+    "seen_in": 3,
+    "href": "https://artbook.dev/library/agents/patterns/announcement-bar.json"
+   },
+   {
+    "id": "ruled-structure",
+    "title": "Ruled structure",
+    "status": "established",
+    "what": "Hairline rules divide columns, list rows and FAQ entries, so the grid is visible like a printed table.",
+    "seen_in": 3,
+    "href": "https://artbook.dev/library/agents/patterns/ruled-structure.json",
+    "languages": [
+     "research-index"
+    ]
+   },
+   {
+    "id": "benchmark-as-headline",
+    "title": "Benchmark as headline",
+    "status": "established",
+    "what": "The claim is a number against named competitors, set huge and backed by a chart right below it.",
+    "seen_in": 2,
+    "href": "https://artbook.dev/library/agents/patterns/benchmark-as-headline.json",
+    "languages": [
+     "retro-machine-pop"
+    ]
+   },
+   {
+    "id": "numbered-sections",
+    "title": "Numbered sections",
+    "status": "established",
+    "what": "Sections numbered 01, 02 … like chapters, so a long page reads as an ordered argument and not a scroll of features.",
+    "seen_in": 2,
+    "href": "https://artbook.dev/library/agents/patterns/numbered-sections.json",
+    "languages": [
+     "research-index"
+    ]
+   },
+   {
+    "id": "object-carousel-hero",
+    "title": "Object carousel hero",
+    "status": "established",
+    "what": "The hero is a row of objects or media with the focused one centered and full, and its neighbors scaled down and faded.",
+    "seen_in": 2,
+    "href": "https://artbook.dev/library/agents/patterns/object-carousel-hero.json",
+    "languages": [
+     "humane-editorial",
+     "cinematic-media-canvas"
+    ]
+   }
+  ],
+  "motion": [
+   {
+    "id": "motion-timing-tiers",
+    "title": "Four-tier motion timing",
+    "status": "established",
+    "what": "The 103 distinct durations measured across the eight clips cluster into four bands: 29 under 300ms, 41 between 300 and 800ms, 20 between 800 and 1600ms, 13 above. The bands blur at their edges, but picking a value from a band and keeping to it is most of a motion system.",
+    "seen_in": 5,
+    "href": "https://artbook.dev/library/agents/patterns/motion-timing-tiers.json"
+   },
+   {
+    "id": "soft-rise-reveal",
+    "title": "Soft rise reveal",
+    "status": "established",
+    "what": "Content fades in while rising a short distance, with a strong ease-out and a small stagger. It's the most common motion in the library.",
+    "seen_in": 4,
+    "href": "https://artbook.dev/library/agents/patterns/soft-rise-reveal.json",
+    "languages": [
+     "humane-editorial"
+    ]
+   },
+   {
+    "id": "static-by-design",
+    "title": "Static by design",
+    "status": "established",
+    "what": "Little or no scroll motion, as a deliberate choice: content is simply there. Motion is limited to hover color and loaders.",
+    "seen_in": 3,
+    "href": "https://artbook.dev/library/agents/patterns/static-by-design.json",
+    "languages": [
+     "research-index",
+     "retro-machine-pop"
+    ]
+   },
+   {
+    "id": "ambient-breathing-glow",
+    "title": "Ambient breathing glow",
+    "status": "established",
+    "what": "A slow loop (3.5–5s) gently pulsing opacity and scale on a glow behind the thing that matters: the hero object, or the plan you want chosen.",
+    "seen_in": 2,
+    "href": "https://artbook.dev/library/agents/patterns/ambient-breathing-glow.json",
+    "languages": [
+     "humane-editorial",
+     "cinematic-media-canvas"
+    ]
+   },
+   {
+    "id": "inertial-smooth-scroll",
+    "title": "Inertial smooth scroll",
+    "status": "established",
+    "what": "Scroll is taken over by a smoothing library, so the page glides with momentum. It sets the pacing for every other scroll effect.",
+    "seen_in": 2,
+    "href": "https://artbook.dev/library/agents/patterns/inertial-smooth-scroll.json",
+    "languages": [
+     "cinematic-media-canvas"
+    ]
+   },
+   {
+    "id": "spring-for-characters",
+    "title": "Springs for characters only",
+    "status": "established",
+    "what": "An overshooting spring (back-out) is reserved for characters and objects: mascots, products, carousel items. Text and UI never spring.",
+    "seen_in": 2,
+    "href": "https://artbook.dev/library/agents/patterns/spring-for-characters.json",
+    "languages": [
+     "research-index",
+     "humane-editorial"
+    ]
+   },
+   {
+    "id": "cinematic-entrance",
+    "title": "Cinematic entrance",
+    "status": "emerging",
+    "what": "The hero arrives slowly (about 1.5s), scaling down from 1.2 while it fades in on a long expo-out, like a camera settling.",
+    "seen_in": 1,
+    "href": "https://artbook.dev/library/agents/patterns/cinematic-entrance.json",
+    "languages": [
+     "cinematic-media-canvas"
+    ]
+   },
+   {
+    "id": "develop-reveal",
+    "title": "Develop reveal",
+    "status": "emerging",
+    "what": "Images appear overexposed and settle to normal, like a photo developing, staggered across a grid.",
+    "seen_in": 1,
+    "href": "https://artbook.dev/library/agents/patterns/develop-reveal.json",
+    "languages": [
+     "cinematic-media-canvas"
+    ]
+   },
+   {
+    "id": "narrated-proof",
+    "title": "Narrated proof",
+    "status": "emerging",
+    "what": "The hero artifact acts out the claim in sequence: strike the old value, type the new one, blink a caret. About 1.3s from first move to caret.",
+    "seen_in": 1,
+    "href": "https://artbook.dev/library/agents/patterns/narrated-proof.json",
+    "languages": [
+     "humane-editorial"
+    ]
+   }
+  ]
+ },
+ "clips": [
+  {
+   "key": "2026-10-17_bencho-dev_ok20",
+   "site": "bencho.dev",
+   "title": "Bencho — Interactive React UI Components & Micro-interactions",
+   "collection": "technical-landing",
+   "clipped": "2026-10-17",
+   "swatches": [
+    "#17181A",
+    "#FFFFFF"
+   ],
+   "display": "Inter",
+   "body": "Inter",
+   "motion": 65,
+   "libraries": [
+    "WebGL canvas"
+   ],
+   "patterns": [],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-17_bencho-dev_ok20.json"
+  },
+  {
+   "key": "2026-10-17_motion-dev_3iot",
+   "site": "motion.dev",
+   "title": "Motion (prev Framer Motion): JavaScript & React animation library",
+   "collection": "technical-landing",
+   "clipped": "2026-10-17",
+   "swatches": [
+    "#000000",
+    "#141214",
+    "#F8F8F6"
+   ],
+   "display": "TASA Orbiter",
+   "body": "TASA Orbiter",
+   "motion": 20,
+   "libraries": [
+    "WebGL canvas"
+   ],
+   "patterns": [],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-17_motion-dev_3iot.json"
+  },
+  {
+   "key": "2026-10-17_pen-dev_qjnk",
+   "site": "pen.dev",
+   "title": "pen.dev – An agentic canvas for building bold software",
+   "collection": "technical-landing",
+   "clipped": "2026-10-17",
+   "swatches": [
+    "#DBE0E6",
+    "#EAEDF0",
+    "#0D0D0D",
+    "#000000"
+   ],
+   "display": "InterDisplay",
+   "body": "InterDisplay",
+   "motion": 31,
+   "libraries": [
+    "WebGL canvas"
+   ],
+   "patterns": [],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-17_pen-dev_qjnk.json"
+  },
+  {
+   "key": "2026-10-16_dynamic-xyz_a0q0",
+   "site": "dynamic.xyz/docs/flow/api",
+   "title": "Fireblocks Flow API guide - Dynamic",
+   "collection": "docsinspo",
+   "clipped": "2026-10-16",
+   "swatches": [
+    "#FAFAFA",
+    "#EDF1FE",
+    "#FEFCE8"
+   ],
+   "display": "Inter",
+   "body": "Inter",
+   "motion": 0,
+   "libraries": [
+    "GSAP",
+    "WebGL canvas",
+    "Tailwind"
+   ],
+   "patterns": [],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-16_dynamic-xyz_a0q0.json"
+  },
+  {
+   "key": "2026-10-16_gesso-build_4oz3",
+   "site": "gesso.build",
+   "title": "Gesso - AI creative team for builders",
+   "collection": "docsinspo",
+   "clipped": "2026-10-16",
+   "swatches": [
+    "#F2E9D6",
+    "#000000",
+    "#252525",
+    "#786B67",
+    "#FFFFFF"
+   ],
+   "display": "featureDisplay",
+   "body": "graphik",
+   "motion": 31,
+   "libraries": [
+    "WebGL canvas",
+    "Tailwind"
+   ],
+   "patterns": [],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-16_gesso-build_4oz3.json"
+  },
+  {
+   "key": "2026-10-15_chenglou-me_ikur",
+   "site": "chenglou.me/handwired",
+   "title": "Handwired: turn your regular JavaScript code into a neural net",
+   "collection": "inbox",
+   "clipped": "2026-10-15",
+   "swatches": [
+    "#FFFDF8",
+    "#1E1A16",
+    "#A64D1D"
+   ],
+   "display": "Iowan Old Style",
+   "body": "ui-sans-serif",
+   "motion": 0,
+   "libraries": null,
+   "patterns": [
+    "humane-editorial",
+    "warm-tinted-depth",
+    "artifact-as-hero",
+    "static-by-design",
+    "machine-voice-labels",
+    "serif-display-sans-ui"
+   ],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-15_chenglou-me_ikur.json"
+  },
+  {
+   "key": "2026-10-15_hone-com_yxt2",
+   "site": "hone.com",
+   "title": "Hone: AI Engines That Own Outcomes",
+   "collection": "inbox",
+   "clipped": "2026-10-15",
+   "swatches": [
+    "#FFFFFF",
+    "#000000",
+    "#001115",
+    "#BCF891",
+    "#3BD966"
+   ],
+   "display": "FT Aktual",
+   "body": "FT Aktual",
+   "motion": 78,
+   "libraries": [
+    "ScrollTrigger",
+    "Lenis smooth scroll",
+    "Swiper"
+   ],
+   "patterns": [
+    "cinematic-media-canvas",
+    "research-index",
+    "accent-rationing",
+    "color-indexed-sections",
+    "highlighter-marks",
+    "announcement-bar",
+    "numbered-sections",
+    "ruled-structure",
+    "inertial-smooth-scroll",
+    "motion-timing-tiers",
+    "soft-rise-reveal",
+    "spring-for-characters",
+    "hard-edges-flat-depth",
+    "one-family-scale-hierarchy",
+    "oversized-tight-display"
+   ],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-15_hone-com_yxt2.json"
+  },
+  {
+   "key": "2026-10-15_melius-com_4nc8",
+   "site": "melius.com",
+   "title": "Melius – the AI-native operating system for creatives",
+   "collection": "inbox",
+   "clipped": "2026-10-15",
+   "swatches": [
+    "#FAFAFA",
+    "#0E0E0E",
+    "#202020",
+    "#FFF78B",
+    "#2A2A2A"
+   ],
+   "display": "recklessStandard",
+   "body": "ui-sans-serif",
+   "motion": 50,
+   "libraries": [
+    "Lenis smooth scroll",
+    "WebGL canvas",
+    "Tailwind"
+   ],
+   "patterns": [
+    "cinematic-media-canvas",
+    "humane-editorial",
+    "retro-machine-pop",
+    "accent-rationing",
+    "analog-grain",
+    "highlighter-marks",
+    "announcement-bar",
+    "artifact-as-hero",
+    "object-carousel-hero",
+    "ambient-breathing-glow",
+    "cinematic-entrance",
+    "develop-reveal",
+    "inertial-smooth-scroll",
+    "motion-timing-tiers",
+    "soft-rise-reveal",
+    "machine-voice-labels",
+    "serif-display-sans-ui"
+   ],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-15_melius-com_4nc8.json"
+  },
+  {
+   "key": "2026-10-15_typesafe-ai_7sp7",
+   "site": "typesafe.ai",
+   "title": "Home - TypeSafe AI",
+   "collection": "inbox",
+   "clipped": "2026-10-15",
+   "swatches": [
+    "#F386A1",
+    "#1E1E1E",
+    "#FEFEFE",
+    "#03AA5C"
+   ],
+   "display": "Die Grotesk C Medium",
+   "body": "JetBrains Mono",
+   "motion": 10,
+   "libraries": [
+    "Framer Motion / Framer"
+   ],
+   "patterns": [
+    "research-index",
+    "retro-machine-pop",
+    "analog-grain",
+    "color-indexed-sections",
+    "announcement-bar",
+    "benchmark-as-headline",
+    "static-by-design",
+    "hard-edges-flat-depth",
+    "machine-voice-labels",
+    "oversized-tight-display"
+   ],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-15_typesafe-ai_7sp7.json"
+  },
+  {
+   "key": "2026-10-14_era-world_cics",
+   "site": "era.world",
+   "title": "era · creating intelligence to fit objects you love",
+   "collection": "inbox",
+   "clipped": "2026-10-14",
+   "swatches": [
+    "#FFFFFF",
+    "#000000"
+   ],
+   "display": "IvyOra Display",
+   "body": "IvyOra Display",
+   "motion": 11,
+   "libraries": null,
+   "patterns": [
+    "humane-editorial",
+    "accent-rationing",
+    "object-carousel-hero",
+    "ambient-breathing-glow",
+    "motion-timing-tiers",
+    "soft-rise-reveal",
+    "spring-for-characters",
+    "serif-display-sans-ui"
+   ],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-14_era-world_cics.json"
+  },
+  {
+   "key": "2026-10-14_preferencemodel-com_by8f",
+   "site": "preferencemodel.com",
+   "title": "Preference Model",
+   "collection": "inbox",
+   "clipped": "2026-10-14",
+   "swatches": [
+    "#FFFFFF",
+    "#E8E8E8",
+    "#FAB3F6",
+    "#000000"
+   ],
+   "display": "MartianMono",
+   "body": "TWKLausanne",
+   "motion": 0,
+   "libraries": null,
+   "patterns": [
+    "research-index",
+    "retro-machine-pop",
+    "color-indexed-sections",
+    "numbered-sections",
+    "ruled-structure",
+    "static-by-design",
+    "hard-edges-flat-depth",
+    "machine-voice-labels",
+    "one-family-scale-hierarchy"
+   ],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-14_preferencemodel-com_by8f.json"
+  },
+  {
+   "key": "2026-10-14_usejog-com_arec",
+   "site": "usejog.com",
+   "title": "Jog · GitHub runners for agent-scale development",
+   "collection": "inbox",
+   "clipped": "2026-10-14",
+   "swatches": [
+    "#F4EBDA",
+    "#1F1814",
+    "#FAF5EC"
+   ],
+   "display": "Source Serif 4 Variable",
+   "body": "Inter Variable",
+   "motion": 19,
+   "libraries": [
+    "WebGL canvas",
+    "Tailwind"
+   ],
+   "patterns": [
+    "humane-editorial",
+    "analog-grain",
+    "highlighter-marks",
+    "warm-tinted-depth",
+    "artifact-as-hero",
+    "benchmark-as-headline",
+    "ruled-structure",
+    "motion-timing-tiers",
+    "narrated-proof",
+    "soft-rise-reveal",
+    "machine-voice-labels",
+    "serif-display-sans-ui"
+   ],
+   "href": "https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json"
+  }
+ ],
+ "collections": [
+  {
+   "key": "docsinspo",
+   "title": "docsinspo",
+   "brief": null,
+   "clips": 2
+  },
+  {
+   "key": "inbox",
+   "title": "inbox",
+   "brief": null,
+   "clips": 7
+  },
+  {
+   "key": "technical-landing",
+   "title": "technical-landing",
+   "brief": null,
+   "clips": 3
+  }
+ ],
+ "whole_book": {
+  "markdown": "https://artbook.dev/library/artbook.md",
+  "page": "https://artbook.dev/library/"
+ },
+ "remix": {
+  "skill": "https://github.com/bryfeng/artspo",
+  "install": "npx skills add bryfeng/artspo",
+  "import_book": "python3 import_book.py https://artbook.dev/library/artbook.md"
+ }
+}

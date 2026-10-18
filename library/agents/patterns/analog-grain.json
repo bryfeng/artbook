@@ -1,0 +1,41 @@
+{
+ "id": "analog-grain",
+ "kind": "technique",
+ "facet": "color",
+ "title": "Analog grain",
+ "status": "established",
+ "summary": "A paper, film or halftone texture over flat color, to take the digital sterility off a page.",
+ "use_when": "Warm or nostalgic brands; dark pages that feel too flat.",
+ "avoid_when": "Dense data UI; texture under small text hurts legibility.",
+ "languages": [
+  "humane-editorial",
+  "retro-machine-pop",
+  "cinematic-media-canvas"
+ ],
+ "techniques": null,
+ "swatches": null,
+ "recipe": [
+  ".grain::after { content: \"\"; position: fixed; inset: 0; pointer-events: none; opacity: .06;\n  background-image: url(\"noise.png\");      /* 128px tile */\n  animation: grain 3s steps(5) infinite; }  /* optional: film-grain jitter */\n@keyframes grain { 20% { background-position: 96px -64px } 40% { background-position: -80px 112px }\n  60% { background-position: 128px 48px } 80% { background-position: -48px -96px } }"
+ ],
+ "specimen_html": "<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; background: #1b1b1b; }\n.p { position: relative; min-height: 284px; display: grid; place-items: center; color: #F4EBDA; font: 500 30px/1.1 \"Iowan Old Style\", \"Charter\", Georgia, serif; overflow: hidden; }\n.p.a { background: #3a4b3f; } .p.b { background: #3a4b3f; }\n.p.b::after { content: \"\"; position: absolute; inset: -60px; pointer-events: none; opacity: .22; mix-blend-mode: overlay;\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\");\n  animation: grain 3s steps(5) infinite; }\n@keyframes grain { 20% { transform: translate(24px,-16px) } 40% { transform: translate(-20px,28px) } 60% { transform: translate(32px,12px) } 80% { transform: translate(-12px,-24px) } }\n.p span { position: absolute; left: 12px; bottom: 10px; color: #F4EBDA; }\n</style>\n<div class=\"s\"><div class=\"p a\">Flat color<span class=\"cap\">no texture</span></div><div class=\"p b\">With grain<span class=\"cap\">noise · 3s steps(5) jitter</span></div></div>",
+ "evidence": [
+  {
+   "site": "Jog",
+   "measured": "Paper-fiber texture across the page ground",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json"
+  },
+  {
+   "site": "Melius",
+   "measured": "3× div.animate-noise.absolute: `noise`, 3000ms, linear, infinite",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_melius-com_4nc8.json"
+  },
+  {
+   "site": "TypeSafe AI",
+   "measured": "Halftone dot fields on the pink sections",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_typesafe-ai_7sp7.json"
+  }
+ ],
+ "from_book": null,
+ "source": null,
+ "prompt": "Use the color technique \"Analog grain\" from the Artspo book \"The Artbook library\" (https://artbook.dev/library/).\n\nA paper, film or halftone texture over flat color, to take the digital sterility off a page.\n\n## Recipe\n\n_Rebuilt from measurements. A starting point, not any site's code._\n\n```css\n.grain::after { content: \"\"; position: fixed; inset: 0; pointer-events: none; opacity: .06;\n  background-image: url(\"noise.png\");      /* 128px tile */\n  animation: grain 3s steps(5) infinite; }  /* optional: film-grain jitter */\n@keyframes grain { 20% { background-position: 96px -64px } 40% { background-position: -80px 112px }\n  60% { background-position: 128px 48px } 80% { background-position: -48px -96px } }\n```\n\n## Specimen\n\n_A generic demo of the move, for reference: HTML and CSS, no scripts._\n\n```html\n<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; background: #1b1b1b; }\n.p { position: relative; min-height: 284px; display: grid; place-items: center; color: #F4EBDA; font: 500 30px/1.1 \"Iowan Old Style\", \"Charter\", Georgia, serif; overflow: hidden; }\n.p.a { background: #3a4b3f; } .p.b { background: #3a4b3f; }\n.p.b::after { content: \"\"; position: absolute; inset: -60px; pointer-events: none; opacity: .22; mix-blend-mode: overlay;\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\");\n  animation: grain 3s steps(5) infinite; }\n@keyframes grain { 20% { transform: translate(24px,-16px) } 40% { transform: translate(-20px,28px) } 60% { transform: translate(32px,12px) } 80% { transform: translate(-12px,-24px) } }\n.p span { position: absolute; left: 12px; bottom: 10px; color: #F4EBDA; }\n</style>\n<div class=\"s\"><div class=\"p a\">Flat color<span class=\"cap\">no texture</span></div><div class=\"p b\">With grain<span class=\"cap\">noise · 3s steps(5) jitter</span></div></div>\n```\n\n## Use when\n\nWarm or nostalgic brands; dark pages that feel too flat.\n\n## Avoid when\n\nDense data UI; texture under small text hurts legibility.\n\n## Pairs with\n\nSerif display, sans UI, Warm-tinted depth\n\nMeasured on: Jog, Melius, TypeSafe AI.\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

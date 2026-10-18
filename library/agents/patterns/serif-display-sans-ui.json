@@ -1,0 +1,45 @@
+{
+ "id": "serif-display-sans-ui",
+ "kind": "technique",
+ "facet": "type",
+ "title": "Serif display, sans UI",
+ "status": "established",
+ "summary": "Headlines in a text serif with tight tracking; everything you interact with in a neutral sans. The serif carries the voice, the sans does the work.",
+ "use_when": "Signaling craft or editorial taste in a technical category.",
+ "avoid_when": "Products where everything is UI; the serif ends up on nothing.",
+ "languages": [
+  "humane-editorial",
+  "cinematic-media-canvas"
+ ],
+ "techniques": null,
+ "swatches": null,
+ "recipe": [
+  "h1, h2 { font-family: var(--font-serif); font-weight: 400–500; letter-spacing: -0.02em; line-height: 1.0–1.04; }\nbody, button, input { font-family: var(--font-sans); }"
+ ],
+ "specimen_html": "<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #FBFAF7; color: #1d1b18; display: grid; align-content: center; gap: 18px; }\nh1 { font: 500 50px/1.02 \"Iowan Old Style\", \"Charter\", Georgia, serif; letter-spacing: -0.02em; margin: 0; max-width: 16ch; }\n.ui { display: flex; gap: 10px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; }\ninput { font: inherit; font-size: 14px; padding: 10px 12px; border: 1px solid #d8d4cc; border-radius: 6px; width: 260px; background: #fff; }\nbutton { font: 500 14px \"Helvetica Neue\", Helvetica, Arial, sans-serif; padding: 10px 16px; border: 0; border-radius: 6px; background: #1d1b18; color: #fff; }\n</style>\n<div class=\"s\"><span class=\"cap\">serif carries the voice</span><h1>Software that reads like a good book.</h1>\n<span class=\"cap\">sans does the work</span><div class=\"ui\"><input value=\"you@studio.com\" aria-label=\"email\"><button>Request access</button></div></div>",
+ "evidence": [
+  {
+   "site": "Jog",
+   "measured": "Display: \"Source Serif 4 Variable\" 56px/500, letter-spacing -1.232px (-0.022em)",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_usejog-com_arec.json"
+  },
+  {
+   "site": "Melius",
+   "measured": "Display: \"recklessStandard\" 56px/400, letter-spacing -1.12px (-0.02em), line-height 56px (1)",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_melius-com_4nc8.json"
+  },
+  {
+   "site": "Era",
+   "measured": "Families by text share: IvyOra Display 92%, Figtree 8%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-14_era-world_cics.json"
+  },
+  {
+   "site": "Handwired",
+   "measured": "Families by text share: ui-sans-serif 51%, Iowan Old Style 29%, ui-monospace 20%",
+   "clip": "https://artbook.dev/library/agents/clips/2026-10-15_chenglou-me_ikur.json"
+  }
+ ],
+ "from_book": null,
+ "source": null,
+ "prompt": "Use the type technique \"Serif display, sans UI\" from the Artspo book \"The Artbook library\" (https://artbook.dev/library/).\n\nHeadlines in a text serif with tight tracking; everything you interact with in a neutral sans. The serif carries the voice, the sans does the work.\n\n## Recipe\n\n_Rebuilt from measurements. A starting point, not any site's code._\n\n```css\nh1, h2 { font-family: var(--font-serif); font-weight: 400–500; letter-spacing: -0.02em; line-height: 1.0–1.04; }\nbody, button, input { font-family: var(--font-sans); }\n```\n\n## Variants\n\n- Era goes further and sets body copy in the serif too, with positive tracking (+0.043em) on the display.\n\n## Specimen\n\n_A generic demo of the move, for reference: HTML and CSS, no scripts._\n\n```html\n<style>\n:host { display: block; }\n.s { box-sizing: border-box; min-height: 340px; padding: 28px; font: 15px/1.5 \"Helvetica Neue\", Helvetica, Arial, sans-serif; position: relative; overflow: hidden; }\n.s *, .s *::before, .s *::after { box-sizing: border-box; }\n.cap { font: 500 11px/1.3 ui-monospace, \"SF Mono\", Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; opacity: .6; }\n@media (prefers-reduced-motion: reduce) { .s *, .s *::before, .s *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; } }\n.s { background: #FBFAF7; color: #1d1b18; display: grid; align-content: center; gap: 18px; }\nh1 { font: 500 50px/1.02 \"Iowan Old Style\", \"Charter\", Georgia, serif; letter-spacing: -0.02em; margin: 0; max-width: 16ch; }\n.ui { display: flex; gap: 10px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; }\ninput { font: inherit; font-size: 14px; padding: 10px 12px; border: 1px solid #d8d4cc; border-radius: 6px; width: 260px; background: #fff; }\nbutton { font: 500 14px \"Helvetica Neue\", Helvetica, Arial, sans-serif; padding: 10px 16px; border: 0; border-radius: 6px; background: #1d1b18; color: #fff; }\n</style>\n<div class=\"s\"><span class=\"cap\">serif carries the voice</span><h1>Software that reads like a good book.</h1>\n<span class=\"cap\">sans does the work</span><div class=\"ui\"><input value=\"you@studio.com\" aria-label=\"email\"><button>Request access</button></div></div>\n```\n\n## Use when\n\nSignaling craft or editorial taste in a technical category.\n\n## Avoid when\n\nProducts where everything is UI; the serif ends up on nothing.\n\n## Pairs with\n\nSoft rise reveal, Analog grain\n\nMeasured on: Jog, Melius, Era, Handwired.\n\nRules: Rebuild from these measurements, never from a real site's code, text, logos or imagery. A font in <angle brackets> is a placeholder: pick a licensed face of that kind. Respect prefers-reduced-motion.\n"
+}

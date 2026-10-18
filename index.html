@@ -8,6 +8,8 @@
 <link rel="canonical" href="https://artbook.dev/">
 <link rel="icon" type="image/png" href="media/icon.png">
 <link rel="apple-touch-icon" href="media/icon.png">
+<link rel="help" type="text/plain" href="/llms.txt" title="For agents: start here">
+<link rel="alternate" type="application/json" href="/library/agents/menu.json" title="Artbook library: agent catalogue">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Artbook">
 <meta property="og:url" content="https://artbook.dev/">
@@ -383,6 +385,7 @@ footer.site p { color: var(--muted); font-size: 13px; max-width: 70ch; }
   <a class="brand" href="#top" aria-label="Artbook home"><span class="mark"></span>artbook</a>
   <nav aria-label="Main">
     <a href="#wheels">Your book</a>
+    <a href="library/" data-umami-event="library-nav">Library</a>
     <a href="#how">How it works</a>
     <a href="#next">What's next</a>
     <a class="ghost sm" href="https://github.com/bryfeng/artspo" data-umami-event="github-nav">GitHub ↗</a>
@@ -564,6 +567,24 @@ footer.site p { color: var(--muted); font-size: 13px; max-width: 70ch; }
         <h2>Plain files, readable by any agent.</h2>
         <p>Everything lives in a folder on your computer as markdown and images. The skill teaches your coding agent to read the library, distill it, make from it and rebuild the catalogue.</p>
         <div class="agents"><span>Claude Code</span><span>Codex</span><span>Cursor</span><span>Gemini CLI</span><span>Copilot</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="agents">
+    <div class="wrap">
+      <div class="head">
+        <h2>A library your agent can shop.</h2>
+        <p>The Artbook library is design knowledge in a form agents read: design languages, single techniques and measured websites, each with a prompt that works on its own. Point your agent at it and it picks what fits your brief.</p>
+      </div>
+      <div class="share">
+        <span class="cap">Paste into Claude Code, Codex or Cursor</span>
+        <div class="cmd"><code id="c4">Shop https://artbook.dev/llms.txt for design references that fit what we're building.</code><button class="ghost sm copy" type="button" data-copy="c4">Copy</button></div>
+      </div>
+      <div class="ctas" style="margin-top:20px">
+        <a class="primary" href="library/" data-umami-event="library-browse">Browse the library</a>
+        <a class="ghost" href="library/agents/menu.json" data-umami-event="library-menu">menu.json</a>
+        <a class="ghost" href="llms.txt" data-umami-event="library-llms">llms.txt</a>
       </div>
     </div>
   </section>
